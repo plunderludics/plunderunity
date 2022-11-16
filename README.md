@@ -1,5 +1,5 @@
 # plunderunity
-a unity project for managing the plundering of games
+a unity project for managing the plundering of games, mostly display right now, but hopefully more fun stuff in the future!
 
 at this time this project serves mostly to consolidate ideas from Touch Designer into a thing that is more feasable to package into a zip file that people could then download and play.
 
