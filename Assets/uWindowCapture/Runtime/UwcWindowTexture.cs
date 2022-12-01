@@ -129,6 +129,8 @@ public class UwcWindowTexture : MonoBehaviour
         }
     }
 
+    public RenderTexture targetTexture;
+
     public CaptureMode captureMode = CaptureMode.Auto;
     public CapturePriority capturePriority = CapturePriority.Auto;
     public WindowTextureCaptureTiming captureRequestTiming = WindowTextureCaptureTiming.OnlyWhenVisible;
@@ -260,7 +262,12 @@ public class UwcWindowTexture : MonoBehaviour
 
     void UpdateTexture()
     {
+        // Debug.Log("UpdateTexture "+isValid);
+        if (targetTexture) {
+            Graphics.Blit(window.texture, targetTexture);
+        }
         if (!isValid) return;
+        
 
         window.cursorDraw = drawCursor;
 
