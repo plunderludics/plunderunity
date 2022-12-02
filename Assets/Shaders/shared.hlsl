@@ -141,22 +141,3 @@ float3 quantizeHueLightness(float3 color, int paletteSize, float3 palette[maxPal
     resultColor.z = l1; //(lightnessDiff < d) ? l1 : l2;
     return HSLtoRGB(resultColor);
 }
-
-
-float rand_1_05(in float2 uv)
-{
-    float2 noise = (frac(sin(dot(uv ,float2(12.9898,78.233)*2.0)) * 43758.5453));
-    return abs(noise.x + noise.y) * 0.5;
-}
-
-float msnoise(in float3 uv, in int n) {
-    float m = 1.0;
-    float p = 0.0;
-    float t = 0.0;
-    for (int i = 0; i < n; i++) {
-        p += cnoise(uv*m)/m;
-        t += 1.0/m;
-        m *= 2.0;
-    }
-    return p/t;
-}
