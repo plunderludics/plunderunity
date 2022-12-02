@@ -39,6 +39,7 @@ public class UwcWindowTextureEditor : Editor
     bool scaleSettingFold_ = true;
     bool windowInformationFold_ = true;
 
+    SerializedProperty targetTexture;
     SerializedProperty updateTitle;
     SerializedProperty childWindowPrefab;
     SerializedProperty childWindowZDistance;
@@ -52,6 +53,7 @@ public class UwcWindowTextureEditor : Editor
 
     void OnEnable()
     {
+        targetTexture = serializedObject.FindProperty("targetTexture");
         updateTitle = serializedObject.FindProperty("updateTitle");
         childWindowPrefab = serializedObject.FindProperty("childWindowPrefab");
         childWindowZDistance = serializedObject.FindProperty("childWindowZDistance");
@@ -70,6 +72,7 @@ public class UwcWindowTextureEditor : Editor
 
         serializedObject.Update();
         {
+            EditorGUILayout.PropertyField(targetTexture, new GUIContent("Target Texture"));
             EditorGUILayout.Space();
             EditorUtils.Fold("Target", ref targetFold_, () => { DrawTargetSettings(); });
             EditorUtils.Fold("Capture Settings", ref captureSettingFold_, () => { DrawCaptureSettings(); });
