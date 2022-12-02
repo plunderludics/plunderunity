@@ -132,12 +132,17 @@ public class UwcManager : MonoBehaviour
     {
         get { return Lib.IsWindowsGraphicsCaptureCursorCaptureEnabledApiSupported(); }
     }
-
     void Awake()
     {
         Lib.SetDebugMode(debugMode);
-        Lib.Initialize();
+        Reset();
         renderEventFunc_ = Lib.GetRenderEventFunc();
+    }
+
+    public void Reset() {
+        Lib.Finalize();
+        windows_ = new Dictionary<int, UwcWindow>();
+        Lib.Initialize();
     }
 
     void Start()
@@ -153,6 +158,7 @@ public class UwcManager : MonoBehaviour
 
     void OnEnable()
     {
+        Reset();
         Lib.SetLogFunc(onDebugLog);
         Lib.SetErrorFunc(onDebugErr);
     }
