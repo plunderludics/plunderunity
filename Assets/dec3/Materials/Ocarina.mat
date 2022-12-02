@@ -7,12 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Golf
+  m_Name: Ocarina
   m_Shader: {fileID: 4800000, guid: 0d18be674016d214785ed3fdb3b85ea3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _CHROMAKEYENABLED_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -44,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: f528a81a10d5dc445a0abfa44cbe49c4, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -62,10 +63,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _ChromaKeyBrightnessRange: 0.047
-    - _ChromaKeyEnabled: 0
-    - _ChromaKeyHueRange: 0.021
-    - _ChromaKeySaturationRange: 0.06
+    - _ChromaKeyBrightnessRange: 0.07
+    - _ChromaKeyEnabled: 1
+    - _ChromaKeyHueRange: 0.02
+    - _ChromaKeySaturationRange: 0.16
     - _ColorMask: 15
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -89,7 +90,7 @@ Material:
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _ChromaKeyColor: {r: 0.49803925, g: 0.69803923, b: 1, a: 0}
+    - _ChromaKeyColor: {r: 0.20784315, g: 0.23137257, b: 0.050980397, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
