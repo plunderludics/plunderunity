@@ -12,8 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _CHROMAKEYENABLED_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -63,10 +62,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _ChromaKeyBrightnessRange: 0.21
-    - _ChromaKeyEnabled: 1
-    - _ChromaKeyHueRange: 0.853
-    - _ChromaKeySaturationRange: 0.16
+    - _ChromaKeyBrightnessRange: 0.06
+    - _ChromaKeyEnabled: 0
+    - _ChromaKeyHueRange: 0.03
+    - _ChromaKeyInvert: 0
+    - _ChromaKeySaturationRange: 0.08
     - _ColorMask: 15
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -90,7 +90,7 @@ Material:
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _ChromaKeyColor: {r: 0.098039225, g: 0.08235294, b: 0.10196079, a: 0}
+    - _ChromaKeyColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

@@ -13,6 +13,15 @@ float hueDistance(float h1, float h2) {
     return min(abs((1.0 - diff)), diff);
 }
 
+float3 hsl_delta(float3 a, float3 b)
+{
+    return float3(
+        hueDistance(a[0], b[0]),
+        abs(a[1] - b[1]),
+        abs(a[2] - b[2])
+    );
+}
+
 float3 HUEtoRGB(in float H)
 {
     float R = abs(H * 6 - 3) - 1;
