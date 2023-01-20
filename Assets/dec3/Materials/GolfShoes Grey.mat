@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3865450807391007251
+--- !u!114 &-2283147119015086349
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PD wall gun
-  m_Shader: {fileID: -6465566751694194690, guid: a846f9c12fe96bc488a5ebfd79b0c631, type: 3}
+  m_Name: GolfShoes Grey
+  m_Shader: {fileID: -6465566751694194690, guid: a2c71d6ff6568194f9d64ab49ea31f24, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: 0aeb87a037389034bbccf733cc638d75, type: 2}
+        m_Texture: {fileID: 8400000, guid: f528a81a10d5dc445a0abfa44cbe49c4, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -72,31 +72,21 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_6e37bacb824346f5a727be04db58ff92_Texture_1:
-        m_Texture: {fileID: 2800000, guid: b979a45cdeb4f6444a2f5c9d1ed87fcb, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 5d35b40d323f2a747b4e24b3e9cce585, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_8f995ca5ae774b7f869822f072987563_Out_0:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_9fb10c12ca934e5da0d4b3ec5f40b9e9_Out_0:
-        m_Texture: {fileID: 2800000, guid: 5d35b40d323f2a747b4e24b3e9cce585, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
+    - _ChromaKeyBrightnessRange: 0.047
+    - _ChromaKeyEnabled: 0
+    - _ChromaKeyHueRange: 0.021
+    - _ChromaKeyInvert: 0
+    - _ChromaKeySaturationRange: 0.06
+    - _ColorMask: 15
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlipV: 1
+    - _FlipV: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -107,12 +97,18 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
     - _UVSec: 0
+    - _UseUIAlphaClip: 0
     - _ZWrite: 1
-    - _xx: 0
     m_Colors:
+    - _ChromaKeyColor: {r: 0.49803925, g: 0.69803923, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CropMax: {r: 0.92, g: 0.59, b: 0, a: 0}
-    - _CropMin: {r: 0.14, g: 0.12, b: 0, a: 0}
+    - _CropMax: {r: 0.28, g: 0.76, b: 0, a: 0}
+    - _CropMin: {r: 0.08, g: 0.66, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
