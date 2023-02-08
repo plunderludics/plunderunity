@@ -13,7 +13,8 @@ public class RenderWebcamTexture : MonoBehaviour
     public int fps;
 
     public int deviceIndex = 0; // can't be changed at runtime
-    [Readonly] public List<string> availableDevices;
+   // [Readonly]
+    public List<string> availableDevices;
 
     private WebCamTexture _tex;
 
@@ -32,7 +33,7 @@ public class RenderWebcamTexture : MonoBehaviour
         availableDevices = devices.Select(_ => _.name).ToList();
 
         _tex = new WebCamTexture(devices[deviceIndex].name, width, height, fps);
-        
+
         if (material) {
             material.mainTexture = _tex;
         }
