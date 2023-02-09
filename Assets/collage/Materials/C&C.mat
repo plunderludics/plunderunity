@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WWE
-  m_Shader: {fileID: -6465566751694194690, guid: 6f7e389d1c67e8c47ab5c42af68fd479, type: 3}
+  m_Name: C&C
+  m_Shader: {fileID: -6465566751694194690, guid: 0722b70890fd3ca448ecce2911a0f8e7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -114,7 +114,7 @@ Material:
     m_Colors:
     - _ChromaKeyColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CropMax: {r: 0.931853, g: 0.5805915, b: 0, a: 0}
-    - _CropMin: {r: 0.494599, g: 0.1294045, b: 0, a: 0}
+    - _CropMax: {r: 0.800364, g: 0.77983654, b: 0, a: 0}
+    - _CropMin: {r: 0.25992, g: 0.49940348, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

@@ -7,6 +7,10 @@ using NaughtyAttributes;
 [ExecuteInEditMode]
 public class BizhawkSample : MonoBehaviour
 {
+    [Button("Update")]
+    // Configure everything according to the current settings
+    private void OnResetClicked() { Reset(); }
+
     [Header("Renderer")]
     [SerializeField] Renderer targetRenderer;
 
@@ -27,8 +31,11 @@ public class BizhawkSample : MonoBehaviour
     private static readonly string defaultShaderName = "Shader Graphs/SimpleCrop";
     Material _createdMaterial;
 
-    // Start is called before the first frame update
-    void OnEnable()
+    void OnEnable() {
+        Reset();
+    }
+
+    void Reset()
     {
         Debug.Log(this.name + ": " + "OnEnable");
 
@@ -86,6 +93,6 @@ public class BizhawkSample : MonoBehaviour
 
     void OnDisable()
     {
-        
+        // TODO: should probably clean up materials and rendertextures here
     }
 }
