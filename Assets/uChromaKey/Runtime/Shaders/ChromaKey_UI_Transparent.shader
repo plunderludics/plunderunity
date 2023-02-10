@@ -17,7 +17,8 @@ Properties
     [Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
 
     [Header(Chroma Key)]
-    [Toggle] _ChromaKeyEnabled("Enabled", Float) = 1
+    [Toggle] _ChromaKeyEnabled("Enabled", Float) = 1.0
+    [Toggle] _ChromaKeyInvert("Invert", Float) = 0.0
     _ChromaKeyColor("Color", Color) = (0.0, 0.0, 1.0, 0.0)
     _ChromaKeyHueRange("Hue Range", Range(0, 1)) = 0.1
     _ChromaKeySaturationRange("Saturation Range", Range(0, 1)) = 0.5
