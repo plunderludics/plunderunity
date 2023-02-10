@@ -11,10 +11,35 @@ public class MixTextures : MonoBehaviour
     public float tex3mix;
     public float tex4mix;
 
-    public void SetTex1mix(float value) => tex1mix = Mathf.InverseLerp(-4.95f, 4.95f, value);
-    public void SetTex2mix(float value) => tex2mix = Mathf.InverseLerp(-4.95f, 4.95f, value);
-    public void SetTex3mix(float value) => tex3mix = Mathf.InverseLerp(-4.95f, 4.95f, value);
-    public void SetTex4mix(float value) => tex4mix = Mathf.InverseLerp(-4.95f, 4.95f, value);
+    [Header("remapping input")]
+    public float MinInput = -4.95f;
+    public float MaxInput = 4.95f;
+    public AnimationCurve Curve = AnimationCurve.Linear(0, 0, 1, 1);
+
+    public void SetTex1mix(float value) => SetTexMix(1, value);
+    public void SetTex2mix(float value) => SetTexMix(2, value);
+    public void SetTex3mix(float value) => SetTexMix(3, value);
+    public void SetTex4mix(float value) => SetTexMix(4, value);
+
+    public void SetTexMix(int index, float value) {
+        switch (index) {
+            case 1:
+                tex1mix = Curve.Evaluate(Mathf.InverseLerp(MinInput, MaxInput, value));
+                break;
+            case 2:
+                tex2mix = Curve.Evaluate(Mathf.InverseLerp(MinInput, MaxInput, value));
+                break;
+            case 3:
+                tex3mix = Curve.Evaluate(Mathf.InverseLerp(MinInput, MaxInput, value));
+                break;
+            case 4:
+                tex4mix = Curve.Evaluate(Mathf.InverseLerp(MinInput, MaxInput, value));
+                break;
+            default:
+                throw new System.Exception($"index {index} does not exist");
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
