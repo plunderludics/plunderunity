@@ -6,7 +6,7 @@ using UnityEngine;
 public class TapestryWalker : MonoBehaviour
 {
     private class WalkerMix {
-        public int Index;
+        public int Track;
         public float Value;
     }
 
@@ -16,18 +16,27 @@ public class TapestryWalker : MonoBehaviour
     [SerializeField] AnimationCurve m_SqrDistCurve;
 
     [Header("mixing")]
+    [Header("number of bizhawk instances")]
+    [SerializeField] int m_Tracks = 4;
+
+    [Header("number of expected mixing channels")]
+    [SerializeField] int m_Channels = 3;
+
     [SerializeField] Dictionary<string, WalkerMix> m_Mix;
     [SerializeField] MixTextures m_TextureMixer;
+    [SerializeField] SampleLoader m_SampleLoader;
     [SerializeField] Material m_Mat;
 
+
     private IEnumerable<TapestryEmitter> m_Emitters;
-    private List<int> m_AvailableTextures = new List<int>() {1, 2, 3, 4};
+    private List<int> m_AvailableTracks = new List<int>() {1, 2, 3, 4};
 
     // Start is called before the first frame update
     void Awake()
     {
         m_Emitters = FindObjectsOfType<TapestryEmitter>().ToList();
         m_Mix = new Dictionary<string, WalkerMix>();
+        m_AvailableTracks = Enumerable.Range(0, m_Tracks).Select(x => x+1).ToList();
     }
 
     // Update is called once per frame
@@ -47,15 +56,18 @@ public class TapestryWalker : MonoBehaviour
 
         var closest = m_Emitters.First();
         var closestDist = Dist(closest);
+        // the thing that is furtest away determines where zero is
+        // TODO: maybe all this stuff should be absolute to make life easier
+        var lastChannelDist = Dist(m_Emitters.ElementAt(m_Channels+1));
 
         // free textures
         var keysToRemove = new List<string>();
         foreach(var key in m_Mix.Keys) {
-            if (!m_Emitters.Take(3).Any(e => e.Name == key)) {
+            if (!m_Emitters.Take(m_Channels).Any(e => e.Name == key)) {
                 var removed = m_Mix[key];
-                m_AvailableTextures.Add(removed.Index);
-                m_TextureMixer.SetTexMix(removed.Index, 0.0f);
-                print($"removed {key} tex{removed.Index}");
+                m_AvailableTracks.Add(removed.Track);
+                m_TextureMixer.SetTrackMix(removed.Track, 0.0f);
+                print($"removed {key} tex{removed.Track}");
                 keysToRemove.Add(key);
             }
         }
@@ -64,22 +76,30 @@ public class TapestryWalker : MonoBehaviour
             m_Mix.Remove(key);
         }
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < m_Tracks; i++) {
             var emitter = m_Emitters.ElementAt(i);
             // see if already using name
-            var value = m_SqrDistCurve.Evaluate(closestDist / Dist(emitter));
+            var value = m_SqrDistCurve.Evaluate(
+                Mathf.InverseLerp(
+                    closestDist,
+                    lastChannelDist,
+                    Dist(emitter)
+                )
+            );
+
             if (m_Mix.TryGetValue(emitter.Name, out var mix)) {
                 m_Mix[emitter.Name].Value = value;
                 continue;
             }
 
             // event here for newly added key
-            var index = m_AvailableTextures.First();
-            m_AvailableTextures.RemoveAt(0);
-            mix = new WalkerMix() { Index=index, Value=value };
-            print($"added {emitter.Name} tex{index}");
+            var track = m_AvailableTracks.First();
+            m_AvailableTracks.RemoveAt(0);
+            mix = new WalkerMix() { Track=track, Value=value };
+            print($"added {emitter.Name} @ track: {track}");
 
-            m_Mat.SetTexture($"_tex{index}", emitter.TestTexture);
+            m_Mat.SetTexture($"_tex{track}", emitter.TestTexture);
+            m_SampleLoader.LoadSample($"track{track}", emitter.Name);
 
             m_Mix[emitter.Name] = mix;
         }
@@ -87,7 +107,7 @@ public class TapestryWalker : MonoBehaviour
         // already clean mix
         foreach(var key in m_Mix.Keys) {
             var mix = m_Mix[key];
-            m_TextureMixer.SetTexMix(mix.Index, mix.Value);
+            m_TextureMixer.SetTrackMix(mix.Track, mix.Value);
         }
     }
 

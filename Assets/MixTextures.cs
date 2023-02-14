@@ -21,6 +21,8 @@ public class MixTextures : MonoBehaviour
     public void SetTex3mix(float value) => SetTexMix(3, value);
     public void SetTex4mix(float value) => SetTexMix(4, value);
 
+    public void SetTrackMix(int index, float value) => SetTexMix(index, value);
+
     public void SetTexMix(int index, float value) {
         switch (index) {
             case 1:
