@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/tonytony/tonytony.unity
+    guid: 8f0593993baab0540b628ed2e53402a6
+  - enabled: 1
+    path: Assets/fourtextures/fourtextures.unity
+    guid: c298a29a7557ee24ab0acf02a6bbaf3f
   m_configObjects: {}

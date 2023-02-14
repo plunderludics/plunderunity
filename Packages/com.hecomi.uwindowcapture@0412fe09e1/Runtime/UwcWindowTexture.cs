@@ -8,7 +8,7 @@ namespace uWindowCapture
 public class UwcWindowTexture : MonoBehaviour
 {
     bool shouldUpdateWindow_ = true;
-    bool shouldUpdateWindow 
+    bool shouldUpdateWindow
     {
         get
         {
@@ -59,9 +59,9 @@ public class UwcWindowTexture : MonoBehaviour
     bool altTabWindow_ = false;
     public bool altTabWindow
     {
-        get 
-        { 
-            return altTabWindow_; 
+        get
+        {
+            return altTabWindow_;
         }
         set
         {
@@ -74,8 +74,8 @@ public class UwcWindowTexture : MonoBehaviour
     bool createChildWindows_ = true;
     public bool createChildWindows
     {
-        get 
-        { 
+        get
+        {
             return createChildWindows_;
         }
         set
@@ -100,13 +100,13 @@ public class UwcWindowTexture : MonoBehaviour
 
     [SerializeField]
     string partialWindowTitle_;
-    public string partialWindowTitle 
+    public string partialWindowTitle
     {
-        get 
+        get
         {
             return partialWindowTitle_;
         }
-        set 
+        set
         {
             shouldUpdateWindow = true;
             partialWindowTitle_ = value;
@@ -150,13 +150,13 @@ public class UwcWindowTexture : MonoBehaviour
     }
 
     UwcWindow window_;
-    public UwcWindow window 
-    { 
-        get 
+    public UwcWindow window
+    {
+        get
         {
             return window_;
         }
-        set 
+        set
         {
             if (window_ == value) {
                 return;
@@ -262,12 +262,8 @@ public class UwcWindowTexture : MonoBehaviour
 
     void UpdateTexture()
     {
-        // Debug.Log("UpdateTexture "+isValid);
-        // if (targetTexture) {
-        //     Graphics.Blit(window.texture, targetTexture);
-        // }
         if (!isValid) return;
-        
+
 
         window.cursorDraw = drawCursor;
 
@@ -339,7 +335,7 @@ public class UwcWindowTexture : MonoBehaviour
         if (captureFrameRate < 0) {
             captureTimer_ = 0f;
             isCaptureRequested_ = true;
-        } else { 
+        } else {
             captureTimer_ += Time.deltaTime;
 
             float T = 1f / captureFrameRate;
@@ -431,7 +427,7 @@ public class UwcWindowTexture : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distance, layerMask)) {
             var collider = hit.collider;
-            var texture = 
+            var texture =
                 collider.GetComponent<UwcWindowTexture>() ??
                 collider.GetComponentInChildren<UwcWindowTexture>();
             if (texture) {
