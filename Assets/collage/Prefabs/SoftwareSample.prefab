@@ -59,11 +59,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7411211403060175715}
+  - component: {fileID: 7411211403060175719}
   - component: {fileID: 7411211403060175712}
   - component: {fileID: 7411211403060175713}
-  - component: {fileID: 7411211403060175719}
+  - component: {fileID: 8611044809475584550}
+  - component: {fileID: 5659111817888045148}
   m_Layer: 5
-  m_Name: BizhawkSample
+  m_Name: SoftwareSample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,6 +87,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -449.966, y: 0, z: 0.009}
+--- !u!114 &7411211403060175719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411211403060175714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0e38f1062524448906bc0d0d006356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRenderer: {fileID: 7411211403060175712}
+  useCustomWindowCapture: 0
+  windowTitleSubstring: 
+  windowCapture: {fileID: 8611044809475584550}
+  blitter: {fileID: 5659111817888045148}
+  useCustomRenderTexture: 0
+  renderTexture: {fileID: 0}
+  useCustomRenderMaterial: 0
+  renderMaterial: {fileID: 0}
+  blitMaterial: {fileID: 0}
 --- !u!23 &7411211403060175712
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -135,7 +159,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7411211403060175714}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7411211403060175719
+--- !u!114 &8611044809475584550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,14 +168,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 7411211403060175714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0e38f1062524448906bc0d0d006356, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c150c011a6544b4b8054bba7ee5e5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRenderer: {fileID: 7411211403060175712}
-  useCustomWindowCapture: 0
-  windowTitleSubstring: 
-  windowCapture: {fileID: 0}
-  useCustomRenderTexture: 0
-  renderTexture: {fileID: 0}
-  useCustomMaterial: 0
-  targetMaterial: {fileID: 0}
+  searchTiming_: 0
+  type_: 0
+  altTabWindow_: 0
+  createChildWindows_: 0
+  childWindowPrefab: {fileID: 0}
+  childWindowZDistance: 0.02
+  partialWindowTitle_: 
+  desktopIndex_: 0
+  captureMode: 3
+  capturePriority: 0
+  captureRequestTiming: 0
+  captureFrameRate: -1
+  drawCursor: 0
+  updateTitle: 0
+  searchAnotherWindowWhenInvalid: 0
+  scaleControlType: 3
+  scalePer1000Pixel: 1
+  updateScaleForcely: 0
+--- !u!114 &5659111817888045148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411211403060175714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e609fd47bd88f9d45b78b23bb7afaa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowCapture: {fileID: 8611044809475584550}
+  targetTexture: {fileID: 0}
+  blitMaterial: {fileID: 0}

@@ -129,7 +129,7 @@ public class UwcWindowTexture : MonoBehaviour
         }
     }
 
-    public RenderTexture targetTexture;
+    // public RenderTexture targetTexture;
 
     public CaptureMode captureMode = CaptureMode.Auto;
     public CapturePriority capturePriority = CapturePriority.Auto;
@@ -218,7 +218,7 @@ public class UwcWindowTexture : MonoBehaviour
 
         rectTransform_ = GetComponent<RectTransform>();
 
-        if (renderer_) material_ = renderer_.material; // clone
+        // if (renderer_) material_ = renderer_.material; // clone
         meshFilter_ = GetComponent<MeshFilter>();
         collider_ = GetComponent<Collider>();
 
@@ -262,10 +262,6 @@ public class UwcWindowTexture : MonoBehaviour
 
     void UpdateTexture()
     {
-        // Debug.Log("UpdateTexture "+isValid);
-        if (targetTexture) {
-            Graphics.Blit(window.texture, targetTexture, new Vector2(1.0f, -1.0f), new Vector2(0.0f, 1.0f));
-        }
         if (!isValid) return;
 
 
