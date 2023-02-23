@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SimpleCrop
-  m_Shader: {fileID: -6465566751694194690, guid: 7c3b8fc11b0921242aa6b85137c343fa, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 69d9d028b6bd9e9429510266b04612b4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -88,6 +88,7 @@ Material:
     - _DstBlend: 0
     - _FlipHorizontal: 1
     - _FlipV: 0
+    - _FlipVertical: 0
     - _Float: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5

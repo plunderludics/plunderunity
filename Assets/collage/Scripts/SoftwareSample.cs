@@ -7,9 +7,6 @@ using NaughtyAttributes;
 [ExecuteInEditMode]
 public class SoftwareSample : MonoBehaviour
 {
-    [Button("Update")]
-    // Configure everything according to the current settings
-    private void OnResetClicked() { Reset(); }
 
     [Header("Renderer")]
     [SerializeField] Renderer targetRenderer;
@@ -24,6 +21,7 @@ public class SoftwareSample : MonoBehaviour
 
     [Header("RenderTexture")]
     [SerializeField] bool useCustomRenderTexture;
+    [HideIf("useCustomRenderTexture")]
     [SerializeField] bool setRenderTextureSizeFromUwcWindow = true;
     [HideIf("useCustomRenderTexture"),
      DisableIf("setRenderTextureSizeFromUwcWindow"),
@@ -47,9 +45,20 @@ public class SoftwareSample : MonoBehaviour
         Reset();
     }
 
-    public void Reset()
+    [Button("Reset")]
+    // Resets everything (material, etc) and applies settings
+    public void Reset() {
+        if (!useCustomRenderTexture) renderTexture = null;
+        if (!useCustomRenderMaterial) renderMaterial = null;
+        if (!useCustomWindowCapture) windowCapture = null;
+        Apply();
+    }
+
+    [Button("Apply")]
+    // Applies config
+    public void Apply()
     {
-        Debug.Log(this.name + ": " + "Reset");
+        // Debug.Log(this.name + ": " + "Apply");
 
         // Set up UwcWindowCapture
         if (useCustomWindowCapture) {
@@ -116,7 +125,7 @@ public class SoftwareSample : MonoBehaviour
         if (!renderMaterial) {
             renderMaterial = new Material(Shader.Find(defaultShaderName));
             renderMaterial.name = this.name+"-Surface";
-            renderMaterial.SetFloat("FlipVertical", 1f); // Set to true by default (has to be default false in shader for annoying reasons)
+            renderMaterial.SetFloat("_FlipVertical", 1f); // Set to true by default (has to be default false in shader for annoying reasons)
             // _createdMaterial = targetMaterial;
         }
 
