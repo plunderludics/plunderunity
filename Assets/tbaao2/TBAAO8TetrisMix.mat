@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4664075735139306970
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TBAAO8TetrisMix
+  m_Shader: {fileID: -6465566751694194690, guid: 2ea5d712cf7beb747809ae102358d2e1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _tex1:
+        m_Texture: {fileID: 8400000, guid: a2e2f57cdef28f24288a5df26e7d79e2, type: 2}
+        m_Scale: {x: 0.82, y: 1}
+        m_Offset: {x: -0.165, y: 0.03}
+    - _tex2:
+        m_Texture: {fileID: 8400000, guid: a354eced8e9ac574c8193df56c0622b7, type: 2}
+        m_Scale: {x: 0.85, y: 1}
+        m_Offset: {x: -0.07, y: 0.08}
+    - _tex3:
+        m_Texture: {fileID: 8400000, guid: 23d89427aa7b8904b95f5b073e454456, type: 2}
+        m_Scale: {x: 1, y: 1.14}
+        m_Offset: {x: 0, y: -0.04}
+    - _tex4:
+        m_Texture: {fileID: 8400000, guid: c09ee60e6b223cc4eb666ba942f37bd0, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0.041, y: 0.04}
+    - _tex5:
+        m_Texture: {fileID: 8400000, guid: c07ed170eb0e4654982e5b5da13fe1b9, type: 2}
+        m_Scale: {x: 1.5, y: 1.27}
+        m_Offset: {x: -0.37, y: -0.03}
+    - _tex6:
+        m_Texture: {fileID: 8400000, guid: 4452df9884376b148b38cf23df9f0a78, type: 2}
+        m_Scale: {x: 0.75, y: 0.97}
+        m_Offset: {x: 0.135, y: 0.03}
+    - _tex7:
+        m_Texture: {fileID: 8400000, guid: cb5c36d6d08c2904ba1a57ee9d25121f, type: 2}
+        m_Scale: {x: 1.16, y: 0.64}
+        m_Offset: {x: -0.2125, y: 0}
+    - _tex8:
+        m_Texture: {fileID: 8400000, guid: d5d3a4c4fbe3b8c4681315b1519b83db, type: 2}
+        m_Scale: {x: 1.03, y: 1.23}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _tex1mix: 1
+    - _tex2mix: 1
+    - _tex3mix: 1
+    - _tex4mix: 1
+    - _tex5mix: 1
+    - _tex6mix: 1
+    - _tex7mix: 1
+    - _tex8mix: 1
+    m_Colors: []
+  m_BuildTextureStacks: []
