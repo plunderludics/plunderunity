@@ -10,8 +10,6 @@ public class BlitWindowTexture : MonoBehaviour {
     public Material blitMaterial;
     public int pass = 0;
     public bool clear = true;
-    public Material clearMaterial;
-    public int clearPass;
 
     void Update() {
         if (!windowCapture) {

@@ -11,6 +11,8 @@ public class Cropper : MonoBehaviour
     private Material _targetMaterial;
     private RectTransform _rectTransform; // Scale of the transform must be 1
 
+    public float transformScale = 10f;
+
     void Start() {
         _rectTransform = GetComponent<RectTransform>();
         _targetTransform = targetRenderer.GetComponent<Transform>();
@@ -27,8 +29,8 @@ public class Cropper : MonoBehaviour
         // (not sure exactly why the width is 10)
         Vector2 localXY = new Vector2(_rectTransform.localPosition.x, _rectTransform.localPosition.z)*-1f;
         // localXY is the center of the rect
-        Vector2 cropMax = ((localXY + _rectTransform.sizeDelta/2f) + 5f*Vector2.one)/10f;
-        Vector2 cropMin = ((localXY - _rectTransform.sizeDelta/2f) + 5f*Vector2.one)/10f;
+        Vector2 cropMax = ((localXY + _rectTransform.sizeDelta/2f) + 0.5f*transformScale*Vector2.one)/transformScale;
+        Vector2 cropMin = ((localXY - _rectTransform.sizeDelta/2f) + 0.5f*transformScale*Vector2.one)/transformScale;
 
         // Send those params to the shader
         _targetMaterial.SetVector("_CropMin", cropMin);

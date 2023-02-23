@@ -22,10 +22,11 @@ void chroma_float(float4 col, float3 key, float3 hsl_thresholds, float smooth, b
             bool p = all(step(0.0, hsl_thresholds - delta));
             m = p ? 0. : 1.;
         } else {
+            // this seems totally broken for some reason
             m = saturate(delta/smooth - hsl_thresholds);
-            if (all(1.-m <= 0.)) {
-                m = 0.;
-            }
+            // if (all(1.-m <= 0.)) {
+            //     m = 0.;
+            // }
         }
     }
     if (invert) m = 1.-m; 
