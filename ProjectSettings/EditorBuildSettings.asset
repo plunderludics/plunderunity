@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/tonytony/tonytony.unity
     guid: 8f0593993baab0540b628ed2e53402a6
   - enabled: 0
-    path: Assets/fourtextures/fourtextures.unity
+    path: Assets/mixer/fourtextures.unity
     guid: c298a29a7557ee24ab0acf02a6bbaf3f
   - enabled: 1
     path: Assets/collage/Scenes/feb25/_feb25.unity
