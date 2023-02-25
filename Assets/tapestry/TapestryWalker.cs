@@ -27,7 +27,7 @@ public class TapestryWalker : MonoBehaviour
     [Header("debug")]
     [SerializeField] TMPro.TMP_Text m_Debug;
 
-    [SerializeField] MixTextures m_TextureMixer;
+    [SerializeField] MixTextures2 m_TextureMixer;
     [SerializeField] SampleLoader m_SampleLoader;
     [SerializeField] Material m_Mat;
 
@@ -150,6 +150,13 @@ public class TapestryWalker : MonoBehaviour
 
             if (m_Mix.TryGetValue(emitter.Sample, out var mix)) {
                 m_Mix[emitter.Sample].Value = value;
+                var tr = $"track{mix.Track}";
+                if (value > 0) {
+                    m_SampleLoader.UnPause(tr);
+
+                } else {
+                    m_SampleLoader.Pause(tr);
+                }
                 continue;
             }
 
@@ -164,7 +171,14 @@ public class TapestryWalker : MonoBehaviour
             mix = new WalkerMix() { Track=track, Value=value };
             print($"added {emitter.Sample} @ track: {track}");
 
-            m_SampleLoader.LoadSample($"track{track}", emitter.Sample);
+            var t = $"track{track}";
+            m_SampleLoader.LoadSample(t, emitter.Sample);
+            if (value > 0) {
+                m_SampleLoader.UnPause(t);
+
+            } else {
+                m_SampleLoader.Pause(t);
+            }
 
             m_Mix[emitter.Sample] = mix;
         }

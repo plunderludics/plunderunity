@@ -7,15 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fourTexturesMix
-  m_Shader: {fileID: -6465566751694194690, guid: de30d22360aa8d24aa60c57c121fee74, type: 3}
+  m_Name: mixEight
+  m_Shader: {fileID: -6465566751694194690, guid: 2ea5d712cf7beb747809ae102358d2e1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - UNITY_UI_ALPHACLIP
-  - _CHROMAKEYENABLED_ON
-  - _ZWRITE_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -78,6 +75,22 @@ Material:
         m_Texture: {fileID: 8400000, guid: 4c4b3ca991c88294fbe26bf53ad31092, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _tex5:
+        m_Texture: {fileID: 8400000, guid: c18041f5b87b7f34a8b998c5a56a04c8, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex6:
+        m_Texture: {fileID: 8400000, guid: 176819d73ad621449a1434964697efd7, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex7:
+        m_Texture: {fileID: 8400000, guid: c26e639a2584a83439f84ad7f580550a, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex8:
+        m_Texture: {fileID: 8400000, guid: d78e24a80a8ce5a48af2c5347d41402f, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
@@ -113,10 +126,14 @@ Material:
     - _UVSec: 0
     - _UseUIAlphaClip: 1
     - _ZWrite: 1
-    - _tex1mix: 1
-    - _tex2mix: 1
-    - _tex3mix: 1
-    - _tex4mix: 1
+    - _tex1mix: 0
+    - _tex2mix: 0
+    - _tex3mix: 0.035116572
+    - _tex4mix: 0
+    - _tex5mix: 0
+    - _tex6mix: 0.64813304
+    - _tex7mix: 0
+    - _tex8mix: 0.009929987
     m_Colors:
     - _ChromaKeyColor: {r: 1, g: 0, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

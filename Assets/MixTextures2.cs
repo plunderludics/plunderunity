@@ -30,6 +30,8 @@ public class MixTextures2 : MonoBehaviour
     public void SetTex7mix(float value) => SetTexMix(7, value);
     public void SetTex8mix(float value) => SetTexMix(8, value);
 
+    public void SetTrackMix(int index, float value) => SetTexMix(index, value);
+
     public void SetTexMix(int index, float value) {
         switch (index) {
             case 1:
@@ -91,7 +93,7 @@ public class MixTextures2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         mat.SetFloat("_tex1mix", tex1mix);
         mat.SetFloat("_tex2mix", tex2mix);
         mat.SetFloat("_tex3mix", tex3mix);

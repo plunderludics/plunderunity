@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fourTexturesMix_test
+  m_Name: mix4
   m_Shader: {fileID: -6465566751694194690, guid: de30d22360aa8d24aa60c57c121fee74, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -113,9 +113,9 @@ Material:
     - _UVSec: 0
     - _UseUIAlphaClip: 1
     - _ZWrite: 1
-    - _tex1mix: NaN
-    - _tex2mix: NaN
-    - _tex3mix: NaN
+    - _tex1mix: 0
+    - _tex2mix: 0
+    - _tex3mix: 0
     - _tex4mix: 0
     m_Colors:
     - _ChromaKeyColor: {r: 1, g: 0, b: 1, a: 1}

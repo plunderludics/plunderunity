@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7567228215430137861}
   - component: {fileID: 7567228215430137860}
   - component: {fileID: 7567228215430137863}
+  - component: {fileID: 1895658171616189920}
   m_Layer: 0
   m_Name: tex2
   m_TagString: Untagged
@@ -54,7 +55,6 @@ MonoBehaviour:
   childWindowZDistance: 0.02
   partialWindowTitle_: tex2
   desktopIndex_: 0
-  targetTexture: {fileID: 8400000, guid: ec236c2089e281e4786748a1182fa22f, type: 2}
   captureMode: 3
   capturePriority: -1
   captureRequestTiming: 0
@@ -115,6 +115,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1895658171616189920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567228215430137862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e609fd47bd88f9d45b78b23bb7afaa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowCapture: {fileID: 7567228215430137861}
+  targetTexture: {fileID: 8400000, guid: ec236c2089e281e4786748a1182fa22f, type: 2}
+  blitMaterial: {fileID: 0}
+  pass: 0
+  clear: 1
 --- !u!1 &7567228215802891230
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +144,7 @@ GameObject:
   - component: {fileID: 7567228215802891229}
   - component: {fileID: 7567228215802891228}
   - component: {fileID: 7567228215802891231}
+  - component: {fileID: 3796778129844452520}
   m_Layer: 0
   m_Name: tex1
   m_TagString: Untagged
@@ -169,7 +187,6 @@ MonoBehaviour:
   childWindowZDistance: 0.02
   partialWindowTitle_: tex1
   desktopIndex_: 0
-  targetTexture: {fileID: 8400000, guid: 9e17e52a11156ef4d99aa0cbc5e29ba4, type: 2}
   captureMode: 3
   capturePriority: -1
   captureRequestTiming: 0
@@ -230,6 +247,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3796778129844452520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567228215802891230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e609fd47bd88f9d45b78b23bb7afaa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowCapture: {fileID: 7567228215802891229}
+  targetTexture: {fileID: 8400000, guid: 9e17e52a11156ef4d99aa0cbc5e29ba4, type: 2}
+  blitMaterial: {fileID: 0}
+  pass: 0
+  clear: 1
 --- !u!1 &7567228216952173908
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +276,7 @@ GameObject:
   - component: {fileID: 7567228216952173909}
   - component: {fileID: 7567228216952173896}
   - component: {fileID: 7567228216952173899}
+  - component: {fileID: 887741039130489371}
   m_Layer: 0
   m_Name: tex3
   m_TagString: Untagged
@@ -284,7 +319,6 @@ MonoBehaviour:
   childWindowZDistance: 0.02
   partialWindowTitle_: tex3
   desktopIndex_: 0
-  targetTexture: {fileID: 8400000, guid: 16ba9478172d3744985a0acf66cad1e9, type: 2}
   captureMode: 3
   capturePriority: -1
   captureRequestTiming: 0
@@ -345,6 +379,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &887741039130489371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567228216952173908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e609fd47bd88f9d45b78b23bb7afaa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowCapture: {fileID: 7567228216952173909}
+  targetTexture: {fileID: 8400000, guid: 16ba9478172d3744985a0acf66cad1e9, type: 2}
+  blitMaterial: {fileID: 0}
+  pass: 0
+  clear: 1
 --- !u!1 &7567228217038942057
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +408,7 @@ GameObject:
   - component: {fileID: 7567228217038942060}
   - component: {fileID: 7567228217038942063}
   - component: {fileID: 7567228217038942062}
+  - component: {fileID: 7354675116116123634}
   m_Layer: 0
   m_Name: tex4
   m_TagString: Untagged
@@ -399,7 +451,6 @@ MonoBehaviour:
   childWindowZDistance: 0.02
   partialWindowTitle_: tex4
   desktopIndex_: 0
-  targetTexture: {fileID: 8400000, guid: 4c4b3ca991c88294fbe26bf53ad31092, type: 2}
   captureMode: 3
   capturePriority: -1
   captureRequestTiming: 0
@@ -460,6 +511,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7354675116116123634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567228217038942057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e609fd47bd88f9d45b78b23bb7afaa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowCapture: {fileID: 7567228217038942060}
+  targetTexture: {fileID: 8400000, guid: 4c4b3ca991c88294fbe26bf53ad31092, type: 2}
+  blitMaterial: {fileID: 0}
+  pass: 0
+  clear: 1
 --- !u!1 &8963437787251594712
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,9 +537,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8620818791316747163}
-  - component: {fileID: 6482862905686298756}
+  - component: {fileID: 2678208692691121596}
   m_Layer: 0
-  m_Name: fourTexturesMixer
+  m_Name: mixer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,9 +562,9 @@ Transform:
   - {fileID: 7567228216952173898}
   - {fileID: 7567228217038942061}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6482862905686298756
+--- !u!114 &2678208692691121596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -505,11 +573,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 8963437787251594712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95cff8102a378a043988c966a11edd4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d724bb42c07d8f4cb17f7e2d09070b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: cbb7f5bf228d756448c6768fb1bdd934, type: 2}
-  tex1mix: 1
-  tex2mix: 1
-  tex3mix: 1
-  tex4mix: 1
+  tex1mix: 0
+  tex2mix: 0
+  tex3mix: 0
+  tex4mix: 0
+  MinInput: -4.95
+  MaxInput: 4.95
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
