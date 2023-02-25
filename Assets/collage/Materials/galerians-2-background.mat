@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: golf-solar
-  m_Shader: {fileID: -6465566751694194690, guid: 99ca0e3843de82d4594e729c275f1d53, type: 3}
+  m_Name: galerians-2-background
+  m_Shader: {fileID: -6465566751694194690, guid: a41466b11315ca0499bca6ea6be534ee, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,6 +36,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Background:
+        m_Texture: {fileID: 2800000, guid: 187f7b5110cf2704d9eaf375e291862f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -73,14 +77,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f5101c1df37740d8831bcece731a8007_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 1069e89fec554634cab65e7093c3238d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 996f6877b5292824090710c3b83a3b34, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Brightness: 1
     - _BumpScale: 1
     - _Bypass: 0
     - _ChromaKeyBrightnessRange: 0.06
@@ -89,7 +92,6 @@ Material:
     - _ChromaKeyInvert: 0
     - _ChromaKeySaturationRange: 0.08
     - _ColorMask: 15
-    - _Contrast: 1.5
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -98,12 +100,13 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Invert: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Power: 3.21
     - _Rotate180: 1
+    - _Sharpness: 5.15
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -121,4 +124,6 @@ Material:
     - _CropMax: {r: 0.800364, g: 0.77983654, b: 0, a: 0}
     - _CropMin: {r: 0.25992, g: 0.49940348, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _mult: {r: 1, g: 1, b: 0, a: 0}
+    - _nudge: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

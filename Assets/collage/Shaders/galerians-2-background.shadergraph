@@ -23,9 +23,6 @@
         },
         {
             "m_Id": "03c77832474241758c16384b86c76db3"
-        },
-        {
-            "m_Id": "906235bfa95c4fb3bec864c2cf3d868c"
         }
     ],
     "m_Keywords": [],
@@ -104,9 +101,6 @@
         },
         {
             "m_Id": "70de3077e33649abab8dcbc4e2480de4"
-        },
-        {
-            "m_Id": "673a41eed7a94ab093ff5a6f4ddd1ece"
         }
     ],
     "m_GroupDatas": [],
@@ -264,20 +258,6 @@
                     "m_Id": "f5101c1df37740d8831bcece731a8007"
                 },
                 "m_SlotId": 3
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "673a41eed7a94ab093ff5a6f4ddd1ece"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "f5101c1df37740d8831bcece731a8007"
-                },
-                "m_SlotId": 1
             }
         },
         {
@@ -1070,19 +1050,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
-    "m_ObjectId": "357b76e07cab44f2a19a796088515565",
-    "m_Id": 0,
-    "m_DisplayName": "Background",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_BareResource": false
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "35e37eaabe7f4e16b68fe90926d45e01",
     "m_Id": 0,
@@ -1624,41 +1591,6 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "673a41eed7a94ab093ff5a6f4ddd1ece",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 212.0,
-            "y": 598.0,
-            "width": 146.5,
-            "height": 34.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "357b76e07cab44f2a19a796088515565"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "906235bfa95c4fb3bec864c2cf3d868c"
-    }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "6b985d622ec44551823b0a59f3a888e7",
     "m_Group": {
         "m_Id": ""
@@ -1970,35 +1902,6 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
-    "m_ObjectId": "906235bfa95c4fb3bec864c2cf3d868c",
-    "m_Guid": {
-        "m_GuidSerialized": "e522c294-a248-4a1f-a1ab-c9238d4dcab0"
-    },
-    "m_Name": "Background",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Background",
-    "m_DefaultReferenceName": "_Background",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"996f6877b5292824090710c3b83a3b34\",\"type\":3}}",
-        "m_Guid": ""
-    },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
-    "m_Modifiable": true,
-    "m_DefaultType": 0
 }
 
 {
@@ -2900,9 +2803,6 @@
         },
         {
             "m_Id": "03c77832474241758c16384b86c76db3"
-        },
-        {
-            "m_Id": "906235bfa95c4fb3bec864c2cf3d868c"
         }
     ]
 }

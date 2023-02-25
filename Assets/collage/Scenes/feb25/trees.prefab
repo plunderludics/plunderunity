@@ -908,7 +908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.82541
+      value: 1.813666
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_SizeDelta.y
@@ -920,7 +920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.49284
+      value: -3.486968
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5137,23 +5137,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.740866
+      value: 1.731231
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1.4761
+      value: 1.542
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.99
+      value: -2.95705
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.044515
+      value: -0.039698
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175712, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5917,7 +5917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2.2763
+      value: 2.35044
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_SizeDelta.y
@@ -5929,7 +5929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.06
+      value: -1.08098
       objectReference: {fileID: 0}
     - target: {fileID: 7411211402320318103, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6041,7 +6041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: windowTitleSubstring
-      value: _silent-hill-look
+      value: _silent-hill-turn
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: useCustomRenderTexture

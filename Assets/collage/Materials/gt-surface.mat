@@ -113,7 +113,7 @@ Material:
     m_Colors:
     - _ChromaKeyColor: {r: 0.49803925, g: 0.69803923, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CropMax: {r: 0.5914948, g: 0.872805, b: 0, a: 0}
-    - _CropMin: {r: 0.41740817, g: 0.72519505, b: 0, a: 0}
+    - _CropMax: {r: 0.59053135, g: 0.872805, b: 0, a: 0}
+    - _CropMin: {r: 0.4174083, g: 0.718605, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
