@@ -12,7 +12,7 @@ public class WrapPerception : MonoBehaviour
         didthing = true;
 
         var p = transform.position;
-        var d = FindObjectOfType<TapestryWalker>().WrapLength;
+        var d = FindObjectOfType<TapestryBlender>().WrapLength;
         // linear
         Instantiate(this, p + d * Vector3.forward, Quaternion.identity);
         Instantiate(this, p - d * Vector3.forward, Quaternion.identity);
@@ -24,12 +24,6 @@ public class WrapPerception : MonoBehaviour
         Instantiate(this, p - d * Vector3.forward + d * Vector3.right, Quaternion.identity);
         Instantiate(this, p + d * Vector3.forward - d * Vector3.right, Quaternion.identity);
         Instantiate(this, p - d * Vector3.forward - d * Vector3.right, Quaternion.identity);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }

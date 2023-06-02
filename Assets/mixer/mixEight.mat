@@ -126,14 +126,14 @@ Material:
     - _UVSec: 0
     - _UseUIAlphaClip: 1
     - _ZWrite: 1
-    - _tex1mix: 0
+    - _tex1mix: 0.76168746
     - _tex2mix: 0
-    - _tex3mix: 0.035116572
-    - _tex4mix: 0
+    - _tex3mix: 0.76130676
+    - _tex4mix: 0.5525927
     - _tex5mix: 0
-    - _tex6mix: 0.64813304
+    - _tex6mix: 0
     - _tex7mix: 0
-    - _tex8mix: 0.009929987
+    - _tex8mix: 0
     m_Colors:
     - _ChromaKeyColor: {r: 1, g: 0, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

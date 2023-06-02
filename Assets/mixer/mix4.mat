@@ -113,8 +113,8 @@ Material:
     - _UVSec: 0
     - _UseUIAlphaClip: 1
     - _ZWrite: 1
-    - _tex1mix: 0
-    - _tex2mix: 0
+    - _tex1mix: 1
+    - _tex2mix: 1
     - _tex3mix: 0
     - _tex4mix: 0
     m_Colors:
