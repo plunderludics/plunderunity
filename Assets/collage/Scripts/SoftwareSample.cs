@@ -51,7 +51,7 @@ public class SoftwareSample : MonoBehaviour
     [SerializeField, Readonly] bool _waitingForSource = false;
 
     void OnEnable() {
-        BizHawk.Emulation.Cores.Waterbox.WaterboxHost.nDllCopies = 2; // temp hack TODO remove
+        BizHawk.Emulation.Cores.Waterbox.WaterboxHost.nDllCopies = 1; // temp hack TODO remove
         Reset();
     }
 
@@ -177,7 +177,7 @@ public class SoftwareSample : MonoBehaviour
             if (source == Source.WindowCapture && windowCapture != null && windowCapture.window != null && windowCapture.window.texture != null) {
                 SetupAfterSourceAvailable();
                 _waitingForSource = false;
-            } else if (source == Source.UnityHawk && unityHawkEmulator.IsRunning) {
+            } else if (source == Source.UnityHawk && unityHawkEmulator != null && unityHawkEmulator.IsRunning) {
                 SetupAfterSourceAvailable();
                 _waitingForSource = false;
             }
