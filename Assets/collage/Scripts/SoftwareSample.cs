@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using uWindowCapture;
 using NaughtyAttributes;
+using UnityHawk;
 
-[ExecuteInEditMode]
+// [ExecuteInEditMode]
 public class SoftwareSample : MonoBehaviour
 {
     [Header("Renderer")]
@@ -24,6 +25,8 @@ public class SoftwareSample : MonoBehaviour
     [Header("UnityHawk")]
     [ShowIf("source", Source.UnityHawk)]
     [SerializeField] UnityHawk.Emulator unityHawkEmulator;
+    [ShowIf("source", Source.UnityHawk)]
+    [SerializeField] string sampleDir;
 
     [Header("Blitter")]
     [Readonly, SerializeField] Blitter blitter;
@@ -51,6 +54,7 @@ public class SoftwareSample : MonoBehaviour
     [SerializeField, Readonly] bool _waitingForSource = false;
 
     void OnEnable() {
+        UnityHawk.UnityHawk.InitIfNeeded();
         BizHawk.Emulation.Cores.Waterbox.WaterboxHost.nDllCopies = 1; // temp hack TODO remove
         Reset();
     }

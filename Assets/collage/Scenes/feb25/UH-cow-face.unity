@@ -946,6 +946,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c150c011a6544b4b8054bba7ee5e5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2042798922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042798924}
+  - component: {fileID: 2042798923}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2042798923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042798922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAttachedRenderer: 1
+  targetRenderer: {fileID: 0}
+  romFileName: mario.nes
+  configFileName: config.ini
+  saveStateFileName: 
+  luaScripts: []
+  frameRateMultiplier: 1
+  disableMultithreadingForDebug: 0
+  frame: 0
+  uncappedFps: 0
+  emulatorDefaultFps: 0
+  currentCore: nul
+--- !u!4 &2042798924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042798922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14, y: -5, z: 327.49985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &2145050072
 Material:
   serializedVersion: 8
@@ -1188,16 +1244,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 292222880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a001f230289f52a4f8d9e80f9575afb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useAttachedRenderer: 0
+  targetRenderer: {fileID: 0}
   romFileName: F:/pludics/roms/WWF War Zone/WWF War Zone (USA) (v1.1).cue
   configFileName: config.ini
   saveStateFileName: F:/pludics/samples/wwe-face/save.State
   luaScripts:
   - F:/pludics/samples/wwe-face/wwe-face.lua
-  targetRenderer: {fileID: 0}
-  frameRateMultiplier: 1
+  frameRateMultiplier: 3
+  disableMultithreadingForDebug: 1
   frame: 0
   uncappedFps: 0
   emulatorDefaultFps: 0
@@ -1466,17 +1524,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2895073698401173935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a001f230289f52a4f8d9e80f9575afb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useAttachedRenderer: 0
+  targetRenderer: {fileID: 0}
   romFileName: F:/pludics/roms/Command & Conquer/Command & Conquer (USA) (Disc 1)
     (GDI).cue
   configFileName: config.ini
   saveStateFileName: F:/pludics/samples/commandconquer/moreguys.State
   luaScripts:
   - F:/pludics/samples/commandconquer/commandconquer.lua
-  targetRenderer: {fileID: 0}
-  frameRateMultiplier: 1
+  frameRateMultiplier: 3
+  disableMultithreadingForDebug: 1
   frame: 0
   uncappedFps: 0
   emulatorDefaultFps: 0
@@ -1627,12 +1687,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
-      propertyPath: blitter
-      value: 
+      propertyPath: source
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      propertyPath: blitter
+      value: 
+      objectReference: {fileID: 4642060402063514063}
+    - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: renderTexture
@@ -1641,11 +1705,19 @@ PrefabInstance:
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: windowCapture
       value: 
-      objectReference: {fileID: 4642060402063514055}
+      objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: renderMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      propertyPath: _waitingForSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 4642060402063514059}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: useCustomMaterial
       value: 0
@@ -1691,17 +1763,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7411211403060175715, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
   m_PrefabInstance: {fileID: 4642060402063514052}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4642060402063514055 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8611044809475584550, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
-  m_PrefabInstance: {fileID: 4642060402063514052}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333891872}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c150c011a6544b4b8054bba7ee5e5ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4642060402063514059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,17 +1772,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 333891872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a001f230289f52a4f8d9e80f9575afb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useAttachedRenderer: 0
+  targetRenderer: {fileID: 0}
   romFileName: F:/pludics/roms/Boku no Natsuyasumi - Summer Holiday 20th Century
     (Japan)/Boku no Natsuyasumi - Summer Holiday 20th Century (Japan).cue
   configFileName: config.ini
   saveStateFileName: F:/pludics/samples/bnn-cow/cow-night.State
   luaScripts:
   - F:/pludics/samples/bnn-cow/bnn-cow.lua
-  targetRenderer: {fileID: 0}
-  frameRateMultiplier: 1
+  frameRateMultiplier: 3
+  disableMultithreadingForDebug: 1
   frame: 0
   uncappedFps: 0
   emulatorDefaultFps: 0
@@ -1731,6 +1794,22 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7411211403060175712, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
   m_PrefabInstance: {fileID: 4642060402063514052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4642060402063514063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333891872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTexture: {fileID: 0}
+  blitMaterial: {fileID: 0}
+  pass: 0
+  clear: 1
 --- !u!4 &4859431346529005308
 Transform:
   m_ObjectHideFlags: 0
