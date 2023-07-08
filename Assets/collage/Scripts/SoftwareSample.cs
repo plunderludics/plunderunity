@@ -5,7 +5,7 @@ using uWindowCapture;
 using NaughtyAttributes;
 using UnityHawk;
 
-// [ExecuteInEditMode]
+[ExecuteInEditMode]
 public class SoftwareSample : MonoBehaviour
 {
     [Header("Renderer")]
@@ -25,8 +25,6 @@ public class SoftwareSample : MonoBehaviour
     [Header("UnityHawk")]
     [ShowIf("source", Source.UnityHawk)]
     [SerializeField] UnityHawk.Emulator unityHawkEmulator;
-    [ShowIf("source", Source.UnityHawk)]
-    [SerializeField] string sampleDir;
 
     [Header("Blitter")]
     [Readonly, SerializeField] Blitter blitter;

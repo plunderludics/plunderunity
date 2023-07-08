@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -451,6 +451,52 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
+--- !u!1 &766352483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5737094667531537195, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &766352490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766352483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTexture: {fileID: 0}
+  blitMaterial: {fileID: 0}
+  pass: 0
+  clear: 1
+--- !u!114 &766352491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766352483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAttachedRenderer: 0
+  targetRenderer: {fileID: 0}
+  romFileName: F:\pludics\roms\Jeopardy! (USA)\Jeopardy! (USA).cue
+  configFileName: 
+  saveStateFileName: F:\pludics\samples\jeopardy-draw\draw.State
+  luaScripts:
+  - F:\pludics\samples\jeopardy-draw\jeopardy-draw.lua
+  frameRateMultiplier: 100
+  disableMultithreadingForDebug: 1
+  frame: 0
+  uncappedFps: 0
+  emulatorDefaultFps: 0
+  currentCore: nul
 --- !u!21 &1004220380
 Material:
   serializedVersion: 8
@@ -1218,7 +1264,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30156
+  m_Name: pb_Mesh-29420
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1683,14 +1729,50 @@ PrefabInstance:
       propertyPath: renderMaterial
       value: 
       objectReference: {fileID: 1082787914}
+    - target: {fileID: 2974531574699735874, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: source
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574699735874, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 5737094667065640587}
     - target: {fileID: 2974531574699735877, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 383268646}
+    - target: {fileID: 2974531574699735879, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908539, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: source
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908539, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: blitter
+      value: 
+      objectReference: {fileID: 5737094667065640579}
+    - target: {fileID: 2974531574835908539, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: windowCapture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908539, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: _waitingForSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908539, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 5737094667065640584}
     - target: {fileID: 2974531574835908540, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1198835355}
+    - target: {fileID: 2974531574835908542, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_Name
+      value: galerians-peace-walk-AP (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2974531574862573648, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1699,6 +1781,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2145138488}
+    - target: {fileID: 2974531575507539697, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: source
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531575507539697, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: blitter
+      value: 
+      objectReference: {fileID: 5737094667065640581}
+    - target: {fileID: 2974531575507539697, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: windowCapture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531575507539697, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: _waitingForSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531575507539697, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 5737094667065640584}
+    - target: {fileID: 2974531575507539700, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_Name
+      value: galerians-peace-walk (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2974531575507539702, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1716,6 +1822,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1778404263}
     - target: {fileID: 2974531575804085404, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: source
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531575804085404, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 1128337481}
@@ -1723,10 +1833,22 @@ PrefabInstance:
       propertyPath: renderMaterial
       value: 
       objectReference: {fileID: 414552724}
+    - target: {fileID: 2974531576037086648, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2974531576037086650, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 265542722}
+    - target: {fileID: 2974531576037086653, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: source
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531576037086653, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 5737094667065640587}
     - target: {fileID: 2974531576062235910, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1735,6 +1857,38 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1004220380}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: source
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: blitter
+      value: 
+      objectReference: {fileID: 766352490}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: renderTexture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: windowCapture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: _waitingForSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 766352491}
+    - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: useCustomRenderTexture
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5737094667806416371, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1795,6 +1949,281 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1646094134}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5737094667531537196, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+--- !u!1 &5737094667065640578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2974531574835908542, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5737094667065640579 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1098842421285175584, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737094667065640578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5737094667065640581 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1098842421688342634, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5737094667065640583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2974531576037086648, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5737094667065640584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737094667065640578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAttachedRenderer: 0
+  targetRenderer: {fileID: 0}
+  romFileName: F:\pludics\roms\Galerians (USA) (Demo)\Galerians (USA) (Demo).cue
+  configFileName: 
+  saveStateFileName: F:\pludics\samples\galerians-peace-walk\AP_charged._State.State
+  luaScripts:
+  - F:\pludics\samples\galerians-peace-walk\galerians-peace-walk.lua
+  frameRateMultiplier: 100
+  disableMultithreadingForDebug: 1
+  frame: 0
+  uncappedFps: 0
+  emulatorDefaultFps: 0
+  currentCore: nul
+--- !u!114 &5737094667065640587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737094667065640583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAttachedRenderer: 0
+  targetRenderer: {fileID: 0}
+  romFileName: F:\pludics\roms\Jeopardy! (USA)\Jeopardy! (USA).cue
+  configFileName: 
+  saveStateFileName: F:\pludics\samples\jeopardy-draw\draw.State
+  luaScripts:
+  - F:\pludics\samples\jeopardy-draw\jeopardy-draw.lua
+  frameRateMultiplier: 100
+  disableMultithreadingForDebug: 1
+  frame: 0
+  uncappedFps: 0
+  emulatorDefaultFps: 0
+  currentCore: nul
+--- !u!82 &5737094667065640588
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737094667065640583}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &5737094667065640593
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737094667065640578}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

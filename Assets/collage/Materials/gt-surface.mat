@@ -89,7 +89,7 @@ Material:
     - _DstBlend: 0
     - _FlipHorizontal: 1
     - _FlipV: 0
-    - _FlipVertical: 1
+    - _FlipVertical: 0
     - _Float: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
