@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GK;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
-public class TapestryWalker : MonoBehaviour
+public class TapestryBlender : MonoBehaviour
 {
     private class WalkerMix {
         public int Track;
         public float Value;
     }
 
+    [Header("config")]
+    [SerializeField] bool m_ReloadSampleOnUnpause = false;
+
     [Header("tuning")]
-    [SerializeField] float m_Radius;
-    [SerializeField] float m_Speed;
-    [SerializeField] float m_WrapLength;
+    [SerializeField] FloatReference m_WrapLength;
     [SerializeField] AnimationCurve m_SqrDistCurve;
 
     [Header("mixing")]
@@ -31,14 +33,14 @@ public class TapestryWalker : MonoBehaviour
     [SerializeField] SampleLoader m_SampleLoader;
     [SerializeField] Material m_Mat;
 
-
     Dictionary<string, WalkerMix> m_Mix;
     IEnumerable<TapestryEmitter> m_Emitters;
     IEnumerable<TapestryEmitter> m_Verts;
     DelaunayTriangulation m_Triangulation;
     List<int> m_AvailableTracks;
 
-    public float WrapLength => m_WrapLength;
+    public float WrapLength => m_WrapLength.Value;
+    public IEnumerable<string> AllTracks => m_Mix.Values.Select(m => TrackName(m.Track));
 
     // Start is called before the first frame update
     void Awake()
@@ -63,15 +65,6 @@ public class TapestryWalker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // move walker
-        var velocity =
-            (Input.GetAxis("Vertical") * Vector3.forward +
-            Input.GetAxis("Horizontal") * Vector3.right)
-            * m_Speed;
-
-        transform.position += velocity * Time.deltaTime;
-        transform.position = Wrap(transform.position);
-
         // TODO: optimize
         m_Emitters = m_Emitters.OrderBy(Dist).ToList();
 
@@ -150,12 +143,19 @@ public class TapestryWalker : MonoBehaviour
 
             if (m_Mix.TryGetValue(emitter.Sample, out var mix)) {
                 m_Mix[emitter.Sample].Value = value;
-                var tr = $"track{mix.Track}";
+                var tr = TrackName(mix.Track);
                 if (value > 0) {
-                    m_SampleLoader.UnPause(tr);
+                    if(m_SampleLoader.IsPaused(tr)) {
+                        m_SampleLoader.UnPause(tr);
+                        if (m_ReloadSampleOnUnpause) {
+                            m_SampleLoader.LoadSample(tr, emitter.Sample);
+                        }
+                    }
 
                 } else {
-                    m_SampleLoader.Pause(tr);
+                    if(!m_SampleLoader.IsPaused(tr)) {
+                        m_SampleLoader.Pause(tr);
+                    }
                 }
                 continue;
             }
@@ -171,14 +171,20 @@ public class TapestryWalker : MonoBehaviour
             mix = new WalkerMix() { Track=track, Value=value };
             print($"added {emitter.Sample} @ track: {track}");
 
-            var t = $"track{track}";
-            m_SampleLoader.LoadSample(t, emitter.Sample);
+            var t = TrackName(track);
             if (value > 0) {
-                m_SampleLoader.UnPause(t);
+                    if(m_SampleLoader.IsPaused(t)) {
+                        m_SampleLoader.UnPause(t);
+                        if (m_ReloadSampleOnUnpause) {
+                            m_SampleLoader.LoadSample(t, emitter.Sample);
+                        }
+                    }
 
-            } else {
-                m_SampleLoader.Pause(t);
-            }
+                } else {
+                    if(!m_SampleLoader.IsPaused(t)) {
+                        m_SampleLoader.Pause(t);
+                    }
+                }
 
             m_Mix[emitter.Sample] = mix;
         }
@@ -205,15 +211,12 @@ public class TapestryWalker : MonoBehaviour
     float Dist(TapestryEmitter other) =>
         (Wrap(transform.position) - other.transform.position).sqrMagnitude;
 
-    Vector3 Wrap(Vector3 pos) => new Vector3 (
-        Mathf.Repeat(pos.x, m_WrapLength),
-        Mathf.Repeat(pos.y, m_WrapLength),
-        Mathf.Repeat(pos.z, m_WrapLength)
-    );
+
+    Vector3 Wrap(Vector3 pos) => Wrapper.Wrap(pos, m_WrapLength.Value);
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.green;
-        var dim =Vector3.one * m_WrapLength;
+        var dim = Vector3.one * m_WrapLength.Value;
         Gizmos.DrawWireCube(Vector3.zero + 0.5f*dim, dim);
 
         if(m_Emitters == null || m_Emitters.Count() == 0) return;
@@ -237,4 +240,7 @@ public class TapestryWalker : MonoBehaviour
         }
 
     }
+
+    private string TrackName(string track) => $"track{track}";
+    private string TrackName(int track) => $"track{track}";
 }

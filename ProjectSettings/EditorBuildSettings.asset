@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/mixer/fourtextures.unity
     guid: c298a29a7557ee24ab0acf02a6bbaf3f
-  - enabled: 1
+  - enabled: 0
     path: Assets/collage/Scenes/feb25/_feb25.unity
     guid: a2e208dc5513dbf4b9b135374bb92a31
   - enabled: 0
     path: Assets/collage/Scenes/feb25/cow-face.unity
     guid: 93af89e0d8882554e8d4f1fdd8906987
+  - enabled: 1
+    path: Assets/tapestry/tapestry4 (chaos).unity
+    guid: 91aadd57df76cad4db51d188b71f2b3a
   m_configObjects: {}
