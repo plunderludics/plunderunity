@@ -414,13 +414,66 @@ Material:
     - _CropMax: {r: 0.93399507, g: 0.78263, b: 0, a: 0}
     - _CropMin: {r: 0.82886505, g: 0.76362, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!84 &511539826
+--- !u!1 &766352483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5737094667531537195, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &766352490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766352483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTexture: {fileID: 805248356}
+  blitMaterial: {fileID: 2100000, guid: 9edc8acc0dc96c046bcd2dd84063476f, type: 2}
+  pass: 0
+  clear: 1
+--- !u!114 &766352491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766352483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAttachedRenderer: 1
+  targetRenderer: {fileID: 766352493}
+  passInputFromUnity: 1
+  captureEmulatorAudio: 0
+  romFileName: geotools.cue
+  configFileName: F:\pludics\samples\jeopardy-draw\config.ini
+  saveStateFileName: F:\pludics\samples\jeopardy-draw\draw.State
+  luaScriptFileName: F:\pludics\samples\jeopardy-draw\jeopardy-draw.lua
+  runInEditMode: 0
+  showBizhawkGui: 0
+  writeBizhawkLogs: 1
+  bizhawkLogLocation: BizHawkLogs\white (jeopardy-draw)-67846.log
+  _initialized: 0
+  _isRunning: 0
+  audioBufferSurplus: 4410
+--- !u!23 &766352493 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5737094667531537197, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!84 &793620373
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: galerians-combat-walk (1)
+  m_Name: galerians-peace-walk (health bar)
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -428,8 +481,8 @@ RenderTexture:
   m_DownscaleFallback: 0
   m_IsAlphaChannelOptional: 0
   serializedVersion: 5
-  m_Width: 1400
-  m_Height: 960
+  m_Width: 350
+  m_Height: 240
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthStencilFormat: 94
@@ -451,52 +504,43 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
---- !u!1 &766352483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5737094667531537195, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
-  m_PrefabInstance: {fileID: 5737094667065640577}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &766352490
-MonoBehaviour:
+--- !u!84 &805248356
+RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766352483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTexture: {fileID: 0}
-  blitMaterial: {fileID: 0}
-  pass: 0
-  clear: 1
---- !u!114 &766352491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766352483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useAttachedRenderer: 0
-  targetRenderer: {fileID: 0}
-  romFileName: F:\pludics\roms\Jeopardy! (USA)\Jeopardy! (USA).cue
-  configFileName: 
-  saveStateFileName: F:\pludics\samples\jeopardy-draw\draw.State
-  luaScripts:
-  - F:\pludics\samples\jeopardy-draw\jeopardy-draw.lua
-  frameRateMultiplier: 100
-  disableMultithreadingForDebug: 1
-  frame: 0
-  uncappedFps: 0
-  emulatorDefaultFps: 0
-  currentCore: nul
+  m_Name: white (jeopardy-draw)
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 560
+  m_Height: 480
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!21 &1004220380
 Material:
   serializedVersion: 8
@@ -549,6 +593,43 @@ RenderTexture:
   serializedVersion: 5
   m_Width: 700
   m_Height: 480
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
+--- !u!84 &1069425899
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: galerians-peace-walk (main)
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 350
+  m_Height: 240
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthStencilFormat: 94
@@ -680,115 +761,6 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
---- !u!21 &1198835355
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: galerians-combat-walk-AP (1)-Surface
-  m_Shader: {fileID: -6465566751694194690, guid: 69d9d028b6bd9e9429510266b04612b4, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 1282129889}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _FlipVertical: 1
-    m_Colors:
-    - _CropMax: {r: 0.93399507, g: 0.78263, b: 0, a: 0}
-    - _CropMin: {r: 0.82886505, g: 0.76362, b: 0, a: 0}
-  m_BuildTextureStacks: []
---- !u!21 &1236593388
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: galerians-combat-walk (1)-Surface
-  m_Shader: {fileID: -6465566751694194690, guid: 69d9d028b6bd9e9429510266b04612b4, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 511539826}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _FlipVertical: 1
-    m_Colors:
-    - _CropMax: {r: 0.764557, g: 0.592872, b: 0, a: 0}
-    - _CropMin: {r: 0.16794698, g: -0.192558, b: 0, a: 0}
-  m_BuildTextureStacks: []
---- !u!84 &1282129889
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: galerians-combat-walk-AP (1)
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1400
-  m_Height: 960
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!84 &1325568072
 RenderTexture:
   m_ObjectHideFlags: 0
@@ -863,6 +835,78 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
+--- !u!21 &1519565066
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: white (jeopardy-draw)-Surface
+  m_Shader: {fileID: -6465566751694194690, guid: 69d9d028b6bd9e9429510266b04612b4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 805248356}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _FlipVertical: 0
+    m_Colors:
+    - _CropMax: {r: 0.5966755, g: 0.718679, b: 0, a: 0}
+    - _CropMin: {r: 0.075058505, g: 0.131179, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!21 &1580265642
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: galerians-peace-walk (health bar)-Surface
+  m_Shader: {fileID: -6465566751694194690, guid: 69d9d028b6bd9e9429510266b04612b4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 793620373}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _FlipVertical: 0
+    m_Colors:
+    - _CropMax: {r: 0.93399507, g: 0.78263, b: 0, a: 0}
+    - _CropMin: {r: 0.82886505, g: 0.76362, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!84 &1602798563
 RenderTexture:
   m_ObjectHideFlags: 0
@@ -1258,13 +1302,127 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1724759774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724759775}
+  - component: {fileID: 1724759779}
+  - component: {fileID: 1724759778}
+  - component: {fileID: 1724759777}
+  - component: {fileID: 1724759776}
+  m_Layer: 0
+  m_Name: Black
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724759775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724759774}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: 22, z: 270.43}
+  m_LocalScale: {x: 264.31433, y: 264.31433, z: 264.31433}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1865978689}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1724759776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724759774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c3c5009c1e99a499a86566a4f7903b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emulators:
+  - {fileID: 766352491}
+  - {fileID: 5737094667065640582}
+--- !u!64 &1724759777
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724759774}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1724759778
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724759774}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e46c7ddb7f50112428b60e50274a6b0b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1724759779
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724759774}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!43 &1751584312
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-29420
+  m_Name: pb_Mesh83270
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -1533,6 +1691,11 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
+--- !u!4 &1865978689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5737094667890083001, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!84 &1963928490
 RenderTexture:
   m_ObjectHideFlags: 0
@@ -1570,6 +1733,42 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
+--- !u!21 &2045124402
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: galerians-peace-walk (main)-Surface
+  m_Shader: {fileID: -6465566751694194690, guid: 69d9d028b6bd9e9429510266b04612b4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 1069425899}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _FlipVertical: 0
+    m_Colors:
+    - _CropMax: {r: 0.764557, g: 0.592872, b: 0, a: 0}
+    - _CropMin: {r: 0.16794698, g: -0.192558, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!850595691 &2062669850
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1764,14 +1963,58 @@ PrefabInstance:
     - target: {fileID: 2974531574835908539, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: unityHawkEmulator
       value: 
-      objectReference: {fileID: 5737094667065640584}
+      objectReference: {fileID: 5737094667065640582}
     - target: {fileID: 2974531574835908540, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1198835355}
+      objectReference: {fileID: 1580265642}
     - target: {fileID: 2974531574835908542, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Name
-      value: galerians-peace-walk-AP (1)
+      value: galerians-peace-walk (health bar)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908542, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 277.652
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -452.933
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49995416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.49995416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50004584
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.50004584
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974531574835908543, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 2974531574862573648, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1800,15 +2043,15 @@ PrefabInstance:
     - target: {fileID: 2974531575507539697, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: unityHawkEmulator
       value: 
-      objectReference: {fileID: 5737094667065640584}
+      objectReference: {fileID: 5737094667065640582}
     - target: {fileID: 2974531575507539700, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Name
-      value: galerians-peace-walk (1)
+      value: galerians-peace-walk (main)
       objectReference: {fileID: 0}
     - target: {fileID: 2974531575507539702, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1236593388}
+      objectReference: {fileID: 2045124402}
     - target: {fileID: 2974531575507539703, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1857,6 +2100,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1004220380}
+    - target: {fileID: 5737094667531537194, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -17.63607
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537194, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -84.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537194, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537195, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_Name
+      value: white (jeopardy-draw)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094667531537197, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1519565066}
+    - target: {fileID: 5737094667531537199, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5737094667531537201, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: source
       value: 1
@@ -1945,13 +2212,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5737094668342663317, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 5.21617
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094668342663317, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094668342663317, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.75071
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094668342663317, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.64133
+      objectReference: {fileID: 0}
+    - target: {fileID: 5737094668342663317, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5737094668368655978, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1646094134}
     m_RemovedComponents:
     - {fileID: 5737094667531537196, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5737094667890083001, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1724759775}
   m_SourcePrefab: {fileID: 100100000, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
 --- !u!1 &5737094667065640578 stripped
 GameObject:
@@ -1969,47 +2259,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5737094667065640580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2974531575507539700, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5737094667065640581 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1098842421688342634, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
   m_PrefabInstance: {fileID: 5737094667065640577}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5737094667065640580}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5737094667065640583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2974531576037086648, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
-  m_PrefabInstance: {fileID: 5737094667065640577}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5737094667065640584
+--- !u!114 &5737094667065640582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5737094667065640578}
+  m_GameObject: {fileID: 5737094667065640580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useAttachedRenderer: 0
-  targetRenderer: {fileID: 0}
-  romFileName: F:\pludics\roms\Galerians (USA) (Demo)\Galerians (USA) (Demo).cue
-  configFileName: 
-  saveStateFileName: F:\pludics\samples\galerians-peace-walk\AP_charged._State.State
-  luaScripts:
-  - F:\pludics\samples\galerians-peace-walk\galerians-peace-walk.lua
-  frameRateMultiplier: 100
-  disableMultithreadingForDebug: 1
-  frame: 0
-  uncappedFps: 0
-  emulatorDefaultFps: 0
-  currentCore: nul
+  useAttachedRenderer: 1
+  targetRenderer: {fileID: 5737094667065640589}
+  passInputFromUnity: 1
+  captureEmulatorAudio: 0
+  romFileName: F:\pludics\samples\../roms/Galerians (USA) (Demo)/Galerians (USA)
+    (Demo).cue
+  configFileName: F:\pludics\samples\galerians-peace-walk\config.ini
+  saveStateFileName: F:\pludics\samples\galerians-peace-walk\save.State
+  luaScriptFileName: F:\pludics\samples\galerians-peace-walk\galerians-peace-walk.lua
+  runInEditMode: 0
+  showBizhawkGui: 0
+  writeBizhawkLogs: 1
+  bizhawkLogLocation: BizHawkLogs\galerians-peace-walk (main)-67910.log
+  _initialized: 0
+  _isRunning: 0
+  audioBufferSurplus: 4410
+--- !u!1 &5737094667065640583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2974531576037086648, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5737094667065640587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,19 +2320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4897e5590ac16ef44a72b3285925e81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useAttachedRenderer: 0
-  targetRenderer: {fileID: 0}
-  romFileName: F:\pludics\roms\Jeopardy! (USA)\Jeopardy! (USA).cue
-  configFileName: 
-  saveStateFileName: F:\pludics\samples\jeopardy-draw\draw.State
-  luaScripts:
-  - F:\pludics\samples\jeopardy-draw\jeopardy-draw.lua
-  frameRateMultiplier: 100
-  disableMultithreadingForDebug: 1
-  frame: 0
-  uncappedFps: 0
-  emulatorDefaultFps: 0
-  currentCore: nul
 --- !u!82 &5737094667065640588
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2131,6 +2416,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!23 &5737094667065640589 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2974531575507539702, guid: b5c9687b8e836e04d98b5ad7caadf754, type: 3}
+  m_PrefabInstance: {fileID: 5737094667065640577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &5737094667065640593
 AudioSource:
   m_ObjectHideFlags: 0

@@ -1,9 +1,13 @@
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using uWindowCapture;
 using NaughtyAttributes;
 using UnityHawk;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 [ExecuteInEditMode]
 public class SoftwareSample : MonoBehaviour
@@ -52,8 +56,6 @@ public class SoftwareSample : MonoBehaviour
     [SerializeField, Readonly] bool _waitingForSource = false;
 
     void OnEnable() {
-        UnityHawk.UnityHawk.InitIfNeeded();
-        BizHawk.Emulation.Cores.Waterbox.WaterboxHost.nDllCopies = 1; // temp hack TODO remove
         Reset();
     }
 
@@ -104,13 +106,33 @@ public class SoftwareSample : MonoBehaviour
                 windowCapture.captureFrameRate = -1;
             }
         } else if (source == Source.UnityHawk) {
-            // Nothing really needed here, the UnityHawk.Emulator component should be configured separately
+            if (unityHawkEmulator == null) {
+                unityHawkEmulator = gameObject.GetComponent<Emulator>();
+                if (unityHawkEmulator == null) {
+                    Debug.LogWarning("Source is UnityHawk but no Emulator component specified and none attached");
+                }
+            } 
+            // Nothing else really needed here, the UnityHawk.Emulator component should be configured separately
         }
 
         // Do the rest of the setup after the source is locked in
         // (this is only really needed for windowCapture since UnityHawk should start up synchronously, but whatever)
         _waitingForSource = true;
     }
+
+#if UNITY_EDITOR
+    [Button("Dump Texture")]
+    public void DumpTexture() {
+        RenderTexture sourceTex = (RenderTexture)(blitter.textureGetter());
+        Texture2D temp = new Texture2D(sourceTex.width, sourceTex.height);
+        RenderTexture.active = sourceTex;
+        temp.ReadPixels(new Rect(0, 0, sourceTex.width, sourceTex.height), 0, 0);
+        temp.Apply();
+        string path = EditorUtility.SaveFilePanel("Sample", "", "", "png");
+        byte[] png = temp.EncodeToPNG();
+        File.WriteAllBytes(path, png);
+    }
+#endif
 
     private void SetupAfterSourceAvailable() {
         // Set up RenderTexture
@@ -170,7 +192,7 @@ public class SoftwareSample : MonoBehaviour
         renderMaterial.mainTexture = renderTexture;
     }
 
-    void Update() {
+    void LateUpdate() {
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.R)) {
             Reset();
         }
@@ -179,7 +201,7 @@ public class SoftwareSample : MonoBehaviour
             if (source == Source.WindowCapture && windowCapture != null && windowCapture.window != null && windowCapture.window.texture != null) {
                 SetupAfterSourceAvailable();
                 _waitingForSource = false;
-            } else if (source == Source.UnityHawk && unityHawkEmulator != null && unityHawkEmulator.IsRunning) {
+            } else if (source == Source.UnityHawk && unityHawkEmulator != null && unityHawkEmulator.IsRunning && unityHawkEmulator.Texture != null) {
                 SetupAfterSourceAvailable();
                 _waitingForSource = false;
             }
