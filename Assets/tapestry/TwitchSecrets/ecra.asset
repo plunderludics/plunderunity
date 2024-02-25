@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4529da9290a912b43b1cb1bb94338939, type: 3}
+  m_Name: ecra
+  m_EditorClassIdentifier: 
+  CLIENT_ID: 786r9pdrb8qy9aqp9hezqvn12z294w
+  OAUTH_TOKEN: nurybv4k8sgsrbxsy9nv74yibq1v2g
+  USERNAME_FROM_OAUTH_TOKEN: festivalecra

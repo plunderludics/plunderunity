@@ -3,24 +3,26 @@
 // Or download the repository at https://github.com/TwitchLib/TwitchLib.Unity, build it, and copy the TwitchLib.Unity.dll from the output directory
 using TwitchLib.Client.Models;
 using TwitchLib.Unity;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 public class TwitchAnalogStick : MonoBehaviour
 {
-	[SerializeField] private TwitchSecrets secrets;
+	[SerializeField] TwitchSecrets secrets;
+	[SerializeField] string m_Channel;
 
-	[SerializeField] private float m_PollDuration;
+	[SerializeField] float m_PollDuration;
 
-	[SerializeField] private float m_MaxMagnitude;
-	[SerializeField] private float m_InputRecenterSpeed;
+	[SerializeField] float m_MaxMagnitude;
+	[SerializeField] float m_InputRecenterSpeed;
 
-	[SerializeField] private float m_InputIncreasePerMessage;
+	[SerializeField] float m_InputIncreasePerMessage;
 
-	[SerializeField] private Vector2 m_Input;
 
-	[SerializeField] private TankMover m_Mover;
-	[SerializeField] private SampleLoader m_SampleLoader;
-	[SerializeField] private TapestryBlender m_Blender;
+	[SerializeField] Vector2Variable m_Input;
+	[SerializeField] TankMover m_Mover;
+	[SerializeField] SampleLoader m_SampleLoader;
+	[SerializeField] TapestryBlender m_Blender;
 
 	private Client client;
 	private float pollTime;
@@ -39,7 +41,7 @@ public class TwitchAnalogStick : MonoBehaviour
 		client = new Client();
 
 		// Initialize the client with the credentials instance, and setting a default channel to connect to.
-		client.Initialize(credentials, secrets.USERNAME_FROM_OAUTH_TOKEN);
+		client.Initialize(credentials, m_Channel);
 
 		// Bind callbacks to events
 		client.OnConnected += OnConnected;
@@ -71,25 +73,38 @@ public class TwitchAnalogStick : MonoBehaviour
         switch (e.ChatMessage.Message.ToLowerInvariant()) {
             case "right":
             case "east":
-                m_Input += Vector2.right * m_InputIncreasePerMessage;
+            case "direita":
+            case "oeste":
+                m_Input.Value += Vector2.right * m_InputIncreasePerMessage;
                 break;
             case "left":
             case "west":
-                m_Input += Vector2.left * m_InputIncreasePerMessage;
+            case "esquerda":
+            case "leste":
+                m_Input.Value += Vector2.left * m_InputIncreasePerMessage;
                 break;
             case "up":
             case "forward":
             case "north":
-                m_Input += Vector2.up * m_InputIncreasePerMessage;
+            case "cima":
+            case "frente":
+            case "norte":
+                m_Input.Value += Vector2.up * m_InputIncreasePerMessage;
                 break;
             case "down":
             case "back":
             case "backward":
             case "south":
-                m_Input += Vector2.down * m_InputIncreasePerMessage;
+            case "baixo":
+            case "tras":
+            case "trás":
+            case "atras":
+            case "atrás":
+            case "sul":
+                m_Input.Value += Vector2.down * m_InputIncreasePerMessage;
                 break;
         }
-        m_Input = Vector2.ClampMagnitude(m_Input, 1);
+        m_Input.Value = Vector2.ClampMagnitude(m_Input.Value, 1);
 	}
 
 	private void OnChatCommandReceived(object sender, TwitchLib.Client.Events.OnChatCommandReceivedArgs e)
@@ -109,18 +124,20 @@ public class TwitchAnalogStick : MonoBehaviour
 	}
 
     private void Update() {
-        m_Input = Vector2.MoveTowards(m_Input, Vector2.zero, m_InputRecenterSpeed * Time.deltaTime);
-        m_Input = Vector2.ClampMagnitude(m_Input, m_MaxMagnitude);
+        m_Input.Value = Vector2.MoveTowards(m_Input.Value, Vector2.zero, m_InputRecenterSpeed * Time.deltaTime);
+        m_Input.Value = Vector2.ClampMagnitude(m_Input.Value, m_MaxMagnitude);
 
-        m_Mover.Input = m_Input;
         pollTime += Time.deltaTime;
+
+        if(!m_SampleLoader.isActiveAndEnabled) return;
 
         if(pollTime > m_PollDuration) {
             pollTime = 0;
             foreach(var track in m_Blender.AllTracks) {
-                m_SampleLoader.SendAnalogInput(track, m_Input);
+				// obsolete
+				// TODO: send input properly
+                m_SampleLoader.SendAnalogInput(track, m_Input.Value);
             }
         }
     }
 }
-
