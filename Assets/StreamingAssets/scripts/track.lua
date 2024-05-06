@@ -50,18 +50,16 @@ function main()
             currSample = sample
 		end
 
-
-
-        local volumeStr = unityhawk.callmethod("SetVolume", "")
-        if (volumeStr) then
-            local volume = tonumber(volumeStr)
-            client.SetVolume(volume);
-        end
+		local volumeStr = unityhawk.callmethod("SetVolume", "")
+		if (volumeStr) then
+				local volume = tonumber(volumeStr)
+				client.SetVolume(volume);
+		end
 
 		if not isPaused then
 			emu.frameadvance()
 		else
-		    emu.yield()
+			emu.yield()
 		end
 
 	-- end

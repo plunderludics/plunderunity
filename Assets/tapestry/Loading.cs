@@ -1,18 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Loading : MonoBehaviour {
     [Header("config")]
     [SerializeField] string m_Template = "loading... {0:00}%";
     [SerializeField] IntReference m_Target;
 
+    [Header("events")]
+    [SerializeField] UnityEvent m_OnDone;
+
     [Header("refs")]
     [SerializeField] IntVariable m_Progress;
     [SerializeField] TMP_Text m_Text;
+
 
     void OnValidate() {
         OnValueChanged();
@@ -24,7 +26,7 @@ public class Loading : MonoBehaviour {
         m_Progress.Changed.Register(_ => {
             OnValueChanged();
             if (m_Progress.Value >= m_Target.Value) {
-                Destroy(gameObject);
+                m_OnDone?.Invoke();
             }
         });
         OnValueChanged();
