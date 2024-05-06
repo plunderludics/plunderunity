@@ -22,7 +22,9 @@ public class Cropper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!targetRenderer) return;
         _targetMaterial = targetRenderer.sharedMaterial;
+        if (!_targetMaterial) return;
         // Get the corners of this rect transform, relative to the target material's transform.
 
         // Remap [-5, 5] -> [0, 1]

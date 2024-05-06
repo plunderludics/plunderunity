@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRenderer: {fileID: 7411211403060175712}
+  transformScale: 10
 --- !u!1 &7411211403060175714
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +64,7 @@ GameObject:
   - component: {fileID: 7411211403060175712}
   - component: {fileID: 7411211403060175713}
   - component: {fileID: 8611044809475584550}
-  - component: {fileID: 5659111817888045148}
+  - component: {fileID: 4657177659748101628}
   m_Layer: 5
   m_Name: SoftwareSample
   m_TagString: Untagged
@@ -100,15 +101,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRenderer: {fileID: 7411211403060175712}
+  source: 0
   useCustomWindowCapture: 0
   windowTitleSubstring: 
   windowCapture: {fileID: 8611044809475584550}
-  blitter: {fileID: 5659111817888045148}
+  unityHawkEmulator: {fileID: 0}
+  sampleDir: 
+  blitter: {fileID: 4657177659748101628}
   useCustomRenderTexture: 0
+  setRenderTextureSizeFromSource: 1
+  renderTextureSize: {x: 1, y: 1}
   renderTexture: {fileID: 0}
   useCustomRenderMaterial: 0
   renderMaterial: {fileID: 0}
   blitMaterial: {fileID: 0}
+  _waitingForSource: 0
 --- !u!23 &7411211403060175712
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -189,7 +196,7 @@ MonoBehaviour:
   scaleControlType: 3
   scalePer1000Pixel: 1
   updateScaleForcely: 0
---- !u!114 &5659111817888045148
+--- !u!114 &4657177659748101628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,9 +205,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7411211403060175714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e609fd47bd88f9d45b78b23bb7afaa4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d1a321226eac2e45bcfea136ffdc3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windowCapture: {fileID: 8611044809475584550}
   targetTexture: {fileID: 0}
   blitMaterial: {fileID: 0}
+  pass: 0
+  clear: 1
