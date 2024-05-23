@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2406799492683350074}
-  - component: {fileID: 3071843392858678902}
+  - component: {fileID: 8802273980421449902}
   m_Layer: 0
   m_Name: mixer8
   m_TagString: Untagged
@@ -24,7 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071843392858678905}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.8288326, y: 3.235655, z: -3.9734602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38,9 +39,8 @@ Transform:
   - {fileID: 1391889999332657540}
   - {fileID: 2315537286146764610}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3071843392858678902
+--- !u!114 &8802273980421449902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071843392858678905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d8f4ab1a7af0e1438727a88fbf545bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 509699f29317324449274d684c23df3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 2c9b2137081cff64dadec711282b7aba, type: 2}
@@ -70,7 +70,7 @@ MonoBehaviour:
         value: 0
         inSlope: 2.4881399
         outSlope: 2.4881399
-        tangentMode: 0
+        tangentMode: 5
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.052630637
@@ -94,16 +94,36 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: c18041f5b87b7f34a8b998c5a56a04c8, type: 2}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -149,8 +169,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939178972610989086, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Sample
+      value: bubsy3d-beginning
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &8092743681377383847 stripped
 Transform:
@@ -162,16 +188,36 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 16ba9478172d3744985a0acf66cad1e9, type: 2}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -217,8 +263,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939178972610989086, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Sample
+      value: bubsy3d-beginning
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &5082036307782859263 stripped
 Transform:
@@ -230,16 +282,36 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 176819d73ad621449a1434964697efd7, type: 2}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -285,8 +357,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939178972610989086, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Sample
+      value: bubsy3d-beginning
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &6731790424440071129 stripped
 Transform:
@@ -298,16 +376,36 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: ec236c2089e281e4786748a1182fa22f, type: 2}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -353,8 +451,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939178972610989086, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Sample
+      value: bubsy3d-beginning
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &3380864120158417242 stripped
 Transform:
@@ -366,16 +470,36 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: d78e24a80a8ce5a48af2c5347d41402f, type: 2}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -421,8 +545,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939178972610989086, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Sample
+      value: bubsy3d-beginning
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &2315537286146764610 stripped
 Transform:
@@ -434,12 +564,44 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: inputProvider
+      value: 
+      objectReference: {fileID: 6421983622474416577}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: targetRenderer
+      value: 
+      objectReference: {fileID: 4594190173578180734}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: bizhawkLogLocation
+      value: BizHawkLogs\tex1--1820.log
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -486,28 +648,75 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6421983622474416577}
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &4594190173578180723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
   m_PrefabInstance: {fileID: 6169220368120148445}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &4594190173578180734 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7664192676825156003, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+  m_PrefabInstance: {fileID: 6169220368120148445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4594190173578180735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+  m_PrefabInstance: {fileID: 6169220368120148445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6421983622474416577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594190173578180735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897a522fdf5f5435eb1f5348ed14bc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7895400386610363791
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 4c4b3ca991c88294fbe26bf53ad31092, type: 2}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -553,8 +762,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939178972610989086, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Sample
+      value: bubsy3d-beginning
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &562587612317234209 stripped
 Transform:
@@ -566,16 +781,36 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 2406799492683350074}
     m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: roms/Bubsy 3D [NTSC-U].ccd
+      objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: c26e639a2584a83439f84ad7f580550a, type: 2}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: config/analogonly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: samples/bubsy3d-beginning/save.State
+      objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
       value: tex7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_RootOrder
@@ -621,8 +856,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8939178972610989086, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Sample
+      value: bubsy3d-beginning
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
 --- !u!4 &1391889999332657540 stripped
 Transform:

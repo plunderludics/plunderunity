@@ -8,61 +8,84 @@ using Soil;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 using UnityHawk;
 
+namespace Tapestry
+{
+    
 public class TapestryBlender : MonoBehaviour
 {
     [Serializable]
-    record WalkerMix {
-        public int Track;
+    public record WalkerMix {
+        public Track Track;
+        public TapestryEmitter Emitter;
         public float Value;
     }
 
     [Header("config")]
+    
+    [Tooltip("if the sample should reload on pause")]
     [SerializeField] bool m_ReloadSampleOnUnpause = false;
+    
+    [Tooltip("if the sample should be saved when unloaded from a track")]
+    [SerializeField] bool m_SaveSampleOnUnload = false;
 
     [Header("tuning")]
     [SerializeField] FloatReference m_WrapLength;
     [SerializeField] MapOutCurve m_AlphaCurve;
     [SerializeField] MapOutCurve m_VolumeCurve;
 
-    [Header("mixing")]
-    [Header("the tracks being mixed")]
-    [SerializeField] Track[] m_Tracks;
-
-    [Header("number of expected mixing channels")]
-    [SerializeField] int m_Channels = 3;
-
     [Header("refs")]
-    [SerializeField] MixTextures2 m_TextureMixer;
+    [FormerlySerializedAs("m_TextureMixer")]
+    [Header("the track mixer")]
+    [SerializeField] TrackMixer m_TrackMixer;
+    
+    [Header("atom with number of loaded tracks")]
     [SerializeField] IntReference m_LoadedTracks;
 
     [Header("debug")]
+    [SerializeField] float m_GizmoRadius;
     [SerializeField] TMPro.TMP_Text m_Debug;
 
-    [ShowNonSerializedField, Readonly] SerializedDictionary<string, WalkerMix> m_Mix;
+    public SerializedDictionary<Guid, WalkerMix> m_Mix;
 
     // a game, emitting videogame, sorted by distance
     [ShowNonSerializedField, Readonly] List<TapestryEmitter> m_Emitters;
 
+    Dictionary<string, string> m_SavedGames;
+
     // the raw vertices emitting videogame
     List<TapestryEmitter> m_Verts;
 
+    // a representation of the triangulation of the emitter map
     DelaunayTriangulation m_Triangulation;
-    List<int> m_AvailableTracks;
 
-    int TrackCount => m_Tracks.Count();
+    int TrackCount => Tracks.Count();
+    
+    // number of expected mixing channels
+    int m_Channels = 3;
+    
     public float WrapLength => m_WrapLength.Value;
-    public IEnumerable<string> AllTracks => m_Mix.Values.Select(m => TrackName(m.Track));
+    
+    public IEnumerable<Track> AllTracks => m_Mix.Values.Select(m => m.Track);
+    
+    // the tracks being mixed
+    Track[] Tracks => m_TrackMixer.Tracks;
+
+    
+    // the list of currently available tracks
+    List<Track> m_AvailableTracks;
 
     // Start is called before the first frame update
     void Awake()
     {
         m_Mix = new ();
-        m_AvailableTracks = Enumerable.Range(0, TrackCount).ToList();
     }
 
     void Start() {
+        m_AvailableTracks = new List<Track>(Tracks);
+        
         m_Emitters = FindObjectsOfType<TapestryEmitter>().ToList();
         m_Verts = FindObjectsOfType<TapestryEmitter>().ToList();
         var calculator = new DelaunayCalculator();
@@ -81,17 +104,15 @@ public class TapestryBlender : MonoBehaviour
 
         // initializeTracks
         StartCoroutine(LoadTracksSync());
-
     }
 
     // HACK: to prevent:  System.IO.IOException: The process cannot access the file because it is being used by another process.
     IEnumerator LoadTracksSync() {
         m_Emitters = m_Emitters.OrderBy(Dist).ToList();
         for (var i = 0; i < TrackCount; i++) {
-            var track = m_Tracks[i];
+            var track = Tracks[i];
 
             track.Volume = 0;
-            var emu = track.GetComponent<Emulator>();
             var sample = m_Emitters.ElementAt(i).Sample;
             print($"initializing track {track.name} with sample {sample}");
 
@@ -100,12 +121,13 @@ public class TapestryBlender : MonoBehaviour
             // create sample object?
             // emu.SetFromSample($"Assets/StreamingAssets/samples/{sample}/rompath.txt");
             track.gameObject.SetActive(true);
-            track.Sample = sample;
             track.LoadSample(sample);
-
-            while (!track.IsLoaded) {
+            
+            while (!track.IsRunning) {
                 yield return null;
             }
+
+            yield return new WaitForSeconds(1);
 
             m_LoadedTracks.Value += 1;
         }
@@ -115,39 +137,20 @@ public class TapestryBlender : MonoBehaviour
     void Update()
     {
         // wait for all tracks to load
-        foreach (var track in m_Tracks) {
+        foreach (var track in Tracks) {
             if (!track.IsLoaded) {
                 return;
             }
         }
 
-        // TODO: optimize
-        m_Emitters = m_Emitters.OrderBy(Dist).ToList();
-
-        // free tracks
-        var keysToRemove = new List<string>();
-        foreach(var key in m_Mix.Keys) {
-            // any of the things to mix outside of the maximum tracks, should be removed
-            if (m_Emitters.Take(TrackCount).All(e => e.Sample != key)) {
-                var removed = m_Mix[key];
-                m_AvailableTracks.Add(removed.Track);
-                print($"removed mix {key} track-{removed.Track} : {removed.Value}");
-                keysToRemove.Add(key);
-            }
-        }
-
-        foreach(var key in keysToRemove) {
-            m_Mix.Remove(key);
-        }
-
-        // triangulate the emitter mesh and find which triangle we are inside of
+        // find which triangle we are inside in the triangulated emitter mesh
         var tris = m_Triangulation.Triangles;
         var verts = m_Triangulation.Vertices;
         var l0 = 0.0f;
         var l1 = 0.0f;
         var l2 = 0.0f;
         var pos = transform.position;
-        var P = new Vector2(pos.x, pos.z);
+        var p = new Vector2(pos.x, pos.z);
         var v0 = tris[0];
         var v1 = tris[1];
         var v2 = tris[2];
@@ -163,8 +166,8 @@ public class TapestryBlender : MonoBehaviour
             // thanks @pancelor for helping with the math
             var detT = (c1.y - c2.y) * (c0.x - c2.x) + (c2.x - c1.x) * (c0.y - c2.y);
 
-            l0 = ((c1.y - c2.y) * (P.x - c2.x) + (c2.x - c1.x) * (P.y - c2.y)) / detT;
-            l1 = ((c2.y - c0.y) * (P.x - c2.x) + (c0.x - c2.x) * (P.y - c2.y)) / detT;
+            l0 = ((c1.y - c2.y) * (p.x - c2.x) + (c2.x - c1.x) * (p.y - c2.y)) / detT;
+            l1 = ((c2.y - c0.y) * (p.x - c2.x) + (c0.x - c2.x) * (p.y - c2.y)) / detT;
             l2 = 1 - l0 - l1;
 
             if(l0 < 0 || l0 > 1) continue;
@@ -173,12 +176,51 @@ public class TapestryBlender : MonoBehaviour
             break;
         }
 
+        // TODO: optimize
+        // distance is a decent parameter here, but the three closest points aren't necessarily
+        // the ones in the current triangle we are inside
         var others = m_Emitters
-            .Where(e => e != m_Verts.ElementAt(v0))
-            .Where(e => e != m_Verts.ElementAt(v1))
-            .Where(e => e != m_Verts.ElementAt(v2))
+            .Where(e => e.Id != m_Verts.ElementAt(v0).Id)
+            .Where(e => e.Id != m_Verts.ElementAt(v1).Id)
+            .Where(e => e.Id != m_Verts.ElementAt(v2).Id)
+            .OrderBy(Dist)
+            .GroupBy(e => e.Id) // remove duplicates
+            .Select(g => g.First()) 
             .ToArray();
+        
+        // free tracks
+        var emittersToRemove = new List<TapestryEmitter>();
+        foreach(var key in m_Mix.Keys)
+        {
+            // any of the emitters beyond of the maximum tracks (minus the mixed ones), should be removed
+            var toRemove = others.Skip(TrackCount-m_Channels).FirstOrDefault(e => e.Id == key);
+            if (toRemove == null) continue;
+            // if (m_Emitters.Take(TrackCount).Any(e => e.Id == key)) continue;
+            
+            var removed = m_Mix[toRemove.Id];
+            m_AvailableTracks.Add(removed.Track);
+            print($"removed mix {toRemove} track-{removed.Track} : {removed.Value}");
+            emittersToRemove.Add(toRemove);
+        }
 
+        foreach(var emitter in emittersToRemove) {
+            // unload tracks
+            if (m_Mix.TryGetValue(emitter.Id, out var mix))
+            {
+                print($"tapestry: unloading mix {emitter.Sample} with value {mix.Value}");
+                if (m_SaveSampleOnUnload)
+                {
+                    // TODO: reuse samples
+                    var sampleName = $"{emitter.name}-savedSamples";
+                    emitter.Save(sampleName);
+                    mix.Track.SaveSample(sampleName);
+                }
+            }
+            
+            m_Mix.Remove(emitter.Id);
+        }
+
+        // update all tracks
         for (var i = 0; i < TrackCount; i++) {
             var emitter = i switch {
                 0 => m_Verts.ElementAt(v0),
@@ -194,38 +236,48 @@ public class TapestryBlender : MonoBehaviour
                 _ => 0
             };
 
-            if (m_Mix.TryGetValue(emitter.Sample, out var mix)) {
-                m_Mix[emitter.Sample].Value = value;
-                MixTrack(mix, emitter.Sample);
+            // if the sample is already in the mixer return
+            var id = emitter.Id;
+            if (m_Mix.TryGetValue(id, out var mix)) {
+                mix = m_Mix[id];
+                mix.Value = value;
+                mix.Emitter = emitter;
+                MixTrack(mix);
                 continue;
             }
 
-            // event here for newly added key
+            // TODO: event here for newly added key
             if (!m_AvailableTracks.Any()) {
                 Debug.Log($"[walker] {emitter.Sample} attempting to request track with no more available tracks");
                 continue;
             }
 
+            // pop next available track
             var track = m_AvailableTracks.First();
             m_AvailableTracks.RemoveAt(0);
-            mix = new WalkerMix() { Track=track, Value=value };
-            m_Mix[emitter.Sample] = mix;
+            
+            mix = new WalkerMix() { Track=track, Value=value, Emitter = emitter};
+            m_Mix[id] = mix;
+            
             print($"added {emitter.Sample} @ track: {track}");
 
-            MixTrack(mix, emitter.Sample);
+            MixTrack(mix);
         }
+
+         
 
         // already clean mix
         foreach(var key in m_Mix.Keys) {
             var mix = m_Mix[key];
-            m_TextureMixer.SetTrackMix(mix.Track, m_AlphaCurve.Evaluate(mix.Value));
+            m_TrackMixer.SetTrackMix(mix.Track, m_AlphaCurve.Evaluate(mix.Value));
         }
 
-        m_Debug.text = string.Concat(m_Tracks.Select((track) => {
+        m_Debug.text = string.Concat(Tracks.Select((track) => {
             var sample = track.Sample;
 
             var mixInfo = "disabled";
-            if(m_Mix.TryGetValue(sample, out var mix)) {
+            var mix = m_Mix.FirstOrDefault(k => k.Value.Emitter.Sample == sample).Value;
+            if(mix != null) {
                 mixInfo = $"{mix.Value}";
             }
 
@@ -233,29 +285,31 @@ public class TapestryBlender : MonoBehaviour
         }));
     }
 
-    void MixTrack(WalkerMix mix, string sample) {
-        var trk = m_Tracks[mix.Track];
+    void MixTrack(WalkerMix mix) {
+        var track = mix.Track;
+        var emitter = mix.Emitter;
 
-        trk.Volume = m_VolumeCurve.Evaluate(mix.Value);
+        track.Volume = m_VolumeCurve.Evaluate(mix.Value);
+        if (track.Sample != emitter.Sample) {
+            track.LoadSample(emitter.Sample);
+        }
 
         if (mix.Value > 0) {
-            if(trk.IsPaused) {
-                trk.IsPaused = false;
+            if(track.IsPaused) {
+                track.IsPaused = false;
                 if (m_ReloadSampleOnUnpause) {
-                    trk.LoadSample(sample);
+                    track.LoadSample(emitter.Sample);
                 }
             }
-
         } else {
-            if(!trk.IsPaused) {
-                trk.IsPaused = true;
+            if(!track.IsPaused) {
+                track.IsPaused = true;
             }
         }
     }
 
     float Dist(TapestryEmitter other) =>
         (Wrap(transform.position) - other.transform.position).sqrMagnitude;
-
 
     Vector3 Wrap(Vector3 pos) => Wrapper.Wrap(pos, m_WrapLength.Value);
 
@@ -266,26 +320,44 @@ public class TapestryBlender : MonoBehaviour
 
         if(m_Emitters == null || !m_Emitters.Any()) return;
 
-        m_Emitters = m_Emitters.OrderBy(Dist).ToList();
-        var closest = m_Emitters.First();
-        var closestDist = Dist(closest);
-        Gizmos.color = Color.magenta;
-        for (var i = 0; i < TrackCount; i++) {
-            if(i > 2) {
-                Gizmos.color = Color.cyan;
-            }
-
-            if (i >= m_Channels) {
-                Gizmos.color = Color.blue;
-            }
-
-            var em = m_Emitters.ElementAt(i);
-            Gizmos.DrawLine(transform.position, em.transform.position);
-            Gizmos.DrawSphere(em.transform.position, closestDist / Dist(em));
+        // draw all the triangles
+        var verts = m_Triangulation.Vertices;
+        var tris = m_Triangulation.Triangles;
+        Gizmos.color = Color.white;
+        for (int i = 0; i < tris.Count; i += 3) {
+            var v0 = tris[i];
+            var v1 = tris[i + 1];
+            var v2 = tris[i + 2];
+            var c0 = verts[v0];
+            var c1 = verts[v1];
+            var c2 = verts[v2];
+            Vector3 pos;
+            var p0 = new Vector3(c0.x, 0, c0.y);
+            var p1 = new Vector3(c1.x, 0, c1.y);
+            var p2 = new Vector3(c2.x, 0, c2.y);
+            
+            Gizmos.DrawLine(p0, p1);
+            Gizmos.DrawLine(p1, p2);
+            Gizmos.DrawLine(p2, p0);
         }
 
+        // this is bad
+        foreach (var mix in m_Mix.Values)
+        {
+            Gizmos.color = Color.blue;
+            var size = 0f;
+            if (mix.Value > 0) {
+                Gizmos.color = Color.magenta;
+                size = mix.Value;
+            }
+
+            Gizmos.DrawLine(transform.position, mix.Emitter.transform.position);
+            Gizmos.DrawSphere(mix.Emitter.transform.position, size * m_GizmoRadius);
+        }
     }
 
     string TrackName(string track) => $"track{track}";
     string TrackName(int track) => $"track{track}";
+}
+
 }

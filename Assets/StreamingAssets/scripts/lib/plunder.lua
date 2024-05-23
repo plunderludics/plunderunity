@@ -1,10 +1,13 @@
 -- TODO: better library import
-local lib = require("./Assets/StreamingAssets/scripts/lib/lib")
+local DIR = ".\\Assets\\StreamingAssets\\"
+-- local DIR = "./plunder_Data/StreamingAssets"
+local lib = require(DIR.."scripts/lib/lib")
+
 local plunder = {}
 
-local json = require("./Assets/StreamingAssets/scripts/lib/json")
+local json = require(DIR.."scripts/lib/json")
 
-local newdecoder = require("./Assets/StreamingAssets/scripts/lib/decoder")
+local newdecoder = require(DIR.."scripts/lib/decoder")
 local decodeJson = newdecoder()
 local currentGame = "none"
 
@@ -25,10 +28,12 @@ INPUTS_MAPS = {
 plunder.USE_SERVER = true
 plunder.USE_SERVER_INPUT = true
 LOG = true
-SAMPLE_PATH = "..\\samples\\"
+-- BASE_PATH = "..\\"
+BASE_PATH = DIR
+SAMPLE_PATH = BASE_PATH.."samples\\"
+ROM_PATH = BASE_PATH.."roms\\"
 ROM_PATH_FILENAME = "rompath.txt"
 SAVE_FILENAME = "save.State"
-ROM_PATH = "..\\roms\\"
 ROMS = {
 	-- path to roms
 	zelda = ROM_PATH.."zelda-mm.n64",
@@ -98,12 +103,12 @@ function plunder.runSample(sampleName)
 	local folderPath = SAMPLE_PATH..sampleName.."\\"
 	local rompathfile = folderPath..ROM_PATH_FILENAME
 	local savepathfile = folderPath..SAVE_FILENAME
-  if not lib.file_exists(rompathfile) then
+    if not lib.file_exists(rompathfile) then
 		print("ERROR: rompath file does not exist. "..rompathfile)
 		return
 	end
-  local lines = {}
-  local rompath = lib.lines_from(rompathfile)[1]
+    local lines = {}
+    local rompath = SAMPLE_PATH..lib.lines_from(rompathfile)[1]
 	print ("[sample] rom path: ".. rompath)
 
 	local wasPaused = client.ispause

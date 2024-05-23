@@ -1,12 +1,13 @@
-local lib = require("./Assets/StreamingAssets/scripts/lib/lib")
-local plunder = require("./Assets/StreamingAssets/scripts/lib/plunder")
+local DIR = ".\\Assets\\StreamingAssets\\"
+-- local DIR = "./plunder_Data/StreamingAssets"
+local lib = require(DIR.."scripts/lib/lib")
+local plunder = require(DIR.."scripts/lib/plunder")
 
 plunder.USE_SERVER = true
 plunder.USE_SERVER_INPUT = true
 
 frameTimer = 0
 SHOW_DEBUG = true
-
 
 -- this is used externally to send information to this window
 windowName = "untitled"
@@ -42,24 +43,16 @@ function main()
             isPaused = false
         end
 
-        local sample = unityhawk.callmethod("LoadSample", ""..f)
-		if (sample ~= "none" and sample ~= currSample) then
-            console.log("[unity] loading sample "..sample)
-			plunder.runSample(sample)
-            unityhawk.callmethod("OnLoadedSample", sample..","..f)
-            currSample = sample
-		end
-
-		local volumeStr = unityhawk.callmethod("SetVolume", "")
-		if (volumeStr) then
-				local volume = tonumber(volumeStr)
-				client.SetVolume(volume);
-		end
+        local volumeStr = unityhawk.callmethod("SetVolume", "")
+        if (volumeStr) then
+            local volume = tonumber(volumeStr)
+            client.SetVolume(volume);
+        end
 
 		if not isPaused then
 			emu.frameadvance()
 		else
-			emu.yield()
+		    emu.yield()
 		end
 
 	-- end
@@ -74,11 +67,12 @@ function main()
 
 		-- prevent mario from getting frozen in dialogue
 		if (currSample == "m64-courtyard") then
-		    if (plunder.getValue(0x206AE4) == 0) then
-                joypad.set({
-					["a"] = true
+			if (plunder.getValue({byte = 0x33d480, size = 4}) ~= 0) then
+				-- mash A
+				joypad.set({
+					["A"] = f % 10 < 5
 				}, 1)
-            end
+			end
 		end
 
 -- 		local newMem = plunder.readMemory()

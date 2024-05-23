@@ -33,7 +33,6 @@ RectTransform:
   m_Children:
   - {fileID: 7294908689466294880}
   m_Father: {fileID: 8069951064606487822}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -57,6 +56,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -133,7 +133,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6858921425336946167}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -250,7 +249,7 @@ GameObject:
   - component: {fileID: 8069951064606487808}
   - component: {fileID: 8069951064606487809}
   m_Layer: 0
-  m_Name: emitter
+  m_Name: m64-backyard
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -263,6 +262,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8069951064606487810}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.3, y: 0, z: 22.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -270,7 +270,6 @@ Transform:
   m_Children:
   - {fileID: 6858921425336946167}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8069951064606487823
 MeshFilter:
@@ -334,5 +333,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 927406a2cd2fcc444a13035d675f33cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Sample: m64-backyard
-  m_TestTexture: {fileID: 8400000, guid: 9e17e52a11156ef4d99aa0cbc5e29ba4, type: 2}
+  m_InitialSample: m64-backyard
+  m_Id: 80629858-68fa-4c1d-91ef-49dbbad218a6

@@ -6,6 +6,9 @@ using TwitchLib.Unity;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
+namespace Tapestry
+{
+	
 public class TwitchAnalogStick : MonoBehaviour
 {
 	[SerializeField] TwitchSecrets secrets;
@@ -136,8 +139,10 @@ public class TwitchAnalogStick : MonoBehaviour
             foreach(var track in m_Blender.AllTracks) {
 				// obsolete
 				// TODO: send input properly
-                m_SampleLoader.SendAnalogInput(track, m_Input.Value);
+                // m_SampleLoader.SendAnalogInput(track, m_Input.Value);
             }
         }
     }
+}
+
 }

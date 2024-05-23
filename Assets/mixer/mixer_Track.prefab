@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7664192676825156002}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10.951168, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7664192676825156000
 MeshFilter:
@@ -99,21 +99,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useAttachedRenderer: 1
   targetRenderer: {fileID: 0}
-  writeToTexture: 1
+  customRenderTexture: 1
   renderTexture: {fileID: 8400000, guid: 9e17e52a11156ef4d99aa0cbc5e29ba4, type: 2}
   passInputFromUnity: 1
   inputProvider: {fileID: 0}
   captureEmulatorAudio: 0
-  romFileName: roms/mario.z64
-  configFileName: 
-  saveStateFileName: samples/m64-courtyard/save.State
-  luaScriptFileName: scripts/track.lua
-  runInEditMode: 0
+  romFile: {fileID: 0}
+  saveStateFile: {fileID: 0}
+  configFile: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
+  luaScriptFile: {fileID: 102900000, guid: c4df4ff45537dda4094635925416faa3, type: 3}
+  firmwareDirectory: {fileID: 102900000, guid: ede978fa046ce464fa0e4f5427167cca, type: 3}
+  _isEnabled: 1
+  forceCopyFilesToBuild: 0
   showBizhawkGui: 1
+  runInEditMode: 0
+  acceptBackgroundInput: 1
+  ramWatchFile: {fileID: 0}
+  savestatesOutputDirectory: {fileID: 0}
+  _initialized: 0
+  _status: 0
+  _currentFrame: 0
+  _textureSize: {x: 0, y: 0}
+  useManualPathnames: 0
+  romFileName: 
+  saveStateFileName: 
+  configFileName: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\config\analogonly.ini
+  luaScriptFileName: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\scripts\track.lua
+  firmwareDirName: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\Firmware
+  savestatesOutputDirName: 
+  ramWatchFileName: 
   writeBizhawkLogs: 1
   bizhawkLogLocation: 
-  _initialized: 0
-  _isRunning: 0
   audioBufferSurplus: 4410
 --- !u!114 &8939178972610989086
 MonoBehaviour:
@@ -127,6 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5b46227bbd5634ba97eb7b18577689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Sample: 
+  Volume: 0
   IsPaused: 0
-  m_Sample: m64-courtyard
-  m_Loaded: 0
+  m_IsLoaded: 0
+  m_LoadedSample: 0
+  m_SavedSample: 0
