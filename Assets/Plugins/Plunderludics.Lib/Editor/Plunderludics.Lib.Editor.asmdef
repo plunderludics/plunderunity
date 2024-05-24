@@ -1,0 +1,24 @@
+{
+    "name": "Plunderludics.Lib.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0ea680467925d245bf19cf2b9d68ee6",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:f88fb04354076c646a4107a491394033",
+        "GUID:d66b3eb9553e05a4fbf55b0163a23650",
+        "GUID:abba43e239f8a2b4498e486350d7b68d",
+        "GUID:405fdeadd7fb4c9aa0b6b2b68d14baa7",
+        "GUID:64f10bf74d2d40ffbcfa6637ae19c550"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

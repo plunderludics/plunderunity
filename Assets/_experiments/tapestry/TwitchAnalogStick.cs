@@ -5,6 +5,7 @@ using TwitchLib.Client.Models;
 using TwitchLib.Unity;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Tapestry
 {
@@ -24,7 +25,6 @@ public class TwitchAnalogStick : MonoBehaviour
 
 	[SerializeField] Vector2Variable m_Input;
 	[SerializeField] TankMover m_Mover;
-	[SerializeField] SampleLoader m_SampleLoader;
 	[SerializeField] TapestryBlender m_Blender;
 
 	private Client client;
@@ -131,8 +131,6 @@ public class TwitchAnalogStick : MonoBehaviour
         m_Input.Value = Vector2.ClampMagnitude(m_Input.Value, m_MaxMagnitude);
 
         pollTime += Time.deltaTime;
-
-        if(!m_SampleLoader.isActiveAndEnabled) return;
 
         if(pollTime > m_PollDuration) {
             pollTime = 0;

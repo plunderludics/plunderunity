@@ -1,11 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Soil;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class MixTextures2 : MonoBehaviour
+public class MixTextures : MonoBehaviour
 {
     public Material mat;
 

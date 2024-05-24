@@ -1,9 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
-public class TrackMixer : MixTextures2
+namespace Plunderludics.Lib
+{
+    
+public class TrackMixer : MixTextures
 {
     Track[] m_Tracks;
 
@@ -11,12 +12,9 @@ public class TrackMixer : MixTextures2
 
     public Track[] Tracks => m_Tracks;
 
-    void OnValidate()
-    {
-    }
+    void OnValidate() { }
 
-    private void Awake()
-    {
+    private void Awake() {
         m_Tracks = GetComponentsInChildren<Track>();
         m_TrackMap = m_Tracks
             .Select((t, i) => new { t, i })
@@ -24,4 +22,6 @@ public class TrackMixer : MixTextures2
     }
 
     public void SetTrackMix(Track track, float value) => SetTrackMix(m_TrackMap[track], value);
+}
+
 }

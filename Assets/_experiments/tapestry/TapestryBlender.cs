@@ -9,7 +9,7 @@ using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
-using UnityHawk;
+using Plunderludics.Lib;
 
 namespace Tapestry
 {
@@ -64,8 +64,8 @@ public class TapestryBlender : MonoBehaviour
     int TrackCount => Tracks.Count();
     
     // number of expected mixing channels
-    int m_Channels = 3;
-    
+    const int k_Channels = 3;
+
     public float WrapLength => m_WrapLength.Value;
     
     public IEnumerable<Track> AllTracks => m_Mix.Values.Select(m => m.Track);
@@ -76,10 +76,12 @@ public class TapestryBlender : MonoBehaviour
     
     // the list of currently available tracks
     List<Track> m_AvailableTracks;
+    
+    // if the loading is done
+    bool m_IsLoaded;
 
     // Start is called before the first frame update
-    void Awake()
-    {
+    void Awake() {
         m_Mix = new ();
     }
 
@@ -106,13 +108,12 @@ public class TapestryBlender : MonoBehaviour
         StartCoroutine(LoadTracksSync());
     }
 
-    // HACK: to prevent:  System.IO.IOException: The process cannot access the file because it is being used by another process.
+    // TODO: don't let emulators load the same file at the same time
     IEnumerator LoadTracksSync() {
         m_Emitters = m_Emitters.OrderBy(Dist).ToList();
         for (var i = 0; i < TrackCount; i++) {
             var track = Tracks[i];
 
-            track.Volume = 0;
             var sample = m_Emitters.ElementAt(i).Sample;
             print($"initializing track {track.name} with sample {sample}");
 
@@ -122,14 +123,16 @@ public class TapestryBlender : MonoBehaviour
             // emu.SetFromSample($"Assets/StreamingAssets/samples/{sample}/rompath.txt");
             track.gameObject.SetActive(true);
             track.LoadSample(sample);
-            
-            while (!track.IsRunning) {
-                yield return null;
-            }
+        }
 
-            yield return new WaitForSeconds(1);
-
-            m_LoadedTracks.Value += 1;
+        while (m_LoadedTracks.Value < TrackCount)
+        {
+            m_LoadedTracks.Value = Tracks.Count(t => t.IsRunning);
+            yield return null;
+        }
+        
+        foreach (var track in Tracks) {
+            track.SetVolume(0);
         }
     }
 
@@ -138,7 +141,7 @@ public class TapestryBlender : MonoBehaviour
     {
         // wait for all tracks to load
         foreach (var track in Tracks) {
-            if (!track.IsLoaded) {
+            if (!track.IsRunning) {
                 return;
             }
         }
@@ -193,7 +196,7 @@ public class TapestryBlender : MonoBehaviour
         foreach(var key in m_Mix.Keys)
         {
             // any of the emitters beyond of the maximum tracks (minus the mixed ones), should be removed
-            var toRemove = others.Skip(TrackCount-m_Channels).FirstOrDefault(e => e.Id == key);
+            var toRemove = others.Skip(TrackCount-k_Channels).FirstOrDefault(e => e.Id == key);
             if (toRemove == null) continue;
             // if (m_Emitters.Take(TrackCount).Any(e => e.Id == key)) continue;
             
@@ -264,8 +267,6 @@ public class TapestryBlender : MonoBehaviour
             MixTrack(mix);
         }
 
-         
-
         // already clean mix
         foreach(var key in m_Mix.Keys) {
             var mix = m_Mix[key];
@@ -289,7 +290,7 @@ public class TapestryBlender : MonoBehaviour
         var track = mix.Track;
         var emitter = mix.Emitter;
 
-        track.Volume = m_VolumeCurve.Evaluate(mix.Value);
+        track.SetVolume(m_VolumeCurve.Evaluate(mix.Value));
         if (track.Sample != emitter.Sample) {
             track.LoadSample(emitter.Sample);
         }

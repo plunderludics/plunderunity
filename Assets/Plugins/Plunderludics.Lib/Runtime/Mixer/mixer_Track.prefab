@@ -107,7 +107,7 @@ MonoBehaviour:
   romFile: {fileID: 0}
   saveStateFile: {fileID: 0}
   configFile: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
-  luaScriptFile: {fileID: 102900000, guid: c4df4ff45537dda4094635925416faa3, type: 3}
+  luaScriptFile: {fileID: 0}
   firmwareDirectory: {fileID: 102900000, guid: ede978fa046ce464fa0e4f5427167cca, type: 3}
   _isEnabled: 1
   forceCopyFilesToBuild: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   romFileName: 
   saveStateFileName: 
   configFileName: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\config\analogonly.ini
-  luaScriptFileName: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\scripts\track.lua
+  luaScriptFileName: 
   firmwareDirName: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\Firmware
   savestatesOutputDirName: 
   ramWatchFileName: 
@@ -144,8 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Sample: 
-  Volume: 0
-  IsPaused: 0
+  m_Volume: 0
   m_IsLoaded: 0
   m_LoadedSample: 0
   m_SavedSample: 0

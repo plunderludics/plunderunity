@@ -1,5 +1,4 @@
-﻿using System;
-using Melanchall.DryWetMidi.Core;
+﻿using Melanchall.DryWetMidi.Core;
 using Melanchall.DryWetMidi.Multimedia;
 using UnityEngine;
 using UnityHawk;
