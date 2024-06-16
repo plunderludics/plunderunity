@@ -335,6 +335,16 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
+    "org.plunderludics.lib": {
+      "version": "file:C:/Users/gusta/Desktop/art/plunderludics/plunderludics.lib/Packages/org.plunderludics.lib",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.dbrizov.naughtyattributes": "2.1.4",
+        "org.plunderludics.unityhawk": "0.0.11"
+      }
+    },
     "org.plunderludics.unityhawk": {
       "version": "file:../../unity-hawk/Packages/org.plunderludics.UnityHawk",
       "depth": 0,

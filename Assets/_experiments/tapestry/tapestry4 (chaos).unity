@@ -617,8 +617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7af0c331e6633c4e96c31181948bd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ReloadSampleOnUnpause: 1
-  m_SaveSampleOnUnload: 0
+  m_ReloadSampleOnUnpause: 0
+  m_SaveSampleOnUnload: 1
   m_WrapLength:
     _usage: 1
     _value: 0
@@ -920,7 +920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.5391235, y: 2.5393066}
+  m_AnchoredPosition: {x: -2.5391235, y: 2.5390625}
   m_SizeDelta: {x: -49.0908, y: -25.3919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420317947
@@ -4103,6 +4103,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
+    - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: 
       objectReference: {fileID: 0}
@@ -4116,7 +4120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: luaScriptFileName
-      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\scripts\track.lua
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFileName
@@ -4127,6 +4131,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 672288650801751670, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
+    - target: {fileID: 672288650801751670, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFileName
+      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\config\analogonly.ini
+      objectReference: {fileID: 0}
+    - target: {fileID: 672288650801751670, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
       value: 1
       objectReference: {fileID: 0}
@@ -4134,6 +4146,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1637011790532718919, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
     - target: {fileID: 1637011790532718919, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: 
@@ -4148,7 +4164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1637011790532718919, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: luaScriptFileName
-      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\scripts\track.lua
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1637011790532718919, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFileName
@@ -4207,6 +4223,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
+    - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: 
       objectReference: {fileID: 0}
@@ -4220,7 +4240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: luaScriptFileName
-      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\scripts\track.lua
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFileName
@@ -4229,6 +4249,14 @@ PrefabInstance:
     - target: {fileID: 3380864120158417238, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190316361333326000, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
+    - target: {fileID: 4190316361333326000, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFileName
+      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\config\analogonly.ini
       objectReference: {fileID: 0}
     - target: {fileID: 4190316361333326000, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
@@ -4247,6 +4275,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6429224453559467155, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
+    - target: {fileID: 6429224453559467155, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFileName
+      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\config\analogonly.ini
+      objectReference: {fileID: 0}
+    - target: {fileID: 6429224453559467155, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
       value: 1
       objectReference: {fileID: 0}
@@ -4254,6 +4290,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
     - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: 
@@ -4268,7 +4308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: luaScriptFileName
-      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\scripts\track.lua
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFileName
@@ -4277,6 +4317,14 @@ PrefabInstance:
     - target: {fileID: 8092743681377383851, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366031875961252589, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFile
+      value: 
+      objectReference: {fileID: 102900000, guid: d1bfabc83836579498176e4a580a2d25, type: 3}
+    - target: {fileID: 8366031875961252589, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: configFileName
+      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\StreamingAssets\config\analogonly.ini
       objectReference: {fileID: 0}
     - target: {fileID: 8366031875961252589, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
