@@ -17,6 +17,8 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/Assets/Plugins/Shapes/**/*
+/Assets/StreamingAssets/roms/
 /MonoBleedingEdge/
 
 # MemoryCaptures can get excessive in size.

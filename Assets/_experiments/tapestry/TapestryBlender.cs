@@ -13,7 +13,7 @@ using Plunderludics.Lib;
 
 namespace Tapestry
 {
-    
+
 public class TapestryBlender : MonoBehaviour
 {
     [Serializable]
@@ -24,10 +24,10 @@ public class TapestryBlender : MonoBehaviour
     }
 
     [Header("config")]
-    
+
     [Tooltip("if the sample should reload on pause")]
     [SerializeField] bool m_ReloadSampleOnUnpause = false;
-    
+
     [Tooltip("if the sample should be saved when unloaded from a track")]
     [SerializeField] bool m_SaveSampleOnUnload = false;
 
@@ -40,7 +40,7 @@ public class TapestryBlender : MonoBehaviour
     [FormerlySerializedAs("m_TextureMixer")]
     [Header("the track mixer")]
     [SerializeField] TrackMixer m_TrackMixer;
-    
+
     [Header("atom with number of loaded tracks")]
     [SerializeField] IntReference m_LoadedTracks;
 
@@ -62,21 +62,21 @@ public class TapestryBlender : MonoBehaviour
     DelaunayTriangulation m_Triangulation;
 
     int TrackCount => Tracks.Count();
-    
+
     // number of expected mixing channels
     const int k_Channels = 3;
 
     public float WrapLength => m_WrapLength.Value;
-    
+
     public IEnumerable<Track> AllTracks => m_Mix.Values.Select(m => m.Track);
-    
+
     // the tracks being mixed
     Track[] Tracks => m_TrackMixer.Tracks;
 
-    
+
     // the list of currently available tracks
     List<Track> m_AvailableTracks;
-    
+
     // if the loading is done
     bool m_IsLoaded;
 
@@ -87,7 +87,7 @@ public class TapestryBlender : MonoBehaviour
 
     void Start() {
         m_AvailableTracks = new List<Track>(Tracks);
-        
+
         m_Emitters = FindObjectsOfType<TapestryEmitter>().ToList();
         m_Verts = FindObjectsOfType<TapestryEmitter>().ToList();
         var calculator = new DelaunayCalculator();
@@ -114,7 +114,7 @@ public class TapestryBlender : MonoBehaviour
         for (var i = 0; i < TrackCount; i++) {
             var track = Tracks[i];
 
-            var sample = m_Emitters.ElementAt(i).Sample;
+            var sample = m_Emitters.ElementAt(i).SampleName;
             print($"initializing track {track.name} with sample {sample}");
 
             // TODO: make this load sample from name?
@@ -130,7 +130,7 @@ public class TapestryBlender : MonoBehaviour
             m_LoadedTracks.Value = Tracks.Count(t => t.IsRunning);
             yield return null;
         }
-        
+
         foreach (var track in Tracks) {
             track.SetVolume(0);
         }
@@ -188,9 +188,9 @@ public class TapestryBlender : MonoBehaviour
             .Where(e => e.Id != m_Verts.ElementAt(v2).Id)
             .OrderBy(Dist)
             .GroupBy(e => e.Id) // remove duplicates
-            .Select(g => g.First()) 
+            .Select(g => g.First())
             .ToArray();
-        
+
         // free tracks
         var emittersToRemove = new List<TapestryEmitter>();
         foreach(var key in m_Mix.Keys)
@@ -199,7 +199,7 @@ public class TapestryBlender : MonoBehaviour
             var toRemove = others.Skip(TrackCount-k_Channels).FirstOrDefault(e => e.Id == key);
             if (toRemove == null) continue;
             // if (m_Emitters.Take(TrackCount).Any(e => e.Id == key)) continue;
-            
+
             var removed = m_Mix[toRemove.Id];
             m_AvailableTracks.Add(removed.Track);
             print($"removed mix {toRemove} track-{removed.Track} : {removed.Value}");
@@ -210,7 +210,7 @@ public class TapestryBlender : MonoBehaviour
             // unload tracks
             if (m_Mix.TryGetValue(emitter.Id, out var mix))
             {
-                print($"tapestry: unloading mix {emitter.Sample} with value {mix.Value}");
+                print($"tapestry: unloading mix {emitter.SampleName} with value {mix.Value}");
                 if (m_SaveSampleOnUnload)
                 {
                     // TODO: reuse samples
@@ -219,7 +219,7 @@ public class TapestryBlender : MonoBehaviour
                     mix.Track.SaveSample(sampleName);
                 }
             }
-            
+
             m_Mix.Remove(emitter.Id);
         }
 
@@ -251,18 +251,18 @@ public class TapestryBlender : MonoBehaviour
 
             // TODO: event here for newly added key
             if (!m_AvailableTracks.Any()) {
-                Debug.Log($"[walker] {emitter.Sample} attempting to request track with no more available tracks");
+                Debug.Log($"[walker] {emitter.SampleName} attempting to request track with no more available tracks");
                 continue;
             }
 
             // pop next available track
             var track = m_AvailableTracks.First();
             m_AvailableTracks.RemoveAt(0);
-            
+
             mix = new WalkerMix() { Track=track, Value=value, Emitter = emitter};
             m_Mix[id] = mix;
-            
-            print($"added {emitter.Sample} @ track: {track}");
+
+            print($"added {emitter.SampleName} @ track: {track}");
 
             MixTrack(mix);
         }
@@ -277,7 +277,7 @@ public class TapestryBlender : MonoBehaviour
             var sample = track.Sample;
 
             var mixInfo = "disabled";
-            var mix = m_Mix.FirstOrDefault(k => k.Value.Emitter.Sample == sample).Value;
+            var mix = m_Mix.FirstOrDefault(k => k.Value.Emitter.SampleName == sample).Value;
             if(mix != null) {
                 mixInfo = $"{mix.Value}";
             }
@@ -291,15 +291,15 @@ public class TapestryBlender : MonoBehaviour
         var emitter = mix.Emitter;
 
         track.SetVolume(m_VolumeCurve.Evaluate(mix.Value));
-        if (track.Sample != emitter.Sample) {
-            track.LoadSample(emitter.Sample);
+        if (track.Sample != emitter.SampleName) {
+            track.LoadSample(emitter.SampleName);
         }
 
         if (mix.Value > 0) {
             if(track.IsPaused) {
                 track.IsPaused = false;
                 if (m_ReloadSampleOnUnpause) {
-                    track.LoadSample(emitter.Sample);
+                    track.LoadSample(emitter.SampleName);
                 }
             }
         } else {
@@ -336,7 +336,7 @@ public class TapestryBlender : MonoBehaviour
             var p0 = new Vector3(c0.x, 0, c0.y);
             var p1 = new Vector3(c1.x, 0, c1.y);
             var p2 = new Vector3(c2.x, 0, c2.y);
-            
+
             Gizmos.DrawLine(p0, p1);
             Gizmos.DrawLine(p1, p2);
             Gizmos.DrawLine(p2, p0);

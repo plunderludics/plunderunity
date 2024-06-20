@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93c9a06f-cfe0-4376-956f-be2da3ef88c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/Fade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/Fade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/TreeMario.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/TreeMario.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/m_OutOfTreeElapsed.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/m_OutOfTreeElapsed.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/sm64-backyard-tree.savestate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/sm64-backyard-tree.savestate.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/tree mario.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/tree mario.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/16marios.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/16marios.lua.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/DrowningMarios.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/DrowningMarios.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Drowned.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Drowned.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1IsAlive.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1IsAlive.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Respawned.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Respawned.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Drowned.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Drowned.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2IsAlive.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2IsAlive.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Respawned.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Respawned.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/MarioDeathTransition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/MarioDeathTransition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/idk mario.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/idk mario.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/3. mirror mario.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/3. mirror mario/3. mirror mario.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/3. mirror mario/3. mirror mario.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/SampleSequencer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/16 marios/SampleSequencer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/roms" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/samples" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryBlender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryBlender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryEmitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryEmitter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_experiments/tapestry/blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_experiments/tapestry/blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/EmuHawk.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/libblip_buf.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Emulator/Emulator.Api.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Emulator/Emulator.Api.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Input/BasicInputProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Input/BasicInputProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Input/InputProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Input/InputProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Savestate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Savestate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/packages-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../unity-hawk" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/85/73f1529b/StreamWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77884c92b391463e9f65a5dc669db09f11200/41/0a2db5fb/MixTextures.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/91f0d03e6176478aa20bd1c36c4390602000/71/ff48876d/Sample.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/16 marios/2. idk mario/MarioDeathTransition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Fade.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2g6GdV1rOR8exVOHDccCC6UR0pT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "bizhawkAssets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\gusta\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\gusta\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\gusta\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Artifacts\plunder.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Artifacts" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\gusta\Desktop\gamedev\plunderunity -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\gusta\Desktop\gamedev\plunderunity" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\gusta\Desktop\gamedev\plunderunity -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\gusta\Desktop\gamedev\plunderunity" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93c9a06f-cfe0-4376-956f-be2da3ef88c5" name="Changes" comment="" />
+      <created>1715010702436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715010702436</updated>
+      <workItem from="1715010708317" duration="1347000" />
+      <workItem from="1715075425798" duration="368000" />
+      <workItem from="1715094447581" duration="7287000" />
+      <workItem from="1715121575905" duration="1713000" />
+      <workItem from="1715124578673" duration="485000" />
+      <workItem from="1715133328673" duration="860000" />
+      <workItem from="1716373097065" duration="22127000" />
+      <workItem from="1716561439638" duration="5139000" />
+      <workItem from="1716775502743" duration="2955000" />
+      <workItem from="1718346549701" duration="1604000" />
+      <workItem from="1718426659110" duration="6770000" />
+      <workItem from="1718574867828" duration="5094000" />
+      <workItem from="1718691706680" duration="2557000" />
+      <workItem from="1718847428259" duration="1107000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/tapestry/TapestryBlender.cs</url>
+          <line>199</line>
+          <properties documentPath="C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\tapestry\TapestryBlender.cs" containingFunctionPresentation="Method 'Update'" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

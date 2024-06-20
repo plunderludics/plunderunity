@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4101872990103824128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: _status
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFile
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: romFileName
+      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\16 marios\Super
+        Mario 64 (USA).z64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: _initialized
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: _currentFrame
+      value: 135547
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: luaScriptFile
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: a604515af3db64b49bc5290e697db1ad, type: 3}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: runInEditMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: _textureSize.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: _textureSize.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: configFileName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: targetRenderer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: luaScriptFileName
+      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\16 marios\16marios.lua
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: saveStateFileName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: bizhawkLogLocation
+      value: BizHawkLogs\mixer_Track-32290.log
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_Name
+      value: mixer_Track Mario
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.951168
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664192676825156014, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
