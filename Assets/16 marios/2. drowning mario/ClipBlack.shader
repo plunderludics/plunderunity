@@ -3,11 +3,14 @@ Shader "Hidden/ClipBlack"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _ClipColor("Clip Color", Color) = (0, 0, 0, 1)
+        _Leniency("Leniency", FLoat) = 0.01
     }
     SubShader
     {
         // No culling or depth
         Cull Off ZWrite Off ZTest Always
+
 
         Pass
         {
@@ -39,10 +42,13 @@ Shader "Hidden/ClipBlack"
 
             sampler2D _MainTex;
 
+            fixed4 _ClipColor;
+            float _Leniency;
+
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
-                clip(col.r + col.g + col.b - 0.05);
+                clip(distance(col.rgb, _ClipColor.rgb) - _Leniency);
                 return col;
             }
             ENDCG

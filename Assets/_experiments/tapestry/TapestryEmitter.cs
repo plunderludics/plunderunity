@@ -47,7 +47,7 @@ namespace Tapestry
 
         /// -- lifecycle --
         private void OnValidate() {
-            this.name = m_UseSampleFile ? m_InitialSampleName : Sample.Name;
+            this.name = m_UseSampleFile ? (m_InitialSample.Name) : m_InitialSampleName;
 
             var text = GetComponentInChildren<TMPro.TMP_Text>();
             if (text != null)

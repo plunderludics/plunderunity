@@ -5,61 +5,138 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93c9a06f-cfe0-4376-956f-be2da3ef88c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/Fade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/Fade.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/TreeMario.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/TreeMario.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/m_OutOfTreeElapsed.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/m_OutOfTreeElapsed.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/sm64-backyard-tree.savestate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/sm64-backyard-tree.savestate.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/tree mario.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/1. tree mario/tree mario.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/16marios.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/16marios.lua.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/DrowningMarios.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/DrowningMarios.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Drowned.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Drowned.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1IsAlive.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1IsAlive.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Respawned.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario1Respawned.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Drowned.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Drowned.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2IsAlive.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2IsAlive.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Respawned.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/Mario2Respawned.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/MarioDeathTransition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/MarioDeathTransition.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/idk mario.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/idk mario.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/3. mirror mario.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/3. mirror mario/3. mirror mario.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/3. mirror mario/3. mirror mario.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/SampleSequencer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/16 marios/SampleSequencer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/roms" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/samples" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/samples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryBlender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryBlender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryEmitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_experiments/tapestry/TapestryEmitter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_experiments/tapestry/blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_experiments/tapestry/blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/MixTextures.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/MixTextures.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/Track.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/Track.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/fourtextures.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/fourtextures.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/mixEight.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/mixEight.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/mixer_Track.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Runtime/Mixer/mixer_Track.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Soil/Runtime/FloatRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../plunderludics.lib/Packages/org.plunderludics.lib/Soil/Runtime/FloatRange.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.plunderunity/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.plunderunity/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.plunderunity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.plunderunity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/16 marios/2. drowning mario/ClipBlack.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/16 marios/6. canon tapestry.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/16 marios/6. canon tapestry/6. canon tapestry.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/16 marios/6. canon tapestry/6. canon tapestry.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/16 marios/Super Mario 64 (USA).Mupen64Plus.QuickSave1.savestate" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/16 marios/Super Mario 64 (USA).Mupen64Plus.QuickSave1.savestate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/New folder.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#02AADDF6#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#02AADDF6#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#031DC071#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#031DC071#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#05EC9E16#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#05EC9E16#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#0F1C2159#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#0F1C2159#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#212A4546#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#212A4546#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#24A049BD#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#24A049BD#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#2D31F48B#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#2D31F48B#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#2DDB1AB2#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#2DDB1AB2#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#32DA5C54#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#32DA5C54#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#408779A6#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#408779A6#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#40AD9DAB#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#40AD9DAB#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#49A828DB#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#49A828DB#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#54CA6DDC#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#54CA6DDC#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#579B80B3#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#579B80B3#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#579D6C8A#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#579D6C8A#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#57DD4DE0#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#57DD4DE0#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#613A2612#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#613A2612#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#626B987C#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#626B987C#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#648DFFC2#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#648DFFC2#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#677CF935#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#677CF935#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#6D00C07C#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#6D00C07C#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#71D8C330#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#71D8C330#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#71FFBF4D#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#71FFBF4D#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#74C13ED4#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#74C13ED4#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#76ABE6DB#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#76ABE6DB#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#76F2963D#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#76F2963D#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#7C98DFA7#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#7C98DFA7#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#7E91D91E#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#7E91D91E#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#84651765#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#84651765#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#86B5C15F#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#86B5C15F#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#9FB76A34#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#9FB76A34#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#A356667C#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#A356667C#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#A87F6678#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#A87F6678#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#B09F7FF5#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#B09F7FF5#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#B416574C#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#B416574C#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#BA25C107#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#BA25C107#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#C70E2879#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#C70E2879#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D3D96165#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D3D96165#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D3F0D281#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D3F0D281#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D404F7B3#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D404F7B3#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D61DC576#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D61DC576#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D8E02894#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#D8E02894#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#E6640E91#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#E6640E91#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#E747F9B9#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#E747F9B9#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#E7D08E45#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#E7D08E45#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EB5C820F#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EB5C820F#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EBA48BA7#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EBA48BA7#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EBA8BFCA#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EBA8BFCA#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EE5C9999#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#EE5C9999#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F03AEF7D#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F03AEF7D#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F05AADEE#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F05AADEE#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F0DD9D26#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F0DD9D26#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F6BB8446#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#F6BB8446#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#FB04DE95#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#FB04DE95#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#FB4E7D3C#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#FB4E7D3C#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#FC424ECC#0#2_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/SUPER MARIO 64#FC424ECC#0#2_all.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TexturePacks/sm64-magentasky/notes.txt.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../unity-hawk/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/EmuHawk.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/config-dev.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/config-dev.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/BizHawk~/libblip_buf.so" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Emulator/Emulator.Api.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../unity-hawk/Packages/org.plunderludics.UnityHawk/Runtime/Emulator/Emulator.Api.cs" afterDir="false" />
@@ -80,8 +157,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17d9ce77f27a4bd2afb5ba32c9bea97646ac00/85/73f1529b/StreamWriter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77884c92b391463e9f65a5dc669db09f11200/41/0a2db5fb/MixTextures.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/91f0d03e6176478aa20bd1c36c4390602000/71/ff48876d/Sample.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/16 marios/2. idk mario/MarioDeathTransition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Fade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/16 marios/6. mario 64 plunder for fran/FlyingMarios.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/16 marios/6. mario 64 plunder for fran/MarioFlyTransition.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -183,6 +260,7 @@
       <workItem from="1718574867828" duration="5094000" />
       <workItem from="1718691706680" duration="2557000" />
       <workItem from="1718847428259" duration="1107000" />
+      <workItem from="1718858026406" duration="1622000" />
     </task>
     <servers />
   </component>

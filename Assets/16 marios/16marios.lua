@@ -13,6 +13,8 @@ SHOW_DEBUG = true
 -- this is used externally to send information to this window
 windowName = "untitled"
 
+CURR_GAME = "mario";
+
 -- if there's multiple instances with same name, they can be used to distinguish them
 instance = 0
 
@@ -38,20 +40,6 @@ function main()
 		gui.clearGraphics()
 		local f = emu.framecount()
 
-		local pauseStr = unityhawk.callmethod("Pause", "")
-        local shouldPause = pauseStr == "true"
-        if (not isPaused and shouldPause) then
-            isPaused = true
-        elseif (isPaused and not shouldPause) then
-            isPaused = false
-        end
-
-        local volumeStr = unityhawk.callmethod("SetVolume", "")
-        if (volumeStr) then
-            local volume = tonumber(volumeStr)
-            client.SetVolume(volume);
-        end
-
 		if not isPaused then
 			emu.frameadvance()
 		else
@@ -66,7 +54,7 @@ function main()
 		end
 
 		-- prevent mario from getting frozen in dialogue
-		local newMem = plunder.readMemory("mario")
+		local newMem = plunder.readMemory(CURR_GAME)
 
 		local health = newMem.health
 
@@ -92,6 +80,16 @@ function main()
 
 		local _ = unityhawk.callmethod("IsOnTree", isOnTree and "true" or "false")
 		local _ = unityhawk.callmethod("GetState", json.encode(newMem))
+		local extMemStr = unityhawk.callmethod("SetState", "");
+		if extMemStr ~= nil and extMemStr ~= "" then
+			local extMem = json.decode(extMemStr)
+			plunder.writeMemory(CURR_GAME, extMem)
+		end
+
+		local healthStr = unityhawk.callmethod("SetHealth", "");
+		if healthStr ~= nil and healthStr ~= "" then
+			plunder.setValue(plunder.MEM[CURR_GAME].health, tonumber(healthStr))
+		end
 
 		if SHOW_DEBUG then
 			gui.text(10, 10, dbg)

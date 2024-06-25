@@ -77,6 +77,8 @@ plunder.MEM = {
 
 		phase = {byte = 0x33B17C, size = 4}, -- writing doesn't do anything
 		cycle = {byte = 0x33B18A, size = 2}, -- writing doesn't do anything
+
+		-- TODO: is in cannon
 	},
 	zelda = {
 		rupees = {byte = 0x10C78A, size = 1},
@@ -186,6 +188,27 @@ function plunder.readMemory(game)
 			address = addresses[key]
 			local value = plunder.getValue(address)
 			newMem[key] = value
+		end
+	end
+
+	return newMem
+end
+
+function plunder.writeMemory(game, mem)
+	game = game or currentGame
+
+	local addresses = plunder.MEM[game]
+	if addresses == nil then
+		print("no memory map for "..game)
+		plunder.MEM[game] = {}
+	else
+		keys = lib.get_keys(addresses)
+		table.sort(keys)
+		for i, key in ipairs(keys) do
+			address = addresses[key]
+			if mem[key] ~= nil then
+				plunder.setValue(address, mem[key])
+			end
 		end
 	end
 
@@ -310,7 +333,7 @@ function plunder.getValue(address, base, domain)
 	local size = address["size"]
 	local kind = address["kind"] or "INT"
 	local base = base or 256
-    local domain = domain or "RDRAM"
+	local domain = domain or "RDRAM"
 
 	local acc = 0
 	if kind == "FLOAT" then
@@ -333,7 +356,9 @@ function plunder.setValue(address, value, base, domain)
 	local size = address["size"]
 	local kind = address["kind"] or "INT"
 	local base = base or 256
-    local domain = domain or "RDRAM"
+	local domain = domain or "RDRAM"
+
+	if value == nil then return end
 
 	if kind == "FLOAT" then
 		memory.writefloat(byte, value, true, domainToCheck)
