@@ -355,7 +355,7 @@
       "url": "https://package.openupm.com"
     },
     "org.plunderludics.lib": {
-      "version": "file:C:/Users/gusta/Desktop/art/plunderludics/lib/Packages/org.plunderludics.lib",
+      "version": "file:../../lib/Packages/org.plunderludics.lib",
       "depth": 0,
       "source": "local",
       "dependencies": {

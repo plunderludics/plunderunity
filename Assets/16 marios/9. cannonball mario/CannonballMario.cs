@@ -23,12 +23,12 @@ public class CannonballMario : MonoBehaviour {
 
     IEnumerator CannonLoop() {
         while (true) {
-            _State.D.health = 0;
+            _State.Curr.health = 0;
             _State.SetState();
 
             yield return new WaitForSeconds(0.1f);
 
-            while (_State.D.health == 0) {
+            while (_State.Curr.health == 0) {
                 yield return null;
             }
             _StateLoader.Load();
