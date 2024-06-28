@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 using Plunderludics.Lib;
+using Color = Soil.Color;
 
 namespace Tapestry
 {
@@ -315,7 +316,7 @@ public class TapestryBlender : MonoBehaviour
     Vector3 Wrap(Vector3 pos) => Wrapper.Wrap(pos, m_WrapLength.Value);
 
     private void OnDrawGizmos() {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.Green;
         var dim = Vector3.one * m_WrapLength.Value;
         Gizmos.DrawWireCube(Vector3.zero + 0.5f*dim, dim);
 
@@ -324,7 +325,7 @@ public class TapestryBlender : MonoBehaviour
         // draw all the triangles
         var verts = m_Triangulation.Vertices;
         var tris = m_Triangulation.Triangles;
-        Gizmos.color = Color.white;
+        Gizmos.color = Color.White;
         for (int i = 0; i < tris.Count; i += 3) {
             var v0 = tris[i];
             var v1 = tris[i + 1];
@@ -345,10 +346,10 @@ public class TapestryBlender : MonoBehaviour
         // this is bad
         foreach (var mix in m_Mix.Values)
         {
-            Gizmos.color = Color.blue;
+            Gizmos.color = Color.Blue;
             var size = 0f;
             if (mix.Value > 0) {
-                Gizmos.color = Color.magenta;
+                Gizmos.color = Color.Magenta;
                 size = mix.Value;
             }
 

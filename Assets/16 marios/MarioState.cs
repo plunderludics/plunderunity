@@ -10,7 +10,7 @@ public class MarioState : MonoBehaviour
 {
     [SerializeField] Emulator _emulator;
 
-	Soil.Queue<Data> _Queue = new(10);
+	Soil.Ring<Data> _Queue = new(10);
 	List<Data> _SendBuffer = new();
 
     public Data Curr {
@@ -45,6 +45,9 @@ public class MarioState : MonoBehaviour
 	    _Queue.Fill(new Data());
     }
 
+    public Emulator Emulator {
+	    get => _emulator;
+    }
     string GetState(string json) {
 	    JsonSerializer serializer = new JsonSerializer();
 	    var sr = new StringReader(json);

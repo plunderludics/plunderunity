@@ -375,14 +375,14 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 033beab1060f99949a9270e3304485c0, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 613e52559474da14284889c1dca7e0a4, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFileName
-      value: C:\Users\gusta\Desktop\art\plunderludics\mut\Assets\samples\sm64-100%-courtyard-start.savestate
+      value: C:\Users\gusta\Desktop\gamedev\plunderludics\mut\Assets\samples\sm64-100%-courtyard-start.savestate
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: bizhawkLogLocation
