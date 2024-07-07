@@ -1,5 +1,6 @@
 using System;
 using NaughtyAttributes;
+using Plunderludics.Lib;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityHawk;
@@ -9,21 +10,19 @@ namespace Tapestry
     public class TapestryEmitter : MonoBehaviour {
         [SerializeField] bool m_UseSampleFile;
 
-        [FormerlySerializedAs("m_Sample")]
-        [FormerlySerializedAs("m_InitialSample")]
         [Tooltip("the sample this emitter starts at")]
         [HideIf(nameof(m_UseSampleFile))]
-        [SerializeField] string m_InitialSampleName;
+        [SerializeField] string m_SampleName;
 
         [ShowIf(nameof(m_UseSampleFile))]
         [Tooltip("the savestate this emitter starts at")]
-        [SerializeField] Savestate m_InitialSample;
+        [SerializeField] Savestate m_Sample;
 
         // the unique id for this emitter
-        [SerializeField, Readonly] string m_Id;
+        [SerializeField] string m_Id;
 
         // the name of the current sample
-        public string SampleName { get; private set; }
+        public string SampleName => m_UseSampleFile ? (m_Sample?.Name ?? "null") : m_SampleName;
 
         public Savestate Sample { get; private set; }
 
@@ -33,11 +32,11 @@ namespace Tapestry
         // the current sample for this emitter
 
         public Guid Id => m_Guid;
+        public bool UseSampleFile => m_UseSampleFile;
 
         /// -- commands --
-        public void Save(string sampleName)
-        {
-            SampleName = sampleName;
+        public void Save(string sampleName) {
+            m_SampleName = sampleName;
         }
 
         public void Save(Savestate sample)
@@ -45,28 +44,12 @@ namespace Tapestry
             Sample = sample;
         }
 
-        /// -- lifecycle --
-        private void OnValidate() {
-            this.name = m_UseSampleFile ? (m_InitialSample.Name) : m_InitialSampleName;
-
-            var text = GetComponentInChildren<TMPro.TMP_Text>();
-            if (text != null)
-            {
-                text.text = SampleName;
+        public void LoadSample(Track track) {
+            if (m_UseSampleFile) {
+                track.LoadSample(Sample);
+            } else {
+                track.LoadSample(SampleName);
             }
-
-            if (string.IsNullOrEmpty(m_Id))
-            {
-                m_Guid = Guid.NewGuid();
-                m_Id = m_Guid.ToString();
-            }
-        }
-
-        private void Awake()
-        {
-            m_Guid = Guid.Parse(m_Id);
-            Sample = m_InitialSample;
         }
     }
-
 }

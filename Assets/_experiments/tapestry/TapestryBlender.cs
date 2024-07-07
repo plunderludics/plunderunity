@@ -84,13 +84,10 @@ public class TapestryBlender : MonoBehaviour
     // Start is called before the first frame update
     void Awake() {
         m_Mix = new ();
-    }
-
-    void Start() {
-        m_AvailableTracks = new List<Track>(Tracks);
-
         m_Emitters = FindObjectsOfType<TapestryEmitter>().ToList();
         m_Verts = FindObjectsOfType<TapestryEmitter>().ToList();
+        m_AvailableTracks = new List<Track>(Tracks);
+
         var calculator = new DelaunayCalculator();
         m_Triangulation = calculator.CalculateTriangulation(
             m_Verts.Select(
@@ -103,8 +100,9 @@ public class TapestryBlender : MonoBehaviour
                 }
                 )
             .ToList());
+    }
 
-
+    void Start() {
         // initializeTracks
         StartCoroutine(LoadTracksSync());
     }
@@ -112,18 +110,19 @@ public class TapestryBlender : MonoBehaviour
     // TODO: don't let emulators load the same file at the same time
     IEnumerator LoadTracksSync() {
         m_Emitters = m_Emitters.OrderBy(Dist).ToList();
+        while (!m_TrackMixer.IsRunning) {
+            yield return null;
+        }
+
         for (var i = 0; i < TrackCount; i++) {
             var track = Tracks[i];
 
-            var sample = m_Emitters.ElementAt(i).SampleName;
-            print($"initializing track {track.name} with sample {sample}");
+            var emitter = m_Emitters.ElementAt(i);
+            print($"initializing track {track.name} with sample {emitter}");
 
-            // TODO: make this load sample from name?
-            // TODO: make this use streaming assets
-            // create sample object?
             // emu.SetFromSample($"Assets/StreamingAssets/samples/{sample}/rompath.txt");
             track.gameObject.SetActive(true);
-            track.LoadSample(sample);
+            emitter.LoadSample(track);
         }
 
         while (m_LoadedTracks.Value < TrackCount)
@@ -135,17 +134,15 @@ public class TapestryBlender : MonoBehaviour
         foreach (var track in Tracks) {
             track.SetVolume(0);
         }
+
+        m_IsLoaded = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         // wait for all tracks to load
-        foreach (var track in Tracks) {
-            if (!track.IsRunning) {
-                return;
-            }
-        }
+        if (!m_TrackMixer.IsRunning) return;
 
         // find which triangle we are inside in the triangulated emitter mesh
         var tris = m_Triangulation.Triangles;
@@ -293,14 +290,14 @@ public class TapestryBlender : MonoBehaviour
 
         track.SetVolume(m_VolumeCurve.Evaluate(mix.Value));
         if (track.Sample != emitter.SampleName) {
-            track.LoadSample(emitter.SampleName);
+            emitter.LoadSample(track);
         }
 
         if (mix.Value > 0) {
             if(track.IsPaused) {
                 track.IsPaused = false;
                 if (m_ReloadSampleOnUnpause) {
-                    track.LoadSample(emitter.SampleName);
+                    emitter.LoadSample(track);
                 }
             }
         } else {

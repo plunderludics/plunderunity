@@ -9,6 +9,7 @@ public class TankMover : MonoBehaviour
     [Header("tuning")]
     [SerializeField] FloatReference m_Speed;
     [SerializeField] FloatReference m_TurnSpeed;
+    [SerializeField] bool m_Invert;
 
     [Header("tuning")]
     [SerializeField] Vector2Reference m_Input;
@@ -17,14 +18,15 @@ public class TankMover : MonoBehaviour
 
     void Update() {
         // move walker
+        var (fwd, rot) = m_Invert ? (Input.y, Input.x) : (Input.x, Input.y);
         var t = transform;
         var velocity =
-            Input.y *
+            fwd *
             t.forward *
             m_Speed;
 
         var angularSpeed =
-            Input.x *
+            rot *
             m_TurnSpeed;
 
         // transform.Rotate

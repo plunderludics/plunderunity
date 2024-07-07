@@ -1,45 +1,58 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using Soil;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Serialization;
 using UnityHawk;
 
-public class KuleshovMario : MonoBehaviour {
+public class CuttingMario : MonoBehaviour {
+    [Serializable]
+    public class Sample {
+        public Savestate Savestate;
+        public bool IsPersistent;
+    }
+
     [Serializable]
     public class Data {
+        public string SavePath = "./Test/{0}-{1}";
         public Emulator Emulator;
         public GameObject Image;
-        public Savestate[] Samples;
+        public Sample[] Samples;
         public FloatRange DurationRange;
+        public bool PauseOnStop;
 
-        int _Curr = -1;
+        int _Curr = 0;
 
         public void Play() {
+            Emulator.Unpause();
             Image.SetActive(true);
         }
 
         public void Stop() {
             Image.SetActive(false);
-            var next = UnityEngine.Random.Range(0, Samples.Length);
-            if (next == _Curr) {
-                // idk, made sense
-                next = (next + 1) % Samples.Length;
+
+            var currSample = Samples[_Curr];
+            if (currSample.IsPersistent) {
+                currSample.Savestate = Emulator.SaveState(string.Format(SavePath, currSample.Savestate.Name, _Curr));
             }
 
-            var nextSavestate = Samples[next];
-            Emulator.LoadState(nextSavestate);
+            // preload the next sample
+            var next = UnityEngine.Random.Range(0, Samples.Length);
+            if (next != _Curr) {
+                var nextSample = Samples[next];
+                Emulator.LoadState(nextSample.Savestate);
+            }
+
+            Emulator.Pause();
 
             _Curr = next;
         }
     }
 
+    public FloatRange CutInterval;
     public Data Face;
     public Data Look;
-
 
     bool _Started = false;
 
@@ -56,11 +69,11 @@ public class KuleshovMario : MonoBehaviour {
             StartCoroutine(Sequence());
         }
 
-        var input = Face.Emulator.inputProvider;
-        input.AddInputEvent(new InputEvent() {
-            keyName = "A",
-            isPressed = true
-        });
+        // var input = Face.Emulator.inputProvider;
+        // input.AddInputEvent(new InputEvent() {
+        //     keyName = "A",
+        //     isPressed = true
+        // });
     }
 
     IEnumerator Sequence() {
@@ -71,6 +84,9 @@ public class KuleshovMario : MonoBehaviour {
             var next = i == 0 ? Face : Look;
 
             curr.Play();
+
+            yield return new WaitForSeconds(CutInterval.Random());
+
             next.Stop();
 
             var wait = curr.DurationRange.Random();
