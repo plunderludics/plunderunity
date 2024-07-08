@@ -470,14 +470,14 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 745fda020f96bab46817b5e4c342466b, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: e3b98ee949c6bc5469ce751dfe6226d4, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFileName
-      value: C:\Users\gusta\Desktop\gamedev\plunderludics\mut\Assets\samples\sm64-100%-bobombbattlefield-kooparace-dialog.savestate
+      value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\samples\sm64-100%-bobombbattlefield-kooparace-dialog.savestate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 1429512065}
   - component: {fileID: 1429512064}
   m_Layer: 0
-  m_Name: Cuttiong
+  m_Name: Cutting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,21 +846,23 @@ MonoBehaviour:
     Emulator: {fileID: 839965105}
     Image: {fileID: 34272917}
     Samples:
-    - Savestate: {fileID: 5022602860645237092, guid: 745fda020f96bab46817b5e4c342466b, type: 3}
+    - Savestate: {fileID: 5022602860645237092, guid: e3b98ee949c6bc5469ce751dfe6226d4, type: 3}
       IsPersistent: 1
     DurationRange:
       Min: 1
       Max: 1
+    PauseOnStop: 0
   Look:
     SavePath: ./Test/{0}-{1}-F
     Emulator: {fileID: 1510999872}
     Image: {fileID: 56179706}
     Samples:
-    - Savestate: {fileID: 5022602860645237092, guid: 745fda020f96bab46817b5e4c342466b, type: 3}
+    - Savestate: {fileID: 5022602860645237092, guid: e3b98ee949c6bc5469ce751dfe6226d4, type: 3}
       IsPersistent: 1
     DurationRange:
       Min: 1
       Max: 1
+    PauseOnStop: 0
 --- !u!4 &1429512065
 Transform:
   m_ObjectHideFlags: 0
@@ -951,14 +953,14 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 745fda020f96bab46817b5e4c342466b, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: e3b98ee949c6bc5469ce751dfe6226d4, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFileName
-      value: C:\Users\gusta\Desktop\gamedev\plunderludics\mut\Assets\samples\sm64-100%-bobombbattlefield-kooparace-dialog.savestate
+      value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\samples\sm64-100%-bobombbattlefield-kooparace-dialog.savestate
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: bizhawkLogLocation

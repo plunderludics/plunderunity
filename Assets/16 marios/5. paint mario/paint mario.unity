@@ -759,8 +759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f702eb5af5eaa48a50ec47e290cf07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _emulator: {fileID: 4223458904696790466}
-  D:
+  _emulator: {fileID: 0}
+  CurrData:
     coins: 0
     stars: 0
     level: 0
@@ -1037,14 +1037,14 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 033beab1060f99949a9270e3304485c0, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 613e52559474da14284889c1dca7e0a4, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFileName
-      value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\samples\sm64-100%-courtyard-start.savestate
+      value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\samples\sm64-100%-courtyard-start.savestate
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: bizhawkLogLocation
@@ -1059,17 +1059,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
---- !u!114 &4223458904696790466 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
-  m_PrefabInstance: {fileID: 4223458904696790465}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

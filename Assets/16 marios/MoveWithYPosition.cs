@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Soil;
 using UnityEngine;
 
-public class MoveWithYPositiono : MonoBehaviour {
+public class MoveWithYPosition : MonoBehaviour {
     public MarioState State;
 
     public FloatRange HeightRange;

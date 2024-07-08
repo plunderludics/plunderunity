@@ -336,22 +336,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
---- !u!114 &839965105 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
-  m_PrefabInstance: {fileID: 839965104}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839965106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &839965106 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5958378178529996450, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
-  m_PrefabInstance: {fileID: 839965104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &977315325
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,77 +492,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1429512063
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1429512065}
-  - component: {fileID: 1429512064}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1429512064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429512063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7f2bc93b160ccf4dac7500ea2b34b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Face:
-    Emulator: {fileID: 839965105}
-    Image: {fileID: 34272917}
-    Samples:
-    - {fileID: 5022602860645237092, guid: a65ebbee35085094ca271dfd88ce32b0, type: 3}
-    - {fileID: 5022602860645237092, guid: ed4eeb502eae58445b2acaa4f2300c9f, type: 3}
-    - {fileID: 5022602860645237092, guid: 01a3628448cb6604bb2acd96fe436dcb, type: 3}
-    - {fileID: 5022602860645237092, guid: bd0277dbffc46e84fa813f6100bf9724, type: 3}
-    - {fileID: 5022602860645237092, guid: 993b6c69a1a6735408e200559d0cf080, type: 3}
-    DurationRange:
-      Min: 2
-      Max: 4
-  Look:
-    Emulator: {fileID: 839965105}
-    Image: {fileID: 839965106}
-    Samples:
-    - {fileID: 5022602860645237092, guid: 995d3c7be22c5a94cad433530449f59d, type: 3}
-    - {fileID: 5022602860645237092, guid: 671d39a8a1fd30b48a509f802531b6d3, type: 3}
-    - {fileID: 5022602860645237092, guid: f1a209a26b0cbac41b9fb86668c80f49, type: 3}
-    - {fileID: 5022602860645237092, guid: 6704701b26940ba40bdd8666ef22d3d3, type: 3}
-    - {fileID: 5022602860645237092, guid: 35795279abe161442a7db68a20a8b3a0, type: 3}
-    - {fileID: 5022602860645237092, guid: c4884821514025a42acf304e6feaa95c, type: 3}
-    - {fileID: 5022602860645237092, guid: 7b64f80087cb3eb4bb6cc8a6b798c518, type: 3}
-    - {fileID: 5022602860645237092, guid: 6604d492648fc754f85556da443ac63e, type: 3}
-    DurationRange:
-      Min: 5
-      Max: 10
---- !u!4 &1429512065
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429512063}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 626.4042, y: 196.19165, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -758,7 +671,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c9b2137081cff64dadec711282b7aba, type: 2}
+  - {fileID: 2100000, guid: cd6054289fcddd4439ce80180d7ad16e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -995,4 +908,3 @@ SceneRoots:
   - {fileID: 1265898924}
   - {fileID: 1510999867}
   - {fileID: 839965104}
-  - {fileID: 1429512065}

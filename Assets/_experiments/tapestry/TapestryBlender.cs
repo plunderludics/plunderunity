@@ -49,7 +49,7 @@ public class TapestryBlender : MonoBehaviour
     [SerializeField] float m_GizmoRadius;
     [SerializeField] TMPro.TMP_Text m_Debug;
 
-    public SerializedDictionary<Guid, WalkerMix> m_Mix;
+    public SerializedDictionary<string, WalkerMix> m_Mix;
 
     // a game, emitting videogame, sorted by distance
     [ShowNonSerializedField, Readonly] List<TapestryEmitter> m_Emitters;
@@ -86,7 +86,6 @@ public class TapestryBlender : MonoBehaviour
         m_Mix = new ();
         m_Emitters = FindObjectsOfType<TapestryEmitter>().ToList();
         m_Verts = FindObjectsOfType<TapestryEmitter>().ToList();
-        m_AvailableTracks = new List<Track>(Tracks);
 
         var calculator = new DelaunayCalculator();
         m_Triangulation = calculator.CalculateTriangulation(
@@ -103,6 +102,7 @@ public class TapestryBlender : MonoBehaviour
     }
 
     void Start() {
+        m_AvailableTracks = new List<Track>(Tracks);
         // initializeTracks
         StartCoroutine(LoadTracksSync());
     }
@@ -171,9 +171,9 @@ public class TapestryBlender : MonoBehaviour
             l1 = ((c2.y - c0.y) * (p.x - c2.x) + (c0.x - c2.x) * (p.y - c2.y)) / detT;
             l2 = 1 - l0 - l1;
 
-            if(l0 < 0 || l0 > 1) continue;
-            if(l1 < 0 || l1 > 1) continue;
-            if(l2 < 0 || l2 > 1) continue;
+            if(l0 is < 0 or > 1) continue;
+            if(l1 is < 0 or > 1) continue;
+            if(l2 is < 0 or > 1) continue;
             break;
         }
 
@@ -257,7 +257,7 @@ public class TapestryBlender : MonoBehaviour
             var track = m_AvailableTracks.First();
             m_AvailableTracks.RemoveAt(0);
 
-            mix = new WalkerMix() { Track=track, Value=value, Emitter = emitter};
+            mix = new WalkerMix() { Track=track, Value=value, Emitter=emitter};
             m_Mix[id] = mix;
 
             print($"added {emitter.SampleName} @ track: {track}");

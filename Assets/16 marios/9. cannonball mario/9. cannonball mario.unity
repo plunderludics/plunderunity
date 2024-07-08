@@ -300,35 +300,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: _status
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: _initialized
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: _currentFrame
-      value: 113835
+      value: 1375
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: runInEditMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: abaa080da26f6a64a8076ad1adcadf4f, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 6c390b72aed98b848a294b61670a365d, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFileName
-      value: C:\Users\gusta\Desktop\art\plunderludics\mut\Assets\samples\sm64-100%-bobombbattlefield-cannon1.savestate
+      value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\samples\sm64-100%-bobombbattlefield-cannon1.savestate
       objectReference: {fileID: 0}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: bizhawkLogLocation
-      value: BizHawkLogs\mixer_Track Mario-34594.log
+      value: BizHawkLogs\mixer_Track Mario-39840.log
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -559,11 +559,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_States:
-  - {fileID: 5022602860645237092, guid: abaa080da26f6a64a8076ad1adcadf4f, type: 3}
-  - {fileID: 5022602860645237092, guid: b4c855f29d32a5142adc3a229ede9e0c, type: 3}
-  - {fileID: 5022602860645237092, guid: 3842a9750acfb3849954e14765f60cea, type: 3}
-  - {fileID: 5022602860645237092, guid: fca6e8c118b4591449528bd071f1f07a, type: 3}
-  - {fileID: 5022602860645237092, guid: ab7591e6e041ccd449aabc341d125937, type: 3}
+  - {fileID: 5022602860645237092, guid: 6c390b72aed98b848a294b61670a365d, type: 3}
+  - {fileID: 5022602860645237092, guid: 68887d751375093449e80a7839341fe4, type: 3}
+  - {fileID: 5022602860645237092, guid: 8d2df4b351e927f468aeb240caf61ddf, type: 3}
+  - {fileID: 5022602860645237092, guid: 2550f3cf79cd6514bbfcd962d0a25ab4, type: 3}
+  - {fileID: 5022602860645237092, guid: 09d2550991645d344b88da6f1428e3e7, type: 3}
   m_Emulator: {fileID: 938899391}
 --- !u!1 &1549532587
 GameObject:

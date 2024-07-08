@@ -27,7 +27,7 @@
     "com.unity.visualscripting": "1.9.1",
     "com.unity.xr.legacyinputhelpers": "2.1.10",
     "jp.keijiro.osc-jack": "2.0.0",
-    "org.plunderludics.lib": "file:../../lib/Packages/org.plunderludics.lib",
+    "org.plunderludics.plundertools": "file:../../tools/Packages/org.plunderludics.plundertools",
     "org.plunderludics.unityhawk": "file:../../unity-hawk/Packages/org.plunderludics.UnityHawk",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
@@ -80,8 +80,7 @@
         "com.unity-atoms.unity-atoms-base-atoms",
         "com.unity-atoms.unity-atoms-core",
         "com.unity-atoms.unity-atoms-fsm",
-        "jp.keijiro.osc-jack",
-        "org.plunderludics.unityhawk"
+        "jp.keijiro.osc-jack"
       ]
     }
   ]

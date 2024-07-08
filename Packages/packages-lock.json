@@ -354,11 +354,12 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
-    "org.plunderludics.lib": {
-      "version": "file:../../lib/Packages/org.plunderludics.lib",
+    "org.plunderludics.plundertools": {
+      "version": "file:../../tools/Packages/org.plunderludics.plundertools",
       "depth": 0,
       "source": "local",
       "dependencies": {
+        "com.unity.shadergraph": "14.0.9",
         "com.unity.nuget.newtonsoft-json": "3.0.2",
         "com.dbrizov.naughtyattributes": "2.1.4",
         "org.plunderludics.unityhawk": "0.0.11"

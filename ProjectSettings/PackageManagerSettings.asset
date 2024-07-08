@@ -46,7 +46,6 @@ MonoBehaviour:
     - com.unity-atoms.unity-atoms-core
     - com.unity-atoms.unity-atoms-fsm
     - jp.keijiro.osc-jack
-    - org.plunderludics.unityhawk
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4
