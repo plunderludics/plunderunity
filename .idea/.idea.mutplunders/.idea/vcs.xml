@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/samples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../unity-hawk" vcs="Git" />
   </component>
 </project>

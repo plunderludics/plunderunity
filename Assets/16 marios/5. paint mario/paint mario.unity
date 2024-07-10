@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f702eb5af5eaa48a50ec47e290cf07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _emulator: {fileID: 0}
+  _emulator: {fileID: 1592216221}
   CurrData:
     coins: 0
     stars: 0
@@ -795,6 +795,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1592216221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
+  m_PrefabInstance: {fileID: 4223458904696790465}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1718799693
 GameObject:
   m_ObjectHideFlags: 0

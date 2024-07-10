@@ -28,7 +28,7 @@ public class MarioState : MonoBehaviour
 
     // lifecycle
     void OnValidate() {
-		_emulator = GetComponent<Emulator>();
+
         if (!_emulator) {
             _emulator = GetComponentInParent<Emulator>();
         }
