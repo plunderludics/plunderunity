@@ -34,7 +34,8 @@ public class CuttingMario : MonoBehaviour {
 
             var currSample = Samples[_Curr];
             if (currSample.IsPersistent) {
-                currSample.Savestate = Emulator.SaveState(string.Format(SavePath, currSample.Savestate.Name, _Curr));
+                // TODO: figure out persistency
+                // currSample.Savestate = Emulator.SaveState(string.Format(SavePath, currSample.Savestate.Name, _Curr));
             }
 
             // preload the next sample

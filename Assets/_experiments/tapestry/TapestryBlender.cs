@@ -275,7 +275,7 @@ public class TapestryBlender : MonoBehaviour
             var sample = track.Sample;
 
             var mixInfo = "disabled";
-            var mix = m_Mix.FirstOrDefault(k => k.Value.Emitter.SampleName == sample).Value;
+            var mix = m_Mix.FirstOrDefault(k => k.Value.Emitter.Sample == sample).Value;
             if(mix != null) {
                 mixInfo = $"{mix.Value}";
             }
@@ -289,7 +289,7 @@ public class TapestryBlender : MonoBehaviour
         var emitter = mix.Emitter;
 
         track.SetVolume(m_VolumeCurve.Evaluate(mix.Value));
-        if (track.Sample != emitter.SampleName) {
+        if (track.Sample != emitter.Sample) {
             emitter.LoadSample(track);
         }
 
