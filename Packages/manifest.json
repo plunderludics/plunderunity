@@ -23,6 +23,7 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.1",
     "com.unity.xr.legacyinputhelpers": "2.1.10",
+    "jp.keijiro.minis": "1.0.10",
     "jp.keijiro.osc-jack": "2.0.0",
     "org.plunderludics.plundertools": "file:../../tools/Packages/org.plunderludics.plundertools",
     "org.plunderludics.unityhawk": "file:../../unity-hawk/Packages/org.plunderludics.UnityHawk",
