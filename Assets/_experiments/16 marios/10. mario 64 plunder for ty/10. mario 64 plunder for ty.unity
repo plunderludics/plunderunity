@@ -375,7 +375,7 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 613e52559474da14284889c1dca7e0a4, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: b862ec467b5eb394183170ceba843235, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
       value: 0

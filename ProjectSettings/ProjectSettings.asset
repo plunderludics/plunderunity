@@ -832,9 +832,20 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: OBI_ONI_SUPPORTED
-    Standalone: OBI_ONI_SUPPORTED
+    Android: OBI_ONI_SUPPORTED;EXTOSC
+    EmbeddedLinux: EXTOSC
+    GameCoreXboxOne: EXTOSC
+    Nintendo Switch: EXTOSC
+    PS4: EXTOSC
+    PS5: EXTOSC
+    QNX: EXTOSC
+    Stadia: EXTOSC
+    Standalone: OBI_ONI_SUPPORTED;EXTOSC
+    VisionOS: EXTOSC
+    WebGL: EXTOSC
+    XboxOne: EXTOSC
     iPhone: OBI_ONI_SUPPORTED
+    tvOS: EXTOSC
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

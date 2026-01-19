@@ -27,6 +27,7 @@
     "jp.keijiro.osc-jack": "2.0.0",
     "org.plunderludics.plundertools": "file:../../tools/Packages/org.plunderludics.plundertools",
     "org.plunderludics.unityhawk": "file:../../unity-hawk/Packages/org.plunderludics.UnityHawk",
+    "com.codewriter.triinspector": "https://github.com/codewriter-packages/Tri-Inspector.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -57,7 +58,8 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.iam1337.extosc": "1.21.0"
   },
   "scopedRegistries": [
     {
@@ -74,6 +76,7 @@
         "com.dbrizov.naughtyattributes",
         "com.github-glitchenzo.nugetforunity",
         "com.hecomi.uwindowcapture",
+        "com.iam1337.extosc",
         "com.openupm",
         "com.unity-atoms.unity-atoms-base-atoms",
         "com.unity-atoms.unity-atoms-core",

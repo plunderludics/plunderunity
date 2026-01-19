@@ -19,11 +19,11 @@ public class MarioForTy : MonoBehaviour {
     void Update() {
         var curr = _State.Curr;
         var prev = _State.Prev;
-        if (curr.action == prev.action) {
+        if (curr.phase == prev.phase) {
             return;
         }
 
-        if (EnterDoorAddress.Contains(prev.action)) {
+        if (EnterDoorAddress.Contains(prev.phase)) {
             if (DownDoorPosY.Contains(prev.posY)) {
                 _Emulator.LoadState(_LeavingDownDoor);
             } else {
@@ -31,7 +31,7 @@ public class MarioForTy : MonoBehaviour {
             }
         }
 
-        if (EnterHoleAddress.Contains(prev.action)) {
+        if (EnterHoleAddress.Contains(prev.phase)) {
             _Emulator.LoadState(_LeavingHole);
         }
     }

@@ -19,43 +19,43 @@ public class KenjiInoInput : InputProvider {
     void Update() {
         // if (!emu.IsRunning) return;
 
-         var stuff = new { Uparrow = "UpArrow", Downarrow = "DownArrow", Leftarrow = "LeftArrow", Rightarrow = "RightArrow" };
+        var stuff = new { Uparrow = "UpArrow", Downarrow = "DownArrow", Leftarrow = "LeftArrow", Rightarrow = "RightArrow" };
 
         _moveTimer -= Time.deltaTime;
         if (_isMoving) {
             // emu.Unpause();
-         if (firstPerson) {
-            AddInputEvent(new InputEvent() {
-                keyName = "K",
-                isPressed = true
-            });
-            firstPerson = false;
-        } else {
-             AddInputEvent(new InputEvent() {
-                keyName = "K",
-                isPressed = false
-            });
-        }
+            if (firstPerson) {
+                AddInputEvent(new InputEvent() {
+                    name = "K",
+                    value = 1,
+                });
+                firstPerson = false;
+            } else {
+                AddInputEvent(new InputEvent() {
+                    name = "K",
+                    value = 0,
+                });
+            }
 
 
             if (move.y != 0) {
                 AddInputEvent(new InputEvent() {
-                    keyName = move.y > 0 ? stuff.Uparrow : stuff.Downarrow,
-                    isPressed = true
+                    name = move.y > 0 ? stuff.Uparrow : stuff.Downarrow,
+                    value = 1,
                 });
             }
 
             if (jump) {
                 AddInputEvent(new InputEvent() {
-                    keyName = "A",
-                    isPressed = true
+                    name = "A",
+                    value = 1,
                 });
             }
 
             if (move.x != 0) {
                 AddInputEvent(new InputEvent() {
-                    keyName = move.x < 0 ? stuff.Leftarrow : stuff.Rightarrow,
-                    isPressed = true
+                    name = move.x < 0 ? stuff.Leftarrow : stuff.Rightarrow,
+                    value = 1,
                 });
 
                 // AddAxisInputEvent("X Axis", move.x * 128);
@@ -70,40 +70,41 @@ public class KenjiInoInput : InputProvider {
         // emu.Pause();
         if (!firstPerson) {
             AddInputEvent(new InputEvent() {
-                keyName = "I",
-                isPressed = true
+                name = "I",
+                value = 1,
             });
+
             firstPerson = true;
         } else {
-             AddInputEvent(new InputEvent() {
-                keyName = "I",
-                isPressed = false
+            AddInputEvent(new InputEvent() {
+                name = "I",
+                value = 0,
             });
         }
 
         AddInputEvent(new InputEvent() {
-            keyName = "A",
-            isPressed = false
+            name = "A",
+            value = 0,
         });
 
         AddInputEvent(new InputEvent() {
-            keyName = stuff.Downarrow,
-            isPressed = false
+            name = stuff.Downarrow,
+            value = 0,
         });
 
         AddInputEvent(new InputEvent() {
-            keyName = stuff.Uparrow,
-            isPressed = false
+            name = stuff.Uparrow,
+            value = 0,
         });
 
         AddInputEvent(new InputEvent() {
-            keyName = stuff.Leftarrow,
-            isPressed = false
+            name = stuff.Leftarrow,
+            value = 0,
         });
 
         AddInputEvent(new InputEvent() {
-            keyName = stuff.Rightarrow,
-            isPressed = false
+            name = stuff.Rightarrow,
+            value = 0,
         });
 
         if (Input.GetKeyDown(KeyCode.Space)) {

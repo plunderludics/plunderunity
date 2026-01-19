@@ -59,6 +59,8 @@ plunder.MEM = {
 		action = {byte = 0x33B17C, size = 4},
 		health = {byte = 0x33B21E, size = 1},
 
+		sfx = {byte = 0x00FF, size = 1},
+
 		-- Y is the up axis
 		posX = {byte = 0x33B1AC, size = 4, kind="FLOAT"},
 		posY = {byte = 0x33B1B0, size = 4, kind="FLOAT"},

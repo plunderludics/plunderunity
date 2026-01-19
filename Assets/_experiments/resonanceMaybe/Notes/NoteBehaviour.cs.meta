@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b3b8adb2c9b4ffca1a3f6ca971549c3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _NoteOn: {fileID: 11400000, guid: 96ac9e07a51f71c4098a00b03c3e2889, type: 2}
+  - _NoteOff: {fileID: 11400000, guid: a1a96c30a59fbf4448b48030d2c88a10, type: 2}
+  - _AllLoaded: {fileID: 11400000, guid: c49e86728a8641948be2d7831fa780fe, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,12 +8,16 @@ namespace Tapestry
 public class WrapPerception : MonoBehaviour {
     [SerializeField] bool m_Horizontal = true;
     [SerializeField] bool m_Vertical = true;
-    public static bool didthing = false;
+
+    public bool First = true;
+
     // Start is called before the first frame update
-    void Awake()
-    {
-        if (didthing) return;
-        didthing = true;
+    void Awake() {
+        if (!First) {
+            return;
+        }
+
+        First = false;
 
         var p = transform.position;
         var d = FindObjectOfType<TapestryBlender>().WrapLength;

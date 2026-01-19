@@ -504,7 +504,7 @@ PrefabInstance:
     - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ce0ed315ba8362e46a5eebc00f21e15c, type: 3}
     - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\Super
@@ -513,7 +513,7 @@ PrefabInstance:
     - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: ed4eeb502eae58445b2acaa4f2300c9f, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 70431ef2f8ef29d409bae541820073cc, type: 3}
     - target: {fileID: 548660780946716782, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
       value: 0
@@ -526,6 +526,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 672288650801751670, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: saveStateFile
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 82a475254c549214d8a58610862aafe7, type: 3}
     - target: {fileID: 1637011790532718919, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: _status
       value: 0
@@ -554,7 +558,7 @@ PrefabInstance:
     - target: {fileID: 1637011790532718919, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: a65ebbee35085094ca271dfd88ce32b0, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 82a475254c549214d8a58610862aafe7, type: 3}
     - target: {fileID: 1637011790532718919, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: _textureSize.x
       value: 320
@@ -622,7 +626,7 @@ PrefabInstance:
     - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ce0ed315ba8362e46a5eebc00f21e15c, type: 3}
     - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\Super
@@ -631,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 993b6c69a1a6735408e200559d0cf080, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: e3cc96eac64447244a9d351397476a86, type: 3}
     - target: {fileID: 3366639046244154645, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
       value: 0
@@ -644,6 +648,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4190316361333326000, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: saveStateFile
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 82a475254c549214d8a58610862aafe7, type: 3}
     - target: {fileID: 4594190173578180735, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -655,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 6429224453559467155, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ce0ed315ba8362e46a5eebc00f21e15c, type: 3}
     - target: {fileID: 6429224453559467155, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\Super
@@ -664,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 6429224453559467155, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: bd0277dbffc46e84fa813f6100bf9724, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: b5cd93be8ffdacb4693621f07c2d339c, type: 3}
     - target: {fileID: 6429224453559467155, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
       value: 0
@@ -676,7 +684,7 @@ PrefabInstance:
     - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ce0ed315ba8362e46a5eebc00f21e15c, type: 3}
     - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: romFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\Super
@@ -685,7 +693,7 @@ PrefabInstance:
     - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 01a3628448cb6604bb2acd96fe436dcb, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 7c9f5e792257ae04b86ea75ac65c6566, type: 3}
     - target: {fileID: 8066236153175175371, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: showBizhawkGui
       value: 0
@@ -698,6 +706,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8366031875961252589, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
+      propertyPath: saveStateFile
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 82a475254c549214d8a58610862aafe7, type: 3}
     - target: {fileID: 8802273980421449902, guid: 3ceb4a154360a19459bedb8865ebddec, type: 3}
       propertyPath: tex1mix
       value: 1
