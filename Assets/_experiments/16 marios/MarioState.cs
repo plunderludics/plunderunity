@@ -57,25 +57,30 @@ public partial class MarioState: MonoBehaviour {
 	}
 
 	// Y is the up axis
-	MemoryUnsigned coins    = new(address: 0x33B219, size: 2);
-	MemoryUnsigned stars    = new(address: 0x33B21A, size: 2); // writing doesn't do anything
-	MemoryUnsigned level    = new(address: 0x33B249, size: 1); // writing doesn't do anything
-	MemoryUnsigned status   = new(address: 0x33B172, size: 2);
-	MemoryUnsigned health   = new(address: 0x33B21E, size: 1);
-	MemoryUnsigned sfx      = new(address: 0x00FF, size: 1);
-	MemoryFloat    posX     = new(address: 0x33B1AC);
-	MemoryFloat    posY     = new(address: 0x33B1B0);
-	MemoryFloat    posZ     = new(address: 0x33B1B4);
-	MemoryFloat    offY     = new(address: 0x33B220);
-	MemoryFloat    speed      = new(address: 0x33B1C4);
-	MemoryFloat    velX     = new(address: 0x33B1B8);
-	MemoryFloat    velY     = new(address: 0x33B1BC);
-	MemoryFloat    velZ     = new(address: 0x33B1C0);
-	MemoryFloat    camX     = new(address: 0x33C6A4);
-	MemoryFloat    camY     = new(address: 0x33C6A8);
-	MemoryFloat    camZ     = new(address: 0x33C6AC);
-	MemoryUnsigned phase    = new(address: 0x33B17C, size: 4); // writing doesn't do anything
-	MemoryUnsigned cycle    = new(address: 0x33B18A, size: 2); // writing doesn't do anything
+	MemoryUnsigned coins       = new(address: 0x33B219, size: 2);
+	MemoryUnsigned stars       = new(address: 0x33B21A, size: 2); // writing doesn't do anything
+	MemoryUnsigned level       = new(address: 0x33B249, size: 1); // writing doesn't do anything
+	MemoryUnsigned status      = new(address: 0x33B172, size: 2);
+	MemoryUnsigned health      = new(address: 0x33B21E, size: 1);
+	MemoryUnsigned sfx         = new(address: 0x00FF, size: 1);
+	MemoryFloat    posX        = new(address: 0x33B1AC);
+	MemoryFloat    posY        = new(address: 0x33B1B0);
+	MemoryFloat    posZ        = new(address: 0x33B1B4);
+	MemoryFloat    offY        = new(address: 0x33B220);
+	MemoryFloat    speed       = new(address: 0x33B1C4);
+	MemoryFloat    velX        = new(address: 0x33B1B8);
+	MemoryFloat    velY        = new(address: 0x33B1BC);
+	MemoryFloat    velZ        = new(address: 0x33B1C0);
+	MemoryFloat    camX        = new(address: 0x33C6A4);
+	MemoryFloat    camY        = new(address: 0x33C6A8);
+	MemoryFloat    camZ        = new(address: 0x33C6AC);
+	MemoryUnsigned phase       = new(address: 0x33B17C, size: 4); // writing doesn't do anything
+	MemoryUnsigned cycle       = new(address: 0x33B18A, size: 2); // writing doesn't do anything
+	MemoryUnsigned angleI      = new(address: 0x33B194, size:2);
+	MemoryUnsigned angleTilt   = new(address: 0x33B19C, size:2);
+	MemoryUnsigned angleFace   = new(address: 0x33B19E, size:2);
+	MemoryUnsigned angleMove   = new(address: 0x33B1A8, size:2);
+
 
 	// TODO: is in cannon
 
@@ -107,6 +112,8 @@ public partial class MarioState: MonoBehaviour {
         }
     }
 
+    const int TWO_BYTES = 256 * 256;
+
     void Start() {
 	    // _emulator.RegisterLuaCallback("GetState", GetState);
 
@@ -134,6 +141,10 @@ public partial class MarioState: MonoBehaviour {
 		    camZ.Watch(_emulator, v => Curr.cam.z = v);
 		    phase.Watch(_emulator, v => Curr.phase = v);
 		    cycle.Watch(_emulator, v => Curr.cycle = v);
+			angleI.Watch(_emulator, v => Curr.angleI = (2 * (float)v / TWO_BYTES - 1) * Mathf.PI);
+			angleTilt.Watch(_emulator, v => Curr.angleTilt = (2 * (float)v / TWO_BYTES - 1) * Mathf.PI);
+			angleFace.Watch(_emulator, v => Curr.angleFace = (2 * (float)v / TWO_BYTES - 1) * Mathf.PI);
+			angleMove.Watch(_emulator, v => Curr.angleMove = (2 * (float)v / TWO_BYTES - 1) * Mathf.PI);
 	    };
 
 		#if UNITY_EDITOR
@@ -200,6 +211,11 @@ public partial class MarioState: MonoBehaviour {
 		public float posX => pos.x;
 		public float posY => pos.y;
 		public float posZ => pos.z;
+
+		public float angleI;
+		public float angleTilt;
+		public float angleFace;
+		public float angleMove;
 
 		public float offY;
 		public float speed;
