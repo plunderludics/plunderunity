@@ -12,6 +12,10 @@ public partial class MarioState: MonoBehaviour {
 		public override void Watch(Emulator emulator, Action<float> callback) {
 			emulator.WatchFloat(Address, IsBigEndian, Domain, callback);
 		}
+
+		public override void Write(Emulator emulator, float value) {
+			emulator.WriteFloat(Address, value, IsBigEndian, Domain);
+		}
 	}
 
 	class MemoryUnsigned: Memory<uint> {
@@ -20,6 +24,10 @@ public partial class MarioState: MonoBehaviour {
 		public override void Watch(Emulator emulator, Action<uint> callback) {
 			emulator.WatchUnsigned(Address, Size, IsBigEndian, Domain, callback);
 		}
+
+		public override void Write(Emulator emulator, uint value) {
+			emulator.WriteUnsigned(Address, value, Size, IsBigEndian, Domain);
+		}
 	}
 
 	class MemorySigned: Memory<int> {
@@ -27,6 +35,10 @@ public partial class MarioState: MonoBehaviour {
 
 		public override void Watch(Emulator emulator, Action<int> callback) {
 			emulator.WatchSigned(Address, Size, IsBigEndian, Domain, callback);
+		}
+
+		public override void Write(Emulator emulator, int value) {
+			emulator.WriteSigned(Address, value, Size, IsBigEndian, Domain);
 		}
 	}
 
@@ -54,6 +66,7 @@ public partial class MarioState: MonoBehaviour {
 		}
 
 		public abstract void Watch(Emulator emulator, Action<T> callback);
+		public abstract void Write(Emulator emulator, T value);
 	}
 
 	// Y is the up axis
@@ -81,6 +94,8 @@ public partial class MarioState: MonoBehaviour {
 	MemoryUnsigned angleFace   = new(address: 0x33B19E, size:2);
 	MemoryUnsigned angleMove   = new(address: 0x33B1A8, size:2);
 
+	// https://www.youtube.com/watch?v=lHqvuQpsjEs
+	MemoryFloat    musicVolume = new(address: 0x222630);
 
 	// TODO: is in cannon
 
@@ -141,6 +156,7 @@ public partial class MarioState: MonoBehaviour {
 		    camZ.Watch(_emulator, v => Curr.cam.z = v);
 		    phase.Watch(_emulator, v => Curr.phase = v);
 		    cycle.Watch(_emulator, v => Curr.cycle = v);
+		    musicVolume.Watch(_emulator, v => Curr.musicVolume = v);
 			angleI.Watch(_emulator, v => Curr.angleI = (2 * (float)v / TWO_BYTES - 1) * Mathf.PI);
 			angleTilt.Watch(_emulator, v => Curr.angleTilt = (2 * (float)v / TWO_BYTES - 1) * Mathf.PI);
 			angleFace.Watch(_emulator, v => Curr.angleFace = (2 * (float)v / TWO_BYTES - 1) * Mathf.PI);
@@ -150,6 +166,10 @@ public partial class MarioState: MonoBehaviour {
 		#if UNITY_EDITOR
 		CurrData = Curr;
 		#endif
+    }
+
+    void Update() {
+	    musicVolume.Write(_emulator, 0);
     }
 
     public Emulator Emulator {
@@ -229,5 +249,7 @@ public partial class MarioState: MonoBehaviour {
 		public float camX => cam.x;
 		public float camY => cam.y;
 		public float camZ => cam.z;
+
+		public float musicVolume;
     }
 }

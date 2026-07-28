@@ -5,12 +5,15 @@ using UnityEngine;
 using UnityHawk;
 
 namespace MutPlunders {
-    public class OscInputProvider: InputProvider {
+    public class OscInputProvider: BasicInputProvider {
+        [Header("osc")]
         [SerializeField] int m_Track;
         [SerializeField] int m_Controllers;
         [SerializeField] OSCReceiver m_Receiver;
+        [SerializeField] bool m_BasicInputEnabled;
+        [SerializeField] bool m_Log;
 
-        const string k_Channel = "/i/{0}";
+        const string k_Channel = "/{0}";
         readonly Dictionary<string, InputEventMapping> m_InputMap = new() {
             // n64
             {"a", new ("A")},
@@ -31,19 +34,59 @@ namespace MutPlunders {
             {"l", new("L")},
         };
 
-        void Awake() {
+        protected void Awake() {
             Debug.Log($"doing track {m_Track}");
             for (var i = 0; i < m_Controllers; i++) {
                 Debug.Log($"doing controller {i}");
                 foreach (var (input, map) in m_InputMap) {
-                    var channel = string.Format(OscTracks.Channel, m_Track, "i") + string.Format(k_Channel, input);
-                    Debug.Log($"doing channel {channel}");
+                    var channel = Channel(input);
                     m_Receiver.Bind(channel, (msg) => InputReceiver(map, msg));
                 }
+
+                var enableChannel = Channel("toggle");
+                m_Receiver.Bind(enableChannel, EnableReceiver);
+            }
+
+            string Channel(string input) {
+                var channel = string.Format(OscTracks.Channel, m_Track, "i") + string.Format(k_Channel, input);
+                return channel;
             }
         }
 
+
+        protected override void Update() {
+            if (m_BasicInputEnabled) {
+                base.Update();
+            }
+        }
+
+        protected override void FixedUpdate() {
+            if (m_BasicInputEnabled) {
+                base.FixedUpdate();
+            }
+        }
+
+        // -- events --
+        void EnableReceiver(OSCMessage msg) {
+            if(m_Log) {
+                Debug.Log($"received {msg}");
+            }
+
+            int value = -1;
+
+            if(!msg.ToFloat(out float valueF)) {
+                return;
+            }
+
+            m_BasicInputEnabled = valueF > 0.5;
+
+        }
+
         void InputReceiver(InputEventMapping m, OSCMessage msg) {
+            if(m_Log) {
+                Debug.Log($"received {msg}");
+            }
+
             int value = -1;
 
             if(!msg.ToFloat(out float valueF)) {
@@ -58,14 +101,17 @@ namespace MutPlunders {
                 }
                 value = Mathf.FloorToInt(valueF);
             } else {
-                value = Mathf.Abs(valueF) > 0.1 ? 1 : 0;
+                value = valueF > 0 ? 1 : 0;
             }
 
             if (value < 0) {
                 return;
             }
 
-            Debug.Log($"msg {msg} => {value}");
+            if(m_Log) {
+                Debug.Log($"msg {msg} => {value}");
+            }
+
             AddInputEvent(new InputEvent(m.Name, value, m.Controller, m.IsAnalog));
         }
 
