@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using NaughtyAttributes;
 using Plunderludics.Lib;
 using UnityEditor;
@@ -44,6 +45,25 @@ namespace Tapestry
             if (m_Sample) {
                 name = SampleName;
                 SetText();
+            }
+
+            // Select rom file automatically based on save state (if possible)
+            // TODO: could this be saved on the saveStateFile asset, rather than having to happen on validate?
+            if (m_Sample && !m_Rom) {
+                var roms = AssetDatabase.FindAssets("t:rom")
+                    .Select(guid => AssetDatabase.LoadAssetAtPath<Rom>(AssetDatabase.GUIDToAssetPath(guid)))
+                    .Where(rom => m_Sample.MatchesRom(rom))
+                    .ToArray();
+
+                if (roms.Any()) {
+                    var rom = roms.First();
+                    if (roms.Count() > 1) {
+                        Debug.LogWarning($"Multiple roms found matching savestate {m_Sample.name}, using first match: {rom}");
+                    }
+                    m_Rom = rom;
+                } else {
+                    Debug.LogWarning($"No rom found matching savestate {m_Sample.name}");
+                }
             }
         }
 
