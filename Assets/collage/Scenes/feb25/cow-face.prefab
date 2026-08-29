@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721330308147457577}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.707107, y: 0.00035262108, z: -0.000055633478, w: -0.70710653}
   m_LocalPosition: {x: -10, y: 59.3, z: 2141.5}
   m_LocalScale: {x: -19.963043, y: 33.180084, z: 16.547949}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 721330308158894369}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -449.972, y: 0, z: 0.009}
 --- !u!23 &721330308147457578
 MeshRenderer:
@@ -108,6 +108,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721330308158894380}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -117,7 +118,6 @@ Transform:
   - {fileID: 7843941889705582606}
   - {fileID: 721330308147457576}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &721330308158894382
 Camera:
@@ -133,9 +133,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -193,6 +201,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4321469254670518267}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -202,7 +211,6 @@ Transform:
   - {fileID: 7843941888055044277}
   - {fileID: 7843941889660085432}
   m_Father: {fileID: 721330308158894369}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7843941889705582607
 GameObject:
@@ -229,13 +237,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7843941889705582607}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.707107, y: 0.00035262108, z: -0.000055633478, w: -0.70710653}
   m_LocalPosition: {x: -33.2, y: -50, z: 2114}
   m_LocalScale: {x: -19.963043, y: 33.180084, z: 16.547949}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 721330308158894369}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -449.972, y: 0, z: 0.009}
 --- !u!23 &7843941889705582605
 MeshRenderer:
@@ -292,7 +300,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 5292438781127220709}
     m_Modifications:
     - target: {fileID: 5659111817888045148, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
@@ -436,6 +444,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 37300805241514559}
+    - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: useCustomMaterial
       value: 1
       objectReference: {fileID: 0}
@@ -464,7 +476,12 @@ PrefabInstance:
       value: _wwe-face
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7411211403060175714, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 37300805241514559}
   m_SourcePrefab: {fileID: 100100000, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
 --- !u!114 &5378195704441316906 stripped
 MonoBehaviour:
@@ -494,13 +511,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 100
+  isMuted: 0
+  isPaused: 0
   useAttachedRenderer: 1
   targetRenderer: {fileID: 0}
-  romFileName: F:\pludics\samples\../roms/WWF War Zone/WWF War Zone (USA) (v1.1).cue
-  configFileName: 
-  saveStateFileName: F:\pludics\samples\wwe-face\save.State
-  luaScriptFileName: F:\pludics\samples\wwe-face\wwe-face.lua
+  customRenderTexture: 0
+  renderTexture: {fileID: 0}
+  passInputFromUnity: 1
+  inputProvider: {fileID: 0}
+  captureEmulatorAudio: 0
+  romFile: {fileID: 0}
+  saveStateFile: {fileID: 0}
+  configFile: {fileID: 0}
+  luaScriptFile: {fileID: 0}
+  ramWatchFile: {fileID: 0}
+  _isEnabled: 1
+  forceCopyFilesToBuild: 0
   showBizhawkGui: 0
+  runInEditMode: 0
+  acceptBackgroundInput: 1
+  _initialized: 0
+  _status: 0
+  _currentFrame: 0
+  _textureSize: {x: 0, y: 0}
+  config: {fileID: 11400000, guid: 9fa2e33569d57e04898072f8638bc5dd, type: 2}
+  suppressBizhawkPopups: 1
+  writeBizhawkLogs: 1
+  bizhawkLogLocation: 
+  _audioResampler:
+    idealBufferSize: 4096
+    movingAverageN: 1024
+    excessPressureFactor: 0.01
+    rawBufferCount: 0
+    resampleRatio: 1
 --- !u!4 &7843941888055044277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7411211403060175715, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
@@ -511,7 +555,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 5292438781127220709}
     m_Modifications:
     - target: {fileID: 5659111817888045148, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
@@ -639,6 +683,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 1992882904923886844}
+    - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: useCustomMaterial
       value: 0
       objectReference: {fileID: 0}
@@ -671,7 +719,12 @@ PrefabInstance:
       value: _bnn-cow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7411211403060175714, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1992882904923886844}
   m_SourcePrefab: {fileID: 100100000, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
 --- !u!114 &5378195705928919591 stripped
 MonoBehaviour:
@@ -706,20 +759,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 100
+  isMuted: 0
+  isPaused: 0
   useAttachedRenderer: 1
   targetRenderer: {fileID: 0}
-  romFileName: F:\pludics\samples\../roms/Boku no Natsuyasumi - Summer Holiday 20th
-    Century (Japan)/Boku no Natsuyasumi - Summer Holiday 20th Century (Japan).cue
-  configFileName: 
-  saveStateFileName: F:\pludics\samples\bnn-cow\cow-night.State
-  luaScriptFileName: F:\pludics\samples\bnn-cow\bnn-cow.lua
+  customRenderTexture: 0
+  renderTexture: {fileID: 0}
+  passInputFromUnity: 1
+  inputProvider: {fileID: 0}
+  captureEmulatorAudio: 0
+  romFile: {fileID: 0}
+  saveStateFile: {fileID: 0}
+  configFile: {fileID: 0}
+  luaScriptFile: {fileID: 0}
+  ramWatchFile: {fileID: 0}
+  _isEnabled: 1
+  forceCopyFilesToBuild: 0
   showBizhawkGui: 0
+  runInEditMode: 0
+  acceptBackgroundInput: 1
+  _initialized: 0
+  _status: 0
+  _currentFrame: 0
+  _textureSize: {x: 0, y: 0}
+  config: {fileID: 11400000, guid: 9fa2e33569d57e04898072f8638bc5dd, type: 2}
+  suppressBizhawkPopups: 1
+  writeBizhawkLogs: 1
+  bizhawkLogLocation: 
+  _audioResampler:
+    idealBufferSize: 4096
+    movingAverageN: 1024
+    excessPressureFactor: 0.01
+    rawBufferCount: 0
+    resampleRatio: 1
 --- !u!1001 &7843941889772623187
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 5292438781127220709}
     m_Modifications:
     - target: {fileID: 5659111817888045148, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
@@ -863,6 +942,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      propertyPath: unityHawkEmulator
+      value: 
+      objectReference: {fileID: 7431033441133509933}
+    - target: {fileID: 7411211403060175719, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
       propertyPath: useCustomMaterial
       value: 1
       objectReference: {fileID: 0}
@@ -895,7 +978,12 @@ PrefabInstance:
       value: _commandconquer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7411211403060175714, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7431033441133509933}
   m_SourcePrefab: {fileID: 100100000, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}
 --- !u!4 &721330307362321968 stripped
 Transform:
@@ -919,14 +1007,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e98f0c32c4b9ba42a802fccb13ff791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 100
+  isMuted: 0
+  isPaused: 0
   useAttachedRenderer: 1
   targetRenderer: {fileID: 0}
-  romFileName: F:\pludics\samples\../roms/Command & Conquer/Command & Conquer (USA)
-    (Disc 1) (GDI).cue
-  configFileName: 
-  saveStateFileName: F:\pludics\samples\command conquer\moreguys.State
-  luaScriptFileName: F:\pludics\samples\command conquer\commandconquer.lua
+  customRenderTexture: 0
+  renderTexture: {fileID: 0}
+  passInputFromUnity: 1
+  inputProvider: {fileID: 0}
+  captureEmulatorAudio: 0
+  romFile: {fileID: 0}
+  saveStateFile: {fileID: 0}
+  configFile: {fileID: 0}
+  luaScriptFile: {fileID: 0}
+  ramWatchFile: {fileID: 0}
+  _isEnabled: 1
+  forceCopyFilesToBuild: 0
   showBizhawkGui: 0
+  runInEditMode: 0
+  acceptBackgroundInput: 1
+  _initialized: 0
+  _status: 0
+  _currentFrame: 0
+  _textureSize: {x: 0, y: 0}
+  config: {fileID: 11400000, guid: 9fa2e33569d57e04898072f8638bc5dd, type: 2}
+  suppressBizhawkPopups: 1
+  writeBizhawkLogs: 1
+  bizhawkLogLocation: 
+  _audioResampler:
+    idealBufferSize: 4096
+    movingAverageN: 1024
+    excessPressureFactor: 0.01
+    rawBufferCount: 0
+    resampleRatio: 1
 --- !u!114 &3205113773457127599 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4657177659748101628, guid: e5bcb3b15735b8b40b87e3f8a4650a98, type: 3}

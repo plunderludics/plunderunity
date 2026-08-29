@@ -15,7 +15,7 @@ public class DrowningMarios : MonoBehaviour {
         public VoidEvent OnDead;
         public VoidEvent OnRespawn;
     }
-    
+
     public RawImage Front;
     public RawImage Back;
 
@@ -29,7 +29,7 @@ public class DrowningMarios : MonoBehaviour {
         for (int i = 0; i < Drownables.Length; i++) {
             var i1 = i;
             var d = Drownables[i];
-            
+
             d.Emulator.OnRunning += (() => {
                 d.OnRespawn.Register(() => OnRespawn(i1));
                 d.OnDead.Register(() => OnDead(i1));
@@ -43,21 +43,21 @@ public class DrowningMarios : MonoBehaviour {
     void OnDead(int i) {
         var nextI = (i + 1) % Drownables.Length;
         Debug.Log($"{i} dead, unpausing {nextI}");
-            
+
         var emulator = Drownables[nextI].Emulator;
         // Front.texture = emulator.renderTexture;
-        
+
         this.DoAfterTime(StartDelay, () => {
             emulator.Unpause();
-            Debug.Log($"{nextI} unpaused");
+            Debug.Log($"{emulator.name} unpaused");
         });
-        
+
     }
 
     void OnRespawn(int i) {
         Debug.Log($"{i} respawned");
         var emulator = Drownables[i].Emulator;
-        
+
         emulator.ReloadState();
         emulator.Pause();
 

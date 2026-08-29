@@ -31,8 +31,8 @@ public class BlobMario : MonoBehaviour {
 
             var input = blob.GetComponent<InputProvider>();
             input.AddInputEvent(new InputEvent() {
-                keyName = "A",
-                isPressed = true
+                name = "A",
+                value = 1
             });
 
             // input.AddAxisInputEvent("XAxis")

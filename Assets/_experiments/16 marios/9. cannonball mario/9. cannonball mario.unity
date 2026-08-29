@@ -317,7 +317,7 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 6c390b72aed98b848a294b61670a365d, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 7c9b2a0757f6e02459f6be0943c9af55, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
       value: 0
@@ -559,11 +559,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_States:
-  - {fileID: 5022602860645237092, guid: 6c390b72aed98b848a294b61670a365d, type: 3}
-  - {fileID: 5022602860645237092, guid: 68887d751375093449e80a7839341fe4, type: 3}
-  - {fileID: 5022602860645237092, guid: 8d2df4b351e927f468aeb240caf61ddf, type: 3}
-  - {fileID: 5022602860645237092, guid: 2550f3cf79cd6514bbfcd962d0a25ab4, type: 3}
-  - {fileID: 5022602860645237092, guid: 09d2550991645d344b88da6f1428e3e7, type: 3}
+  - {fileID: 5022602860645237092, guid: 7c9b2a0757f6e02459f6be0943c9af55, type: 3}
+  - {fileID: 5022602860645237092, guid: 6fb95cf542322964ab8845b4f798ac36, type: 3}
+  - {fileID: 5022602860645237092, guid: 79c44fc9e6eec5f4db118affbd64b980, type: 3}
+  - {fileID: 5022602860645237092, guid: 38fbafb5524288942a2d5f0976994d5e, type: 3}
+  - {fileID: 5022602860645237092, guid: 6f97164e0fddf8546b88df5d86389c37, type: 3}
+  - {fileID: 5022602860645237092, guid: 4a57b804c57c49d42aa4b709d774199a, type: 3}
+  - {fileID: 5022602860645237092, guid: 94f08834c9a3a2e49b1ab06aeca1a1ac, type: 3}
+  - {fileID: 5022602860645237092, guid: 6d5e569249477924fbc83e9b30cb5168, type: 3}
+  - {fileID: 5022602860645237092, guid: f6dc13e1e1bbbfa459f82b791bbb9c34, type: 3}
+  - {fileID: 5022602860645237092, guid: 7251228d41cf2064894d26a16dd955eb, type: 3}
   m_Emulator: {fileID: 938899391}
 --- !u!1 &1549532587
 GameObject:

@@ -334,7 +334,7 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: ed4eeb502eae58445b2acaa4f2300c9f, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 82a475254c549214d8a58610862aafe7, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: showBizhawkGui
       value: 1
@@ -379,6 +379,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897a522fdf5f5435eb1f5348ed14bc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emulator: {fileID: 0}
+  useDefaultControls: 1
+  useControlsObject: 1
+  controlsObject: {fileID: 0}
+  controls:
+    mappings: []
 --- !u!1 &977315325
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,38 +574,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f2bc93b160ccf4dac7500ea2b34b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CutInterval:
+    Min: 0
+    Max: 0
   Face:
+    SavePath: ./Test/{0}-{1}
     Emulator: {fileID: 839965105}
     Image: {fileID: 34272917}
     Samples:
-    - {fileID: 5022602860645237092, guid: a65ebbee35085094ca271dfd88ce32b0, type: 3}
-    - {fileID: 5022602860645237092, guid: ed4eeb502eae58445b2acaa4f2300c9f, type: 3}
-    - {fileID: 5022602860645237092, guid: 01a3628448cb6604bb2acd96fe436dcb, type: 3}
-    - {fileID: 5022602860645237092, guid: bd0277dbffc46e84fa813f6100bf9724, type: 3}
-    - {fileID: 5022602860645237092, guid: 993b6c69a1a6735408e200559d0cf080, type: 3}
+    - Savestate: {fileID: 5022602860645237092, guid: 82a475254c549214d8a58610862aafe7, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 70431ef2f8ef29d409bae541820073cc, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 7c9f5e792257ae04b86ea75ac65c6566, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: e3cc96eac64447244a9d351397476a86, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: b5cd93be8ffdacb4693621f07c2d339c, type: 3}
+      IsPersistent: 0
     DurationRange:
       Min: 1
       Max: 4
+    PauseOnStop: 0
   Look:
+    SavePath: ./Test/{0}-{1}
     Emulator: {fileID: 1510999872}
     Image: {fileID: 56179706}
     Samples:
-    - {fileID: 5022602860645237092, guid: 995d3c7be22c5a94cad433530449f59d, type: 3}
-    - {fileID: 5022602860645237092, guid: 671d39a8a1fd30b48a509f802531b6d3, type: 3}
-    - {fileID: 5022602860645237092, guid: f1a209a26b0cbac41b9fb86668c80f49, type: 3}
-    - {fileID: 5022602860645237092, guid: 6704701b26940ba40bdd8666ef22d3d3, type: 3}
-    - {fileID: 5022602860645237092, guid: 35795279abe161442a7db68a20a8b3a0, type: 3}
-    - {fileID: 5022602860645237092, guid: c4884821514025a42acf304e6feaa95c, type: 3}
-    - {fileID: 5022602860645237092, guid: 7b64f80087cb3eb4bb6cc8a6b798c518, type: 3}
-    - {fileID: 5022602860645237092, guid: 6604d492648fc754f85556da443ac63e, type: 3}
-    - {fileID: 5022602860645237092, guid: dbfb25057e54d9e46a134bb0e9690e0e, type: 3}
-    - {fileID: 5022602860645237092, guid: 53659e72dcfa81040977341616b10cd0, type: 3}
-    - {fileID: 5022602860645237092, guid: 90817f09932be054b9bb9b75679392c7, type: 3}
-    - {fileID: 5022602860645237092, guid: aca12fbaec6e35f4e85d327d2c52a82c, type: 3}
-    - {fileID: 5022602860645237092, guid: 320f66811f1f75048821ebab25eb6bff, type: 3}
+    - Savestate: {fileID: 5022602860645237092, guid: 6fb95cf542322964ab8845b4f798ac36, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 06d499bdc995b01448e468560060d58b, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 91690c04954a2504e8e86d680d782bea, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: e36810c1bf1bf4b4fbcc1f8ff92bd93b, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 53659e72dcfa81040977341616b10cd0, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: dbfb25057e54d9e46a134bb0e9690e0e, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: df1ea9d3e9e59684faa32c42d45a2425, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 2829bff78cde8354f8aa30451acfac1b, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: b369e48723c7870408e723cba872d355, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: f72f56e956bf8934e8bf24caadc2f969, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 579402b31b20d164a94624a61dee754a, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 45471bca2a00ed84e8d838035c8fc7de, type: 3}
+      IsPersistent: 0
+    - Savestate: {fileID: 5022602860645237092, guid: 1d83bc29bdc37fc42b9a8227fa8aeaae, type: 3}
+      IsPersistent: 0
     DurationRange:
       Min: 1
       Max: 8
+    PauseOnStop: 0
 --- !u!4 &1429512065
 Transform:
   m_ObjectHideFlags: 0
@@ -713,6 +744,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897a522fdf5f5435eb1f5348ed14bc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emulator: {fileID: 0}
+  useDefaultControls: 1
+  useControlsObject: 1
+  controlsObject: {fileID: 0}
+  controls:
+    mappings: []
 --- !u!114 &1510999872 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}

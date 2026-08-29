@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: romFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ce0ed315ba8362e46a5eebc00f21e15c, type: 3}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: romFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\plunderunity\Assets\16 marios\Super
@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 90817f09932be054b9bb9b75679392c7, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 34a97c3124151cb4fae63784f6ce6e97, type: 3}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: _textureSize.x
       value: 320

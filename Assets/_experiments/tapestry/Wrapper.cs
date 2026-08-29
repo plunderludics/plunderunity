@@ -6,8 +6,7 @@ public class Wrapper : MonoBehaviour
     [Header("tuning")]
     [SerializeField] FloatReference m_WrapLength;
 
-    void Update()
-    {
+    void Update() {
         transform.position = Wrap(transform.position, m_WrapLength.Value);
     }
 

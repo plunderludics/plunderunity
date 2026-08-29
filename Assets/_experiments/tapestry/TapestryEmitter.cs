@@ -1,10 +1,13 @@
 using System;
+using System.Linq;
 using NaughtyAttributes;
 using Plunderludics.Lib;
 using UnityEditor;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityHawk;
+using Color = Soil.Color;
 
 namespace Tapestry
 {
@@ -12,15 +15,20 @@ namespace Tapestry
         [Tooltip("the savestate this emitter starts at")]
         [SerializeField] Savestate m_Sample;
 
-        [Tooltip("the sample this emitter starts at")]
-        [SerializeField] string m_SampleName;
+        [Tooltip("the rom related to the sample")]
+        [SerializeField] Rom m_Rom;
 
         // the unique id for this emitter
         [SerializeField] string m_Id;
 
+        [Tooltip("canvas item")]
+        [SerializeField] Canvas m_Canvas;
+
+        string m_SamplePath;
+
         /// -- queries --
         // the name of the current sample
-        public string SampleName => m_Sample.Name;
+        public string SampleName => m_Sample.name;
 
         // the current sample for this emitter
         public Savestate Sample => m_Sample;
@@ -30,21 +38,71 @@ namespace Tapestry
 
         void OnValidate() {
             if (string.IsNullOrEmpty(m_Id)) {
-                m_Id = UnityEngine.Random.value.ToString();
+                // m_Id = Guid.NewGuid().ToString();
+                Debug.Log($"new guid {m_Id}");
+            }
+
+            if (m_Sample) {
+                name = SampleName;
+                SetText();
+            }
+
+            // Select rom file automatically based on save state (if possible)
+            // TODO: could this be saved on the saveStateFile asset, rather than having to happen on validate?
+            if (m_Sample && !m_Rom) {
+                var roms = AssetDatabase.FindAssets("t:rom")
+                    .Select(guid => AssetDatabase.LoadAssetAtPath<Rom>(AssetDatabase.GUIDToAssetPath(guid)))
+                    .Where(rom => m_Sample.MatchesRom(rom))
+                    .ToArray();
+
+                if (roms.Any()) {
+                    var rom = roms.First();
+                    if (roms.Count() > 1) {
+                        Debug.LogWarning($"Multiple roms found matching savestate {m_Sample.name}, using first match: {rom}");
+                    }
+                    m_Rom = rom;
+                } else {
+                    Debug.LogWarning($"No rom found matching savestate {m_Sample.name}");
+                }
             }
         }
 
-        /// -- commands --
-        public void Save(string sampleName) {
-            m_SampleName = sampleName;
+        void Awake() {
+            if (!m_Sample) {
+                return;
+            }
+
+            SetText();
         }
 
+        /// -- commands --
+        public void Save(string samplePath) {
+            m_SamplePath = samplePath;
+        }
+
+        public void SetText() {
+            var text = m_Canvas.GetComponentInChildren<TMPro.TMP_Text>();
+            if (!text) {
+                return;
+            }
+
+            text.text = name.Replace("-", "\n");
+            text.color = name switch {
+                string n when n.Contains("water") => Color.Aqua,
+                string n when n.Contains("bay") => Color.Aqua,
+                string n when n.Contains("swim") => Color.Aqua,
+                string n when n.Contains("rinkwatch") => Color.Red,
+                _ => Color.White,
+            };
+        }
+
+        // TODO
         public void Save(Savestate sample) {
             m_Sample = sample;
         }
 
         public void LoadSample(Track track) {
-            track.LoadSample(m_Sample);
+            track.LoadSample(m_Sample, m_Rom);
         }
     }
 }

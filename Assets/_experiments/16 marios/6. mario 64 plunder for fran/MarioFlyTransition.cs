@@ -18,8 +18,8 @@ public class MarioFlyTransition : MonoBehaviour
     public Action delayed;
 
     void Start() {
-        Emulator.RegisterMethod("OnDeath", OnDeathCallback);
-        Emulator.RegisterMethod("OnRespawn", OnRespawnCallback);
+        Emulator.RegisterLuaCallback("OnDeath", OnDeathCallback);
+        Emulator.RegisterLuaCallback("OnRespawn", OnRespawnCallback);
     }
 
     void Update() {

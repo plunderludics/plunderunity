@@ -208,9 +208,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: isMuted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: romFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ce0ed315ba8362e46a5eebc00f21e15c, type: 3}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: romFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\Super
@@ -239,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 671d39a8a1fd30b48a509f802531b6d3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: f72f56e956bf8934e8bf24caadc2f969, type: 3}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: _textureSize.x
       value: 320
@@ -257,6 +261,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: _shouldInitialize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: luaScriptFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\16marios.lua
       objectReference: {fileID: 0}
@@ -267,6 +275,10 @@ PrefabInstance:
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: bizhawkLogLocation
       value: BizHawkLogs\mixer_Track--3926.log
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGuiInEditor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name
@@ -496,9 +508,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: isMuted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: romFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: e385ae92892850146b96583bd50ea0bc, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: ce0ed315ba8362e46a5eebc00f21e15c, type: 3}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: romFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\Super
@@ -527,7 +543,7 @@ PrefabInstance:
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 671d39a8a1fd30b48a509f802531b6d3, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: f72f56e956bf8934e8bf24caadc2f969, type: 3}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: _textureSize.x
       value: 320
@@ -545,6 +561,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: _shouldInitialize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: luaScriptFileName
       value: C:\Users\gusta\Desktop\art\plunderludics\mutplunders\Assets\16 marios\16marios.lua
       objectReference: {fileID: 0}
@@ -555,6 +575,10 @@ PrefabInstance:
     - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: bizhawkLogLocation
       value: BizHawkLogs\mixer_Track--3926.log
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839870630020235418, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
+      propertyPath: showBizhawkGuiInEditor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664192676825156002, guid: 41dbe3674d6862d44936a10d6594ce05, type: 3}
       propertyPath: m_Name

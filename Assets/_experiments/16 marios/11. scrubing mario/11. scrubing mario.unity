@@ -568,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: saveStateFile
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: eb5bad76b45593e488957201954eb391, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 57d701486ea7e574e99ec7743015bcb1, type: 3}
     - target: {fileID: 8918934247375087514, guid: ed0d9cfa0f6831a4bac45d95db7481f7, type: 3}
       propertyPath: configFileName
       value: C:\Users\gusta\Desktop\gamedev\plunderludics\mut\Assets\16 marios\11.

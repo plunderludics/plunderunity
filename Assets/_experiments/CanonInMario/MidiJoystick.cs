@@ -24,7 +24,7 @@ public class MidiJoystick: MonoBehaviour {
 
     void Start() {
         m_Emitter.OnEventPlayed += OnEventPlayed;
-        m_Emulator.RegisterMethod("SetAnalog", SetAnalog);
+        m_Emulator.RegisterLuaCallback("SetAnalog", SetAnalog);
     }
 
     string SetAnalog(string _) {
