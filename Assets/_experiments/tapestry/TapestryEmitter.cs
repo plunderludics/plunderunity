@@ -3,9 +3,7 @@ using System.Linq;
 using NaughtyAttributes;
 using Plunderludics.Lib;
 using UnityEditor;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityHawk;
 using Color = Soil.Color;
 
@@ -36,9 +34,10 @@ namespace Tapestry
         // an id for this emitter (for wrapping)
         public string Id => m_Id;
 
+        #if UNITY_EDITOR
         void OnValidate() {
             if (string.IsNullOrEmpty(m_Id)) {
-                // m_Id = Guid.NewGuid().ToString();
+                m_Id = Guid.NewGuid().ToString();
                 Debug.Log($"new guid {m_Id}");
             }
 
@@ -66,6 +65,7 @@ namespace Tapestry
                 }
             }
         }
+        #endif
 
         void Awake() {
             if (!m_Sample) {

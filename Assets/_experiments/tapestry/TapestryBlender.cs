@@ -92,6 +92,18 @@ public class TapestryBlender : MonoBehaviour
         m_Emitters = FindObjectsOfType<TapestryEmitter>().ToList();
         m_Verts = FindObjectsOfType<TapestryEmitter>().ToList();
 
+        // validate emitters
+        var duplicates = m_Emitters.DistinctBy(a => a.name).GroupBy(e => e.Id)
+            .Where(g => g.Count() > 1)
+            .ToList();
+
+        if (duplicates.Any()) {
+            var duplicateText = duplicates.Aggregate("", (acc, d) => {
+                return acc + "| " + d.Key + ": (" + string.Join(", ", d.Select(a => a.name)) + ") ";
+            });
+            Debug.LogError($"duplicate ids found {duplicateText}");
+        }
+
         var calculator = new DelaunayCalculator();
         m_Triangulation = calculator.CalculateTriangulation(
             m_Verts.Select(
@@ -454,6 +466,7 @@ public class TapestryBlender : MonoBehaviour
         if (m_IsDryRun) {
             return;
         }
+
 
         emitter.LoadSample(track);
     }

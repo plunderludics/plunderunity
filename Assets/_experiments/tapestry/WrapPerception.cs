@@ -20,7 +20,7 @@ public class WrapPerception : MonoBehaviour {
         First = false;
 
         var p = transform.position;
-        var d = FindObjectOfType<TapestryBlender>().WrapLength;
+        var d = FindAnyObjectByType<TapestryBlender>().WrapLength;
         // linear
         if (m_Vertical) {
             Instantiate(this, p + d * Vector3.forward, Quaternion.identity).name = "u";

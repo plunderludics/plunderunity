@@ -12,10 +12,11 @@ EditorBuildSettings:
     path: Assets/_experiments/16 marios 2/18. mario 64 jump scare/18. mario 64 jump
       scare.unity
     guid: b7735d5974307664ea218990a2a08bcd
-  - enabled: 0
+  - enabled: 1
     path: Assets/_experiments/tapestry/tapestry4 (chaos).unity
     guid: 91aadd57df76cad4db51d188b71f2b3a
-  - enabled: 1
+  - enabled: 0
     path: Assets/_experiments/performance/performance.unity
     guid: b82fc658d9b8e6144ab133d4e358b4d2
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
